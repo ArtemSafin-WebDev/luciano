@@ -15,6 +15,10 @@ import homeAnimation from './homeAnimation';
 import menu from './menu';
 import eventsSlider from './eventsSlider';
 import bottomPanel from './bottomPanel';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -33,10 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     eventsSlider();
     bottomPanel();
-    homeAnimation();
+    
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+    homeAnimation();
+    ScrollTrigger.refresh();
     setTimeout(() => document.body.classList.add('animatable'), 300);
 })
