@@ -67,6 +67,11 @@
     font-size: 2.5rem;
     line-height: 110%;
     margin-bottom: 1.8rem;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #bb9b8c;
+    }
 }
 
 .page-footer__mail-link {

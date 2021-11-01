@@ -138,11 +138,32 @@
     text-transform: uppercase;
     max-width: 70rem;
     align-self: stretch;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4rem);
+    transition: opacity 0.7s, visibility 0.7s, transform 0.7s ease-out;
+
+    .animatable & {
+        opacity: 1;
+        visibility: inherit;
+        transform: translateY(0rem);
+    }
 }
 
 .home-section__events-slider {
     display: flex;
     align-items: flex-start;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4rem);
+    transition: opacity 0.7s, visibility 0.7s, transform 0.7s ease-out;
+
+    .animatable & {
+        opacity: 1;
+        visibility: inherit;
+        transform: translateY(0rem);
+    }
 }
 
 .home-section__events-slider-content {
@@ -254,10 +275,10 @@
     flex-shrink: 0;
     position: relative;
     z-index: 1;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
 
     &.swiper-button-disabled {
-        opacity: .5;
+        opacity: 0.5;
         cursor: default;
     }
 
