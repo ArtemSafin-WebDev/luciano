@@ -1,0 +1,138 @@
+.page-footer {
+    padding-top: 11rem;
+    padding-bottom: 5.5rem;
+    background: #f1dfd6;
+}
+
+.page-footer__top-row {
+    padding-top: 11rem;
+}
+
+.page-footer__row {
+    margin-bottom: 17rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-footer__nav {
+    grid-column: span 2;
+}
+
+.page-footer__nav-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+
+.page-footer__nav-link {
+    font-size: 2.5rem;
+    line-height: 110%;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #bb9b8c;
+    }
+}
+
+.page-footer__secondary-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.page-footer__secondary-nav-link {
+    font-size: 2rem;
+    line-height: 140%;
+    margin-bottom: 1.2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .no-touch &:hover,
+    .touch &:active {
+        color: #bb9b8c;
+    }
+}
+
+.page-footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-footer__phone-link {
+    font-size: 2.5rem;
+    line-height: 110%;
+    margin-bottom: 1.8rem;
+}
+
+.page-footer__mail-link {
+    font-size: 2.5rem;
+    line-height: 110%;
+    text-decoration-line: underline;
+    color: #bb9b8c;
+    margin-bottom: 4.5rem;
+    &:link,
+    &:visited {
+        color: #bb9b8c;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        text-decoration: none;
+    }
+}
+
+.page-footer__address {
+    font-size: 2.5rem;
+    line-height: 110%;
+}
+
+.page-footer__copyright {
+    font-size: 1.8rem;
+    align-self: center;
+    line-height: 120%;
+}
+
+.page-footer__social-list {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.page-footer__social-link {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: #bb9b8c;
+    }
+}
+
+.page-footer__made-by {
+    grid-column: 4 / 5;
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 120%;
+}
+
+
+.page-footer__made-by-logo {
+    flex-shrink: 0;
+    margin-left: 0.6rem;
+    width: 10rem;
+    height: auto;
+    position: relative;
+    bottom: -.2rem;
+}

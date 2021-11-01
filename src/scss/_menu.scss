@@ -1,0 +1,128 @@
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(#091624, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    .mobile-menu-open & {
+        padding-right: var(--sb-width, 0);
+    }
+
+    .mobile-menu-open & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
+
+.menu__inner {
+    margin-left: auto;
+    width: 50%;
+    flex-grow: 1;
+    background-color: #fff;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 6rem;
+    color: black;
+    padding-bottom: var(--fixed-bottom-panel-height);
+    transition: transform .4s ease-in;
+
+    transform: translateX(100%);
+
+    .mobile-menu-open & {
+        transform: translateX(0%);
+        transition: transform .7s ease-out;
+
+    }
+}
+
+.menu__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 6rem;
+}
+
+.menu__nav-link {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    line-height: 110%;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #bb9b8c;
+    }
+}
+
+.menu__secondary-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu__secondary-nav-link {
+    font-size: 2rem;
+    line-height: 140%;
+    margin-bottom: 1.2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #bb9b8c;
+    }
+}
+
+.menu__row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.menu__social-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 3rem;
+    flex-shrink: 0;
+}
+
+.menu__social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: #bb9b8c;
+        transition: fill 0.2s;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        svg {
+            fill: black;
+        }
+    }
+}
