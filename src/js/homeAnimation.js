@@ -16,7 +16,8 @@ export default function homeAnimation() {
                 end: 'bottom top',
                 scrub: true,
                 pin: false,
-                pinSpacing: false
+                pinSpacing: false,
+                markers: false
             }
         });
 

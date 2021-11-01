@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     eventsSlider();
     bottomPanel();
-    
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
 });
 
 window.addEventListener('load', function() {
@@ -45,4 +47,4 @@ window.addEventListener('load', function() {
     homeAnimation();
     ScrollTrigger.refresh();
     setTimeout(() => document.body.classList.add('animatable'), 300);
-})
+});
