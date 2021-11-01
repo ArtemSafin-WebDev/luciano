@@ -7,6 +7,6 @@ export default function setScrollbarWidth() {
 
     setWidth();
 
-    window.addEventListener('resize', setWidth);
+    // window.addEventListener('resize', setWidth);
     
 }
