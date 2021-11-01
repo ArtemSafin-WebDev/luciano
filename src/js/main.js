@@ -14,6 +14,7 @@ import modals from './modals';
 import homeAnimation from './homeAnimation';
 import menu from './menu';
 import eventsSlider from './eventsSlider';
+import bottomPanel from './bottomPanel';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -31,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
     homeAnimation();
     menu();
     eventsSlider();
+    bottomPanel();
+    homeAnimation();
 });
 
 window.addEventListener('load', function() {
