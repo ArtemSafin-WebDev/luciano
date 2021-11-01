@@ -13,7 +13,7 @@ export default function homeAnimation() {
             scrollTrigger: {
                 trigger: section,
                 start: 'top top',
-                end: 'bottom top',
+                end: () => `+=${window.innerHeight * 2}`,
                 scrub: true,
                 pin: false,
                 pinSpacing: false,
