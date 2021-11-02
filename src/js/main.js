@@ -31,10 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     anchorLinks();
     accordions();
     mediaPlayer();
+    menu();
     modals();
     datepicker();
     homeAnimation();
-    menu();
+
     eventsSlider();
     bottomPanel();
     if (history.scrollRestoration) {

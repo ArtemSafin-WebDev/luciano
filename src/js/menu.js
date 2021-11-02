@@ -6,17 +6,17 @@ export default function menu() {
     const menu = document.querySelector('.menu');
     const logo = document.querySelector('.page-header__logo');
 
-    let menuOpen = false;
+    window.menuOpen = false;
 
     if (!burger || !menu) return;
 
     const openMenu = () => {
-        if (menuOpen) return;
+        if (window.menuOpen) return;
         document.body.classList.add('mobile-menu-open');
         disableBodyScroll(menu, {
             reserveScrollBarGap: true
         });
-        menuOpen = true;
+        window.menuOpen = true;
 
         gsap.to(logo, {
             x: (window.innerWidth / 4) * -1,
@@ -24,16 +24,19 @@ export default function menu() {
         });
     };
     const closeMenu = () => {
-        if (!menuOpen) return;
+        if (!window.menuOpen) return;
         document.body.classList.remove('mobile-menu-open');
         clearAllBodyScrollLocks();
-        menuOpen = false;
+        window.menuOpen = false;
 
         gsap.to(logo, {
             x: 0,
             duration: 0.4
         });
     };
+
+    window.openMenu = openMenu;
+    window.closeMenu = closeMenu;
 
     burger.addEventListener('click', event => {
         event.preventDefault();
@@ -51,7 +54,7 @@ export default function menu() {
     });
 
     window.addEventListener('resize', () => {
-        if (menuOpen) {
+        if (window.menuOpen) {
             gsap.set(logo, {
                 x: (window.innerWidth / 4) * -1
             });

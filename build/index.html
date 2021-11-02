@@ -247,66 +247,81 @@
             </div>
 
             <div class="fixed-bottom-panel js-bottom-panel">
+                <div class="fixed-bottom-panel__desktop">
             
-                <div class="fixed-bottom-panel__row">
-                    <div class="fixed-bottom-panel__col">
-                        <a href="#" class="fixed-bottom-panel__ask-question">
-                            <div class="fixed-bottom-panel__ask-question-icon">
-                                <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
-                                    <use xlink:href="#rombus"></use>
-                                </svg>
-                                <svg width="45" height="45" aria-hidden="true" class="icon-question">
-                                    <use xlink:href="#question"></use>
-                                </svg>
-                            </div>
-                            <div class="fixed-bottom-panel__ask-question-text">
-                                Задать вопрос
-                            </div>
-                        </a>
-                    </div>
-                    <div class="fixed-bottom-panel__col">
-                        <form class="fixed-bottom-panel__filters" action="/" method="GET">
-                            <div class="fixed-bottom-panel__filters-inputs">
-                                <div class="fixed-bottom-panel__filters-input-wrapper" id="checkin-container">
-                                    <label for="checkin" class="fixed-bottom-panel__filters-input-label">
-                                        Заезд
-                                    </label>
-                                    <input type="text" name="checkin" class="fixed-bottom-panel__filters-input js-datepicker"
-                                        data-container="#checkin-container" readonly="" id="checkin" value="05.11.2021">
-                                </div>
-                                <div class="fixed-bottom-panel__filters-input-wrapper" id="checkout-container">
-                                    <label for="checkout" class="fixed-bottom-panel__filters-input-label">
-                                        Выезд
-                                    </label>
-                                    <input type="text" name="checkout" class="fixed-bottom-panel__filters-input js-datepicker"
-                                        data-container="#checkout-container" readonly="" id="checkout" value="10.11.2021">
-                                </div>
-                                <div class="fixed-bottom-panel__filters-input-wrapper">
-                                    <label for="guests" class="fixed-bottom-panel__filters-input-label">
-                                        Гости
-                                    </label>
-                                    <div class="fixed-bottom-panel__select">
-                                        <select name="guests" id="guests" class="js-custom-select">
-                                            <option value="1">1 Взрослый</option>
-                                            <option value="2">2 Взрослых</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="fixed-bottom-panel__filters-submit">
-                                <span class="fixed-bottom-panel__filters-submit-icon">
+            
+                    <div class="fixed-bottom-panel__row">
+                        <div class="fixed-bottom-panel__col">
+                            <a href="#" class="fixed-bottom-panel__ask-question">
+                                <div class="fixed-bottom-panel__ask-question-icon">
                                     <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
                                         <use xlink:href="#rombus"></use>
                                     </svg>
-                                    <svg width="45" height="45" aria-hidden="true" class="icon-search">
-                                        <use xlink:href="#search"></use>
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-question">
+                                        <use xlink:href="#question"></use>
                                     </svg>
-                                </span>
-                                <span class="fixed-bottom-panel__filters-submit-text">
-                                    Найти номер
-                                </span>
-                            </button>
-                        </form>
+                                </div>
+                                <div class="fixed-bottom-panel__ask-question-text">
+                                    Задать вопрос
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fixed-bottom-panel__col">
+                            <form class="fixed-bottom-panel__filters" action="/" method="GET">
+                                <div class="fixed-bottom-panel__filters-inputs">
+                                    <div class="fixed-bottom-panel__filters-input-wrapper" id="checkin-container">
+                                        <label for="checkin" class="fixed-bottom-panel__filters-input-label">
+                                            Заезд
+                                        </label>
+                                        <input type="text" name="checkin" class="fixed-bottom-panel__filters-input js-datepicker"
+                                            data-container="#checkin-container" readonly="" id="checkin" value="05.11.2021">
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper" id="checkout-container">
+                                        <label for="checkout" class="fixed-bottom-panel__filters-input-label">
+                                            Выезд
+                                        </label>
+                                        <input type="text" name="checkout" class="fixed-bottom-panel__filters-input js-datepicker"
+                                            data-container="#checkout-container" readonly="" id="checkout" value="10.11.2021">
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper">
+                                        <label for="guests" class="fixed-bottom-panel__filters-input-label">
+                                            Гости
+                                        </label>
+                                        <div class="fixed-bottom-panel__select">
+                                            <select name="guests" id="guests" class="js-custom-select">
+                                                <option value="1">1 Взрослый</option>
+                                                <option value="2">2 Взрослых</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="fixed-bottom-panel__filters-submit">
+                                    <span class="fixed-bottom-panel__filters-submit-icon">
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                            <use xlink:href="#rombus"></use>
+                                        </svg>
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-search">
+                                            <use xlink:href="#search"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="fixed-bottom-panel__filters-submit-text">
+                                        Найти номер
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-bottom-panel__mobile">
+                    <div class="fixed-bottom-panel__mobile-links">
+            
+            
+                        <a href="#" class="fixed-bottom-panel__mobile-link">
+                            Задать вопрос
+                        </a>
+                        <a href="#booking-modal" class="fixed-bottom-panel__mobile-link js-open-modal">
+                            Найти номер
+                        </a>
                     </div>
                 </div>
             
@@ -481,7 +496,7 @@
                 <div class="home-section__col">
                     <div class="home-section__inner-content">
                         <h2 class="home-section__heading">
-                            Оздоровительные программы
+                            Оздоро&shy;ительные програм&shy;мы
                         </h2>
                         <div class="home-section__text">
                             <p>
@@ -747,7 +762,56 @@
                     </a>
                 </div>
             </div>
-        </footer>        <style>
+        </footer>        <div class="modal js-modal" id="booking-modal">
+        
+            <button class="modal__close js-close-modal">
+                <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                    <use xlink:href="#rombus"></use>
+                </svg>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        
+            <h3 class="modal__heading">
+                Забронировать номер
+            </h3>
+            <form class="modal__filters" method="GET" action="/">
+                <div class="modal__filters-fields">
+                    <div class="modal__filters-field" id="modal-checkin-container">
+                        <label for="modal-checkin" class="modal__filters-label">
+                            Заезд
+                        </label>
+                        <input type="text" class="modal__filters-input js-datepicker" id="modal-checkin" value="05.11.2021"
+                            readonly data-container="#modal-checkin-container">
+        
+                    </div>
+                    <div class="modal__filters-field" id="modal-checkout-container">
+                        <label for="modal-checkout" class="modal__filters-label">
+                            Выезд
+                        </label>
+                        <input type="text" class="modal__filters-input js-datepicker" id="modal-checkout" value="10.11.2021"
+                            readonly data-container="#modal-checkout-container">
+        
+                    </div>
+                    <div class="modal__filters-field">
+                        <label for="modal-guests" class="modal__filters-label">
+                            Гости
+                        </label>
+                        <div class="modal__select">
+                            <select name="guests" id="modal-guests" class="js-custom-select">
+                                <option value="1">1 Взрослый</option>
+                                <option value="2">2 Взрослых</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal__submit" type="submit">
+                    НАЙТИ
+                </button>
+            </form>
+        
+        </div>        <style>
             .ie-placeholder {
                 z-index: 4000;
                 position: fixed;

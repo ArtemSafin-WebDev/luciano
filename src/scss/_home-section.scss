@@ -50,15 +50,32 @@
 }
 
 .home-section__row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-bottom: 3.2rem;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        
+    }
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+
     &--centered {
         align-items: center;
+        @include breakpoint(mobile) {
+            align-items: stretch;
+            flex-direction: column-reverse;
+        }
     }
+    margin-bottom: 3.2rem;
 
     &:last-child {
         margin-bottom: 5rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 9rem;
+        }
     }
 }
 
@@ -68,7 +85,9 @@
 }
 
 .home-section:nth-child(odd) .home-section__col:nth-child(2) {
-    align-items: flex-end;
+    @include breakpointMF(small-tablet) {
+        align-items: flex-end;
+    }
 }
 
 .home-section__heading {
@@ -77,6 +96,12 @@
     line-height: 120%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 5.2rem;
+        line-height: 100%;
+    }
 }
 
 .home-section__link {
@@ -89,6 +114,13 @@
     text-transform: uppercase;
     color: #f4e5a0;
     margin-top: 3.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 140%;
+        margin-top: 3rem;
+    }
     &:link,
     &:visited {
         color: #f4e5a0;
@@ -106,6 +138,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include breakpoint(mobile) {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 1.5rem;
+    }
     .icon-rombus-filled {
         position: absolute;
         left: 0;
@@ -120,6 +158,11 @@
         width: 1rem;
         height: 1.8rem;
         fill: black;
+
+        @include breakpoint(mobile) {
+            width: 0.8rem;
+            height: 1.2rem;
+        }
     }
 }
 
@@ -128,6 +171,12 @@
     font-size: 1.8rem;
     line-height: 120%;
     max-width: 38rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-top: 1rem;
+    }
 }
 
 .home-section__intro-heading {
@@ -142,6 +191,13 @@
     visibility: hidden;
     transform: translateY(4rem);
     transition: opacity 0.7s, visibility 0.7s, transform 0.7s ease-out;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 120%;
+        margin-bottom: 3.5rem;
+    }
 
     .animatable & {
         opacity: 1;
@@ -177,6 +233,12 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin-bottom: 1.4rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 140%;
+    }
 }
 
 .home-section__events-slider-card-image-container {
@@ -205,6 +267,11 @@
     line-height: 125%;
     letter-spacing: 0.02em;
     font-weight: 300;
+
+    @include breakpoint(mobile) {
+        font-size: 1.3rem;
+        line-height: 110%;
+    }
 }
 
 .home-section__events-slider-card-image {
@@ -231,6 +298,12 @@
     line-height: 120%;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.3rem;
+        line-height: 120%;
+    }
 }
 
 .home-section__events-slider-card-icon {
@@ -244,6 +317,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    
 
     .icon-rombus-filled {
         position: absolute;
@@ -259,6 +334,10 @@
         width: 1.5rem;
         height: 1.5rem;
         fill: #fff;
+        @include breakpoint(mobile) {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
 }
 
@@ -267,6 +346,11 @@
     align-items: center;
     margin-left: 1.8rem;
     margin-top: 7rem;
+
+    @include breakpoint(mobile) {
+        margin-left: auto;
+        margin-top: 7.3rem;
+    }
 }
 
 .home-section__events-slider-arrow {

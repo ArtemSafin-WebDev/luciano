@@ -11,29 +11,59 @@
 }
 
 .page-header__row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    grid-gap: 2rem;
-    align-items: flex-start;
-    padding-top: 6rem;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        grid-gap: 2rem;
+        align-items: flex-start;
+        padding-top: 6rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 2.5rem;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .page-header__logo {
-    grid-column: 2 / 3;
-    pointer-events: all;
+   
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 2 / 3;
+        pointer-events: all;
+    }
+
+    @include breakpoint(mobile) {
+        margin-right: 2rem;
+    }
 }
 
 .page-header__logo-image {
     width: 14rem;
     height: auto;
     display: block;
+
+    @include breakpoint(mobile) {
+        width: 7.2rem;
+    }   
 }
 
 .page-header__controls {
-    grid-column: 3 / 4;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+   
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 3 / 4;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    @include breakpoint(mobile) {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
 }
 
 .page-header__languages {
@@ -41,6 +71,11 @@
     align-items: center;
     gap: 1.6rem;
     pointer-events: all;
+
+    @include breakpoint(mobile) {
+        gap: 1.5rem;
+       
+    }
 }
 
 .page-header__languages-link {
@@ -65,10 +100,10 @@
     }
 
     .mobile-menu-open & {
-        color: rgba(black, .4);
+        color: rgba(black, 0.4);
         &:link,
         &:visited {
-            color: rgba(black, .4);
+            color: rgba(black, 0.4);
         }
 
         .no-touch &:hover,
@@ -95,6 +130,12 @@
     margin-left: 4.5rem;
     pointer-events: all;
 
+    @include breakpoint(mobile) {
+        width: 6rem;
+        height: 6rem;
+        margin-left: 2.5rem;
+    }
+
     & > svg {
         display: block;
         position: absolute;
@@ -112,6 +153,11 @@
         background: #f4e5a0;
         margin-bottom: 0.7rem;
         transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+
+        @include breakpoint(mobile) {
+            width: 1.7rem;
+            margin-bottom: 0.5rem;
+        }
         &:last-of-type {
             margin-bottom: 0;
         }

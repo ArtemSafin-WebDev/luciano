@@ -16,25 +16,29 @@
     --proxima: 'Proxima Nova', sans-serif;
     --cormorant: 'Cormorant', serif;
     --fixed-bottom-panel-height: 11rem;
+
+    @include breakpoint(mobile) {
+        --content-padding: 2.5rem;
+        --fixed-bottom-panel-height: 6rem;
+    }
 }
 
 html {
     box-sizing: border-box;
-   
+
     -webkit-text-size-adjust: 100%;
-    
+
     font-size: 10px;
-   
 
     @media screen and (max-width: 1680px) {
-       
-       
-       
         font-size: 10px;
         font-size: clamp(5px, 0.6vw, 25px);
     }
 
-   
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
+
     @include noHighlight();
 }
 
@@ -185,7 +189,12 @@ th {
     vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--cormorant);
 }
 

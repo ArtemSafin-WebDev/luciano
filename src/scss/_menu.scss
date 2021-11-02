@@ -37,14 +37,21 @@
     padding-top: 6rem;
     color: black;
     padding-bottom: var(--fixed-bottom-panel-height);
-    transition: transform .4s ease-in;
+    transition: transform 0.4s ease-in;
 
     transform: translateX(100%);
 
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 var(--content-padding);
+        padding-top: 10rem;
+        padding-bottom: 9rem;
+    }
+
     .mobile-menu-open & {
         transform: translateX(0%);
-        transition: transform .7s ease-out;
-
+        transition: transform 0.7s ease-out;
     }
 }
 
@@ -53,12 +60,25 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 6rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        align-items: stretch;
+    }
 }
 
 .menu__nav-link {
     margin-bottom: 2rem;
     font-size: 2.5rem;
     line-height: 110%;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 1.3rem 0;
+       
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -73,12 +93,20 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @include breakpoint(mobile) {
+        margin-bottom: 4.5rem;
+    }
 }
 
 .menu__secondary-nav-link {
     font-size: 2rem;
     line-height: 140%;
     margin-bottom: 1.2rem;
+    @include breakpoint(mobile) {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        margin-bottom: 1rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -94,6 +122,12 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
 }
 
 .menu__social-list {
@@ -102,6 +136,9 @@
     gap: 2rem;
     margin-left: 3rem;
     flex-shrink: 0;
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
 }
 
 .menu__social-link {

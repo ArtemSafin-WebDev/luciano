@@ -33,6 +33,10 @@ export default function modals() {
     }
 
     function closeModal(modal) {
+
+        if (window.menuOpen) {
+            window.closeMenu();
+        }
         document.body.classList.remove('modal-open');
         unlockScroll();
 

@@ -1,0 +1,50 @@
+<div class="modal js-modal" id="booking-modal">
+
+    <button class="modal__close js-close-modal">
+        <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+            <use xlink:href="#rombus"></use>
+        </svg>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <h3 class="modal__heading">
+        Забронировать номер
+    </h3>
+    <form class="modal__filters" method="GET" action="/">
+        <div class="modal__filters-fields">
+            <div class="modal__filters-field" id="modal-checkin-container">
+                <label for="modal-checkin" class="modal__filters-label">
+                    Заезд
+                </label>
+                <input type="text" class="modal__filters-input js-datepicker" id="modal-checkin" value="05.11.2021"
+                    readonly data-container="#modal-checkin-container">
+
+            </div>
+            <div class="modal__filters-field" id="modal-checkout-container">
+                <label for="modal-checkout" class="modal__filters-label">
+                    Выезд
+                </label>
+                <input type="text" class="modal__filters-input js-datepicker" id="modal-checkout" value="10.11.2021"
+                    readonly data-container="#modal-checkout-container">
+
+            </div>
+            <div class="modal__filters-field">
+                <label for="modal-guests" class="modal__filters-label">
+                    Гости
+                </label>
+                <div class="modal__select">
+                    <select name="guests" id="modal-guests" class="js-custom-select">
+                        <option value="1">1 Взрослый</option>
+                        <option value="2">2 Взрослых</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button class="modal__submit" type="submit">
+            НАЙТИ
+        </button>
+    </form>
+
+</div>
