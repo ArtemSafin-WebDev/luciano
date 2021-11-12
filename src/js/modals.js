@@ -1,7 +1,10 @@
 import { disableBodyScroll as lockScroll, clearAllBodyScrollLocks as unlockScroll, enableBodyScroll } from 'body-scroll-lock';
+import gsap from 'gsap';
 
 export default function modals() {
     let activeModal = null;
+
+    const logo = document.querySelector('.page-header__logo');
 
     function openModal(id) {
         const modal = document.querySelector(id);
@@ -20,6 +23,11 @@ export default function modals() {
 
             const openModalEvent = new CustomEvent('openmodal');
             document.dispatchEvent(openModalEvent);
+
+            gsap.to(logo, {
+                x: (window.innerWidth / 4) * -1,
+                duration: 0.7
+            });
         };
         if (activeModal) {
             closeModal(activeModal);
@@ -46,6 +54,11 @@ export default function modals() {
 
         const closeModalEvent = new CustomEvent('closemodal');
         document.dispatchEvent(closeModalEvent);
+
+        gsap.to(logo, {
+            x: 0,
+            duration: 0.4
+        });
     }
 
     window.openModal = openModal;

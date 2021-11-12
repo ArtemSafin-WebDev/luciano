@@ -8,6 +8,10 @@
     .mobile-menu-open & {
         padding-right: var(--sb-width, 0);
     }
+
+    .modal-open & {
+        padding-right: var(--sb-width, 0);
+    }
 }
 
 .page-header__row {
@@ -41,8 +45,6 @@
 
     @include breakpoint(mobile) {
         margin-right: 2rem;
-
-       
     }
 }
 

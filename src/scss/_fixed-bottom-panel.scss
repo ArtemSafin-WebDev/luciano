@@ -137,7 +137,7 @@
 
     
 
-    &::after {
+    &::before {
         content: '';
         position: absolute;
         left: 0;
@@ -148,11 +148,11 @@
         transform-origin: center bottom;
         transform: scaleY(0);
         transition: transform 0.4s;
-        z-index: 5;
+      
     }
 
     .mobile-menu-open & {
-        &::after {
+        &::before {
             transform: scaleY(1);
             transition: transform 0.3s ease-out 0.7s;
         }

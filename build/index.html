@@ -259,7 +259,7 @@
             
                     <div class="fixed-bottom-panel__row">
                         <div class="fixed-bottom-panel__col">
-                            <a href="#" class="fixed-bottom-panel__ask-question">
+                            <a href="#ask-question" class="fixed-bottom-panel__ask-question js-open-modal">
                                 <div class="fixed-bottom-panel__ask-question-icon">
                                     <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
                                         <use xlink:href="#rombus"></use>
@@ -323,7 +323,7 @@
                     <div class="fixed-bottom-panel__mobile-links">
             
             
-                        <a href="#" class="fixed-bottom-panel__mobile-link">
+                        <a href="#ask-question" class="fixed-bottom-panel__mobile-link js-open-modal">
                             Задать вопрос
                         </a>
                         <a href="#booking-modal" class="fixed-bottom-panel__mobile-link js-open-modal">
@@ -818,6 +818,86 @@
                 </button>
             </form>
         
+        </div>
+        
+        
+        
+        <div class="ask-question js-modal" id="ask-question">
+            <div class="ask-question__controls">
+                <div class="container">
+                    <div class="ask-question__controls-row">
+                        <button class="ask-question__inner-close js-close-modal">
+                            <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                <use xlink:href="#rombus"></use>
+                            </svg>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+        
+                </div>
+            </div>
+        
+        
+            <div class="ask-question__inner">
+                <h3 class="ask-question__heading">
+                    Задать вопрос
+                </h3>
+                <form action="/" method="POST" class="ask-question__form" data-need-validation="">
+                    <div class="ask-question__form-fields">
+                        <div class="ask-question__form-field">
+                            <label class="ask-question__form-label">
+                                <input type="text" name="name" class="ask-question__form-input"
+                                    placeholder="Иванов иван иванович" required>
+                                <span class="ask-question__form-label-text">
+                                    Фамилия Имя Отчетсво
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ask-question__form-field">
+                            <label class="ask-question__form-label">
+                                <input type="tel" name="phone" class="ask-question__form-input js-phone-input"
+                                    placeholder="+0 (000) 000-00-00" required data-parsley-phone="">
+                                <span class="ask-question__form-label-text">
+                                    Ваш телефон
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ask-question__form-field">
+                            <label class="ask-question__form-label">
+                                <input type="email" name="email" class="ask-question__form-input"
+                                    placeholder="sample@domain.com" required>
+                                <span class="ask-question__form-label-text">
+                                    E-mail
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ask-question__form-field">
+                            <label class="ask-question__form-label">
+                                <textarea name="comment" class="ask-question__form-input"></textarea>
+                                <span class="ask-question__form-label-text">
+                                    Комментарий
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ask-question__form-controls">
+                        <label class="ask-question__form-checkbox">
+                            <input type="checkbox" name="policy" class="ask-question__form-checkbox-input" checked required>
+                            <span class="ask-question__form-checkbox-mark">
+        
+                            </span>
+                            <span class="ask-question__form-checkbox-text">
+                                Соглашаюсь на обработку <a href="#">персональных данных</a>
+                            </span>
+                        </label>
+                        <button class="ask-question__form-submit" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>        <style>
             .ie-placeholder {
                 z-index: 4000;
