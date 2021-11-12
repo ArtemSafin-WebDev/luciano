@@ -1,6 +1,8 @@
 .services {
     padding-top: 2rem;
     padding-bottom: 4.5rem;
+    background-color: white;
+    z-index: 10;
     @include breakpoint(mobile) {
         padding-top: 0;
         padding-bottom: 0;

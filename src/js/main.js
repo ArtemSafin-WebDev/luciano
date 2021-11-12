@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-    homeAnimation();
+    
     ScrollTrigger.refresh();
     setTimeout(() => document.body.classList.add('animatable'), 300);
 });
