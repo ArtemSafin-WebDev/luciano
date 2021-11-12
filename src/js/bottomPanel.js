@@ -16,6 +16,7 @@ export default function bottomPanel() {
         markers: false,
         pin: true,
         pinSpacing: false,
-        toggleClass: 'sticky'
+        toggleClass: 'sticky',
+        anticipatePin: 1
     });
 }
