@@ -1,0 +1,248 @@
+.standard-header {
+    position: relative;
+
+    color: white;
+}
+
+.standard-header__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0e1d2b;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, var(--overlay-opacity, 0));
+    }
+}
+
+.standard-header__bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.standard-header__bg-decor {
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    height: 58rem;
+    width: auto;
+    max-width: none;
+    position: absolute;
+    margin-left: -26rem;
+    margin-top: -10rem;
+}
+
+.standard-header__content {
+    display: flex;
+    flex-direction: column;
+    min-height: 82rem;
+    padding-top: 4rem;
+
+    .standard-header--compact & {
+        min-height: 70rem;
+    }
+}
+
+.standard-header__heading-wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+.standard-header__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8rem;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--cormorant);
+    margin-bottom: 2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.standard-header__breadcrumbs {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(white, 0.5);
+}
+
+.standard-header__breadcrumbs-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    svg {
+        width: 0.8rem;
+        height: 0.4rem;
+        flex-shrink: 0;
+        fill: currentColor;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+    }
+}
+
+.standard-header__bottom-nav {
+    border-top: 1px solid rgba(#ffffff, 0.2);
+    padding: 3.4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    justify-content: center;
+
+    .icon-divider {
+        width: 4.8rem;
+        height: 4.4rem;
+        flex-shrink: 0;
+        fill: rgba(white, 0.2);
+    }
+}
+
+.standard-header__nav-link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-family: var(--cormorant);
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #f4e5a0;
+    }
+    &.active {
+        color: #f4e5a0;
+    }
+}
+
+.standard-header__heading-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 140%;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.standard-header__contacts {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.standard-header__contacts-icon {
+    flex-shrink: 0;
+    width: 5.6rem;
+    height: 5.6rem;
+    object-fit: contain;
+    margin-right: 1.4rem;
+}
+
+.standard-header__contacts-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 0.8rem;
+}
+
+.standard-header__contacts-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: block;
+    display: flex;
+    align-items: center;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #f4e5a0;
+    }
+}
+
+.standard-header__apartment-info {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.standard-header__apartment-info-features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    row-gap: 2rem;
+}
+
+.standard-header__apartment-info-feature {
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 140%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    gap: .8rem;
+    svg {
+        flex-shrink: 0;
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: currentColor;
+        
+      
+    }
+}
+
+.standard-header__apartment-info-tour-link {
+    margin-top: 3rem;
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    gap: 1rem;
+    svg {
+        flex-shrink: 0;
+        
+        width: 5.6rem;
+        height: 5.6rem;
+        fill: currentColor;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

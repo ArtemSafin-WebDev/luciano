@@ -1,0 +1,104 @@
+.links {
+}
+
+.links__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid #bb9b8c;
+    border-bottom: 1px solid #bb9b8c;
+}
+
+.links + .links {
+    .links__row {
+        border-top: none;
+    }
+}
+
+.links__btn {
+    display: flex;
+    flex-direction: column;
+    min-height: 38rem;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, background-color 0.2s;
+
+    &:nth-child(odd) {
+        border-right: 1px solid #bb9b8c;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: #bb9b8c;
+        color: white;
+
+        .links__btn-content {
+            color: white;
+        }
+
+        .links__btn-icon {
+            &::before {
+                border-color: rgba(white, .4);
+            }
+
+            svg {
+                fill: white;
+            }
+        }
+    }
+}
+
+.links__btn-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: var(--cormorant);
+}
+
+.links__btn-content {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 140%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #0e1d2b;
+    transition: color .2s;
+}
+
+.links__btn-icon {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    z-index: 1;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+        border: 1px solid rgba(#0e1d2b, 0.4);
+        z-index: -1;
+        transition: border-color .2s;
+    }
+    svg {
+        fill: #0e1d2b;
+        width: 1.6rem;
+        height: 1.6rem;
+        transition: fill .2s;
+    }
+}

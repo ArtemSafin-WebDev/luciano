@@ -17,6 +17,12 @@ export default function bottomPanel() {
         pin: true,
         pinSpacing: false,
         toggleClass: 'sticky',
-        anticipatePin: 1
+        anticipatePin: 1,
+        onLeave: () => {
+            document.body.classList.add('fixed-panel-docked');
+        },
+        onEnterBack: () => {
+            document.body.classList.remove('fixed-panel-docked');
+        }
     });
 }

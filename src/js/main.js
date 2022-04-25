@@ -17,6 +17,9 @@ import eventsSlider from './eventsSlider';
 import bottomPanel from './bottomPanel';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import homeSectionGallery from './homeSectionGallery';
+import tabs from './tabs';
+import gallerySlider from './gallery';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,10 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     modals();
     datepicker();
+    homeSectionGallery();
     homeAnimation();
 
     eventsSlider();
     bottomPanel();
+    tabs();
+    gallerySlider();
+   
     if (history.scrollRestoration) {
         history.scrollRestoration = 'manual';
     }
