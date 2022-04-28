@@ -1,0 +1,118 @@
+.announcement {
+    padding: 6rem 0;
+}
+
+.announcement__card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem;
+    border: 1px solid #bb9b8c;
+    max-width: 114rem;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+
+    &--with-decoration {
+        margin-top: 7rem;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover {
+        .announcement__card-bg-image {
+            transform: scale(1.02);
+        }
+    }
+}
+
+.announcement__card-decoration {
+    bottom: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21rem;
+    line-height: 1;
+    color: rgba(#bb9b8c, 0.2);
+    font-family: var(--caravan);
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    margin-bottom: -2rem;
+    margin-left: -9rem;
+}
+
+.announcement__card-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.announcement__card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, var(--overlay-opacity, 0.3));
+    }
+}
+
+.announcement__card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.announcement__card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7rem 8rem;
+    min-height: 40rem;
+}
+
+.announcement__card-heading {
+    margin-bottom: 8rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 7.3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    margin-bottom: 8rem;
+    font-family: var(--cormorant);
+}
+
+.announcement__card-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.announcement__card-text {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 130%;
+    max-width: 54rem;
+}

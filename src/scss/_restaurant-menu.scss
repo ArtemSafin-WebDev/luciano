@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 3rem;
     margin-bottom: 7rem;
 }
 
@@ -26,23 +26,46 @@
     width: 6rem;
     height: 6rem;
     flex-shrink: 0;
+    transition: opacity .2s;
     svg {
         display: block;
         width: 100%;
         height: 100%;
     }
+
+    &.swiper-button-disabled {
+        opacity: .5;
+        cursor: default;
+    }
 }
 
 .restaurant-menu__nav {
-    display: flex;
-    align-items: center;
-    gap: 2.4rem;
+    width: 50%;
+    flex-grow: 1;
+   
 
-    .icon-divider {
+
+    .swiper-container {
+        margin: 0;
+        width: 100%;
+        padding: 0 2rem;
+        mask-image: linear-gradient(to right, transparent 0, white 1.5rem, white calc(100% - 1.5rem), transparent 100%);
+    }
+    .swiper-slide {
+        width: auto;
+        box-sizing: content-box;
         flex-shrink: 0;
-        width: 4.8rem;
-        height: 4.3rem;
-        fill: #bb9b8c;
+        padding-right: 2.4rem;
+
+        &:last-child {
+            .icon-divider {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
     }
 }
 
@@ -58,11 +81,27 @@
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: rgba(#000000, 0.3);
     font-family: var(--cormorant);
+    gap: 2.4rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    flex-grow: 1;
+
+    .icon-divider {
+        flex-shrink: 0;
+        width: 4.8rem;
+        height: 4.3rem;
+        fill: #bb9b8c;
+    }
     &:link,
     &:visited {
         color: rgba(#000000, 0.3);
     }
 
+
+    .no-touch &:hover,
+    .touch &:active,
     &.active {
         color: black;
     }
@@ -138,6 +177,7 @@
     color: rgba(black, 0.5);
     transition: color 0.2s;
     margin-top: 0.3rem;
+    font-family: var(--montserrat);
 }
 
 .restaurant-menu__show-more {

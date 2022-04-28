@@ -19,8 +19,8 @@
     &::before {
         content: '';
         position: absolute;
-        left: 12rem;
-        right: 12rem;
+        left: 14rem;
+        right: 14rem;
         bottom: 0;
         height: 1px;
         background-color: #D9D9D9;
@@ -40,6 +40,7 @@
     display: block;
     position: relative;
     padding-bottom: 5rem;
+    font-family: var(--montserrat);
     &:link,
     &:visited {
         color: #b3b3b3;
@@ -60,6 +61,9 @@
         transition: background-color .2s;
         position: absolute;
     }
+
+    .no-touch &:hover,
+    .touch &:active,
 
     &.active {
         color: #000000;

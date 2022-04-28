@@ -1,0 +1,28 @@
+.circle-btn {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    user-select: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-family: var(--cormorant);
+    padding-left: 4.5rem;
+    position: relative;
+    z-index: 1;
+
+    svg {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10rem;
+        height: 10rem;
+        z-index: -1;
+        pointer-events: none;
+    }
+}

@@ -20,6 +20,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import homeSectionGallery from './homeSectionGallery';
 import tabs from './tabs';
 import gallerySlider from './gallery';
+import showAll from './showAll';
+import fancybox from './fancybox';
+import restaurantsMenuNav from './restaurantsMenuNav';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
     bottomPanel();
     tabs();
     gallerySlider();
+    showAll();
+    fancybox();
+    restaurantsMenuNav();
    
     if (history.scrollRestoration) {
         history.scrollRestoration = 'manual';

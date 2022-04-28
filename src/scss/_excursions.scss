@@ -52,9 +52,22 @@
     margin-top: 8rem;
 }
 
+// .excursions__list-item {
+//     .container:not(.all-shown) &:not(:nth-child(-n+6)) {
+//         display: none;
+//     }
+// }
+
 .excursions__card {
     display: flex;
     flex-direction: column;
+
+    .no-touch &:hover,
+    .touch &:active {
+        .excursions__card-title {
+            color: #BB9B8C;
+        }
+    }
 }
 
 .excursions__card-image-container {
@@ -104,6 +117,7 @@
     text-transform: uppercase;
     font-family: var(--cormorant);
     margin-bottom: 1.2rem;
+    transition: color .2s;
 }
 
 .excursions__card-price {
