@@ -25,4 +25,10 @@
         z-index: -1;
         pointer-events: none;
     }
+
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #bb9b8c;
+    }
 }

@@ -1,0 +1,30 @@
+.scheme {
+    padding: 6rem 0;
+    background: #ececec;
+}
+
+.scheme__heading {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    font-family: var(--cormorant);
+}
+
+
+.scheme__content {
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.scheme__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}

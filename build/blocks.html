@@ -455,6 +455,116 @@
     </div>
 </section>
 
+<section class="standard-header">
+    <div class="standard-header__bg">
+        <img src="img/decor.svg" alt="" class="standard-header__bg-decor">
+    </div>
+    <div class="container">
+        <div class="standard-header__content">
+
+
+            <div class="standard-header__breadcrumbs">
+                <a href="#" class="standard-header__breadcrumbs-link">
+                    Главная
+                </a>
+
+                <a href="#" class="standard-header__breadcrumbs-link">
+                    Отель
+                </a>
+
+                <a href="#" class="standard-header__breadcrumbs-link">
+                    Программы с проживанием
+                </a>
+            </div>
+            <div class="standard-header__heading-wrapper">
+                <h2 class="standard-header__heading">
+                    Программы<br> с проживанием
+
+                </h2>
+            </div>
+            <div class="fixed-bottom-panel js-bottom-panel">
+                <div class="fixed-bottom-panel__desktop">
+            
+            
+                    <div class="fixed-bottom-panel__row">
+                        <div class="fixed-bottom-panel__col">
+                            <a href="#ask-question" class="fixed-bottom-panel__ask-question js-open-modal">
+                                <div class="fixed-bottom-panel__ask-question-icon">
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                        <use xlink:href="#rombus"></use>
+                                    </svg>
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-question">
+                                        <use xlink:href="#question"></use>
+                                    </svg>
+                                </div>
+                                <div class="fixed-bottom-panel__ask-question-text">
+                                    Задать вопрос
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fixed-bottom-panel__col">
+                            <form class="fixed-bottom-panel__filters" action="/" method="GET">
+                                <div class="fixed-bottom-panel__filters-inputs">
+                                    <div class="fixed-bottom-panel__filters-input-wrapper" id="checkin-container">
+                                        <label for="checkin" class="fixed-bottom-panel__filters-input-label">
+                                            Заезд
+                                        </label>
+                                        <input type="text" name="checkin" class="fixed-bottom-panel__filters-input js-datepicker"
+                                            data-container="#checkin-container" readonly="" id="checkin" value="05.11.2021">
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper" id="checkout-container">
+                                        <label for="checkout" class="fixed-bottom-panel__filters-input-label">
+                                            Выезд
+                                        </label>
+                                        <input type="text" name="checkout" class="fixed-bottom-panel__filters-input js-datepicker"
+                                            data-container="#checkout-container" readonly="" id="checkout" value="10.11.2021">
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper">
+                                        <label for="guests" class="fixed-bottom-panel__filters-input-label">
+                                            Гости
+                                        </label>
+                                        <div class="fixed-bottom-panel__select">
+                                            <select name="guests" id="guests" class="js-custom-select">
+                                                <option value="1">1 Взрослый</option>
+                                                <option value="2">2 Взрослых</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="fixed-bottom-panel__filters-submit">
+                                    <span class="fixed-bottom-panel__filters-submit-icon">
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                            <use xlink:href="#rombus"></use>
+                                        </svg>
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-search">
+                                            <use xlink:href="#search"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="fixed-bottom-panel__filters-submit-text">
+                                        Найти номер
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-bottom-panel__mobile">
+                    <div class="fixed-bottom-panel__mobile-links">
+            
+            
+                        <a href="#ask-question" class="fixed-bottom-panel__mobile-link js-open-modal">
+                            Задать вопрос
+                        </a>
+                        <a href="#booking-modal" class="fixed-bottom-panel__mobile-link js-open-modal">
+                            Найти номер
+                        </a>
+                    </div>
+                </div>
+            
+            </div>        </div>
+
+    </div>
+</section>
 <section class="standard-header standard-header--compact">
     <div class="standard-header__bg">
         <img src="img/decor.svg" alt="" class="standard-header__bg-decor">
@@ -2641,6 +2751,343 @@
 
             </div>
         </div>
+    </div>
+</section>
+
+
+<section class="extra-services">
+    <div class="container">
+        <h2 class="extra-services__heading">
+            ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
+        </h2>
+        <div class="extra-services__content">
+            <div class="extra-services__block">
+                <h3 class="extra-services__block-heading">
+                    УХОД
+                    <div class="extra-services__block-heading-decor">
+                        Уход
+                    </div>
+                </h3>
+                <ul class="extra-services__list">
+                    <li class="extra-services__list-item">
+                        <div class="extra-services__card">
+                            <div class="extra-services__card-key">
+                                Очищение тела рукавичкой кессе
+                            </div>
+                            <div class="extra-services__card-value">
+                                3 300 ₽
+                            </div>
+                        </div>
+                    </li>
+                    <li class="extra-services__list-item">
+                        <div class="extra-services__card">
+                            <div class="extra-services__card-key">
+                                Скрабирование Algoane цветочное
+                            </div>
+                            <div class="extra-services__card-value">
+                                3 300 ₽
+                            </div>
+                        </div>
+                    </li>
+                    <li class="extra-services__list-item">
+                        <div class="extra-services__card">
+                            <div class="extra-services__card-key">
+                                Скрабирование Stenders
+                            </div>
+                            <div class="extra-services__card-value">
+                                3 300 ₽
+                            </div>
+                        </div>
+                    </li>
+                    <li class="extra-services__list-item">
+                        <div class="extra-services__card">
+                            <div class="extra-services__card-key">
+                                Скрабирование медово-соляное
+
+                            </div>
+                            <div class="extra-services__card-value">
+                                3 300 ₽
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="extra-services__block">
+                <h3 class="extra-services__block-heading">
+                    Парение
+                    <div class="extra-services__block-heading-decor">
+                        Парение
+                    </div>
+                </h3>
+                <ul class="extra-services__list">
+                    <li class="extra-services__list-item">
+                        <div class="extra-services__card">
+                            <div class="extra-services__card-key">
+                                Парение на сене
+                            </div>
+                            <div class="extra-services__card-value">
+                                2 300 ₽
+                            </div>
+                        </div>
+                    </li>
+                    <li class="extra-services__list-item">
+                        <div class="extra-services__card">
+                            <div class="extra-services__card-key">
+                                Парение «Таежное»
+                                1-6 человек
+                            </div>
+                            <div class="extra-services__card-value">
+                                2 300 ₽
+                            </div>
+                        </div>
+                    </li>
+                    <li class="extra-services__list-item">
+                        <div class="extra-services__card">
+                            <div class="extra-services__card-key">
+                                Парение на сене с апельсинами
+                                1-6 человек
+                            </div>
+                            <div class="extra-services__card-value">
+                                2 300 ₽
+                            </div>
+                        </div>
+                    </li>
+                    <li class="extra-services__list-item">
+                        <div class="extra-services__card">
+                            <div class="extra-services__card-key">
+                                Парение «Таежное» с апельсинами
+                                1-6 человек
+                            </div>
+                            <div class="extra-services__card-value">
+                                2 300 ₽
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="custom-set">
+    <div class="container">
+        <h2 class="custom-set__heading">
+            соБЕРИТЕ индивидуальный пакет оздоровительной программы
+        </h2>
+        <div class="custom-set__content">
+            <div class="custom-set__block">
+                <h3 class="custom-set__block-heading">
+                    КОНСУЛЬТАЦИИ ВРАЧЕЙ:
+                </h3>
+                <ul class="custom-set__list">
+                    <li class="custom-set__list-item">
+                        Эндокринолог
+                    </li>
+                    <li class="custom-set__list-item">
+                        Травматолог-ортопед
+                    </li>
+                    <li class="custom-set__list-item">
+                        Кардиолог
+                    </li>
+                    <li class="custom-set__list-item">
+                        ЛОР-врач
+                    </li>
+                    <li class="custom-set__list-item">
+                        Гастроэнтеролог-диетолог
+                    </li>
+                    <li class="custom-set__list-item">
+                        Аллерголог-иммунолог
+                    </li>
+                    <li class="custom-set__list-item">
+                        Психотерапевт
+                    </li>
+                    <li class="custom-set__list-item">
+                        Нутрициолог
+                    </li>
+                    <li class="custom-set__list-item">
+                        Невролог
+                    </li>
+                    <li class="custom-set__list-item">
+                        Гинеколог
+                    </li>
+                    <li class="custom-set__list-item">
+                        Физиотерапевт
+                    </li>
+                </ul>
+            </div>
+            <div class="custom-set__block">
+                <h3 class="custom-set__block-heading">
+                    ДИАГНОСТИЧЕСКИЕ ПРОЦЕДУРЫ:
+                </h3>
+                <ul class="custom-set__list">
+                    <li class="custom-set__list-item">
+                        Оценка состава тела на апарате
+                        IN BODY
+                    </li>
+                    <li class="custom-set__list-item">
+                        Анализы / УЗИ-диагностика
+                    </li>
+                    <li class="custom-set__list-item">
+                        Cпектрометрический анализ уровня минералов, микроэлементов, тяжелых металлов в тканях на
+                        аппарате OligoScan
+                    </li>
+                    <li class="custom-set__list-item">
+                        Оценка плотности костной ткани
+                    </li>
+                    <li class="custom-set__list-item">
+                        Диагностика организма на аппартае метатрон
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<a href="#" class="call-to-action">
+    <div class="call-to-action__bg">
+        <img src="img/luciano-decor.svg" alt="" class="call-to-action__bg-image">
+    </div>
+    <div class="container">
+        <div class="call-to-action__content">
+            <div class="call-to-action__link">
+                Оформить заказ →
+            </div>
+        </div>
+    </div>
+</a>
+<a href="#" class="call-to-action call-to-action--biege">
+    <div class="call-to-action__bg">
+        <img src="img/luciano-decor-white.svg" alt="" class="call-to-action__bg-image">
+    </div>
+    <div class="container">
+        <div class="call-to-action__content">
+            <div class="call-to-action__link">
+                Забронировать столик →
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="#" class="call-to-action">
+    <div class="call-to-action__bg">
+        <img src="img/call-to-action-bg.jpg" alt="" class="call-to-action__bg-image-fill">
+        <img src="img/luciano-decor.svg" alt="" class="call-to-action__bg-image">
+    </div>
+    <div class="container">
+        <div class="call-to-action__content">
+            <div class="call-to-action__link">
+                Оформить заказ →
+            </div>
+        </div>
+    </div>
+</a>
+
+<section class="scheme">
+    <div class="container">
+        <h2 class="scheme__heading">
+            схема зала
+        </h2>
+        <div class="scheme__content">
+            <img src="img/scheme.jpg" alt="" class="scheme__image">
+        </div>
+    </div>
+</section>
+
+
+<section class="variants">
+    <div class="container">
+        <ul class="variants__list">
+            <li class="variants__list-item">
+                <div class="variants__card">
+                    <div class="variants__card-image-container">
+                        <img data-src="img/variants/1.jpg" alt="" class="variants__card-image lazyload">
+                    </div>
+                    <div class="variants__card-content">
+                        <h3 class="variants__card-title">
+                            ADRIANA
+                        </h3>
+                        <div class="variants__card-text">
+                            Позвольте себе полностью отключиться от ежедневной суеты и испытать ощущение истинного
+                            блаженства
+                        </div>
+                        <a href="#" class="circle-btn variants__card-link">
+                            <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                <use xlink:href="#semicircle"></use>
+                            </svg>
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="variants__list-item">
+                <div class="variants__card">
+                    <div class="variants__card-image-container">
+                        <img data-src="img/variants/2.jpg" alt="" class="variants__card-image lazyload">
+                    </div>
+                    <div class="variants__card-content">
+                        <h3 class="variants__card-title">
+                            алиса
+                        </h3>
+                        <div class="variants__card-text">
+                            Ощутите чистую энергию авторских уходов, в основе каждого из которых глубокие познания
+                            физиологии и различных спа-методик
+                        </div>
+                        <a href="#" class="circle-btn variants__card-link">
+                            <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                <use xlink:href="#semicircle"></use>
+                            </svg>
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="variants__list-item">
+                <div class="variants__card">
+                    <div class="variants__card-image-container">
+                        <img data-src="img/variants/3.jpg" alt="" class="variants__card-image lazyload">
+                    </div>
+                    <div class="variants__card-content">
+                        <h3 class="variants__card-title">
+                            дракон
+                        </h3>
+                        <div class="variants__card-text">
+                            Попариться в бане всегда означало испытать блаженство – пар очищает,
+                            придает сил, дарит здоровье
+                        </div>
+                        <a href="#" class="circle-btn variants__card-link">
+                            <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                <use xlink:href="#semicircle"></use>
+                            </svg>
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="variants__list-item">
+                <div class="variants__card">
+                    <div class="variants__card-image-container">
+                        <img data-src="img/variants/4.jpg" alt="" class="variants__card-image lazyload">
+                    </div>
+                    <div class="variants__card-content">
+                        <h3 class="variants__card-title">
+                            лебедь
+                        </h3>
+                        <div class="variants__card-text">
+                            Проведите целый день, полностью погрузившись в атмосферу LUCIANO SPA
+                        </div>
+                        <a href="#" class="circle-btn variants__card-link">
+                            <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                <use xlink:href="#semicircle"></use>
+                            </svg>
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </section>
 

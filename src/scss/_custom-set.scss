@@ -1,0 +1,72 @@
+.custom-set {
+    padding: 6rem 0;
+    background: #ececec;
+}
+
+.custom-set__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    font-family: var(--cormorant);
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 7rem;
+    max-width: 95rem;
+    width: 100%;
+}
+
+.custom-set__content {
+    width: 100%;
+    max-width: 94.6rem;
+    margin: 0 auto;
+}
+
+.custom-set__block {
+    margin-bottom: 8rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.custom-set__block-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 140%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+    margin-bottom: 3rem;
+}
+
+.custom-set__list {
+    column-count: 2;
+    column-gap: 6rem;
+}
+
+.custom-set__list-item {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+    padding-left: 3.2rem;
+    position: relative;
+    font-family: var(--cormorant);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 120%;
+    &::before {
+        content: '';
+        background-image: url('../img/marker.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 1.2rem;
+        height: 1.2rem;
+        position: absolute;
+        left: 0;
+        top: 1.2rem;
+    }
+}
