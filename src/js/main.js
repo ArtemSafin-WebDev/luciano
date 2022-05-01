@@ -26,6 +26,10 @@ import restaurantsMenuNav from './restaurantsMenuNav';
 
 gsap.registerPlugin(ScrollTrigger);
 
+window.refreshScrollTrigger = () => {
+    ScrollTrigger.refresh();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
