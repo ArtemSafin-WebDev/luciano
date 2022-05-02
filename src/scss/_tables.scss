@@ -1,0 +1,138 @@
+.tables {
+    padding: 6rem 0;
+    background-color: #ececec;
+}
+
+.tables__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--cormorant);
+    margin-bottom: 6rem;
+}
+
+
+.tables__slider {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 144rem;
+}
+
+.tables__slider-main {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.tables__slider-main-inner {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.tables__slider-arrow {
+    flex-shrink: 0;
+    width: 13rem;
+    height: 13rem;
+    transition: opacity .2s;
+
+    &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    &--prev {
+        margin-right: 8.8rem;
+    }
+
+    &--next {
+        margin-left: 8.8rem;
+    }
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.tables__slider-card {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+    }
+}
+
+.tables__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tables__slider-thumbs-card {
+    cursor: pointer;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.34);
+        transition: opacity .2s;
+        opacity: 0;
+    }
+
+    .swiper-slide-thumb-active & {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.tables__slider-thumbs-card-rombus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #F4E5A0;
+    transition: opacity .2s;
+    opacity: 0;
+    z-index: 20;
+
+    .swiper-slide-thumb-active & {
+        opacity: 1;
+    }
+}
+
+.tables__slider-thumbs-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tables__slider-thumbs {
+    padding: 0 21.8rem;
+    .swiper-slide {
+        width: 8rem;
+    }
+}

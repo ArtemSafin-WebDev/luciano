@@ -1070,7 +1070,7 @@
         </div>
         <ul class="excursions__list">
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#excursion-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/excursions/1.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1090,9 +1090,10 @@
                         на русском языке
                     </div>
                 </a>
+                {{> excursion-modal }}
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#excursion-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/excursions/2.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1112,9 +1113,10 @@
                         на русском языке
                     </div>
                 </a>
+
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#excursion-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/excursions/3.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1136,7 +1138,7 @@
                 </a>
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#excursion-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/excursions/4.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1158,7 +1160,7 @@
                 </a>
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#excursion-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/excursions/5.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1180,7 +1182,7 @@
                 </a>
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#excursion-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/excursions/6.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1225,7 +1227,7 @@
         </div>
         <ul class="excursions__list">
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#flowers-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/flowers/1.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1238,9 +1240,10 @@
                     </div>
 
                 </a>
+                {{> flowers-modal }}
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#flowers-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/flowers/2.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1255,7 +1258,7 @@
                 </a>
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#flowers-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/flowers/3.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1270,7 +1273,7 @@
                 </a>
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#flowers-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/flowers/4.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1285,7 +1288,7 @@
                 </a>
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#flowers-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/flowers/5.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -1300,7 +1303,7 @@
                 </a>
             </li>
             <li class="excursions__list-item">
-                <a href="#" class="excursions__card">
+                <a href="#flowers-modal" class="excursions__card js-open-modal">
                     <div class="excursions__card-image-container">
                         <img src="img/flowers/6.jpg" alt="" class="excursions__card-image">
                     </div>
@@ -2794,6 +2797,269 @@
     </div>
 </section>
 
+
+<section class="tables">
+    <div class="container">
+        <h2 class="tables__heading">
+            расстановка столов
+        </h2>
+        <div class="tables__slider js-tables-slider">
+            <div class="tables__slider-main">
+                <button class="tables__slider-arrow tables__slider-arrow--prev">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-left">
+                        <use xlink:href="#gallery-slider-arrow-left"></use>
+                    </svg>
+                </button>
+                <div class="tables__slider-main-inner">
+
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tables__slider-card">
+                                    <img data-src="img/tables.jpg" alt="" class="tables__slider-card-image lazyload">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tables__slider-card">
+                                    <img data-src="img/tables.jpg" alt="" class="tables__slider-card-image lazyload">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tables__slider-card">
+                                    <img data-src="img/tables.jpg" alt="" class="tables__slider-card-image lazyload">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tables__slider-card">
+                                    <img data-src="img/tables.jpg" alt="" class="tables__slider-card-image lazyload">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="tables__slider-arrow tables__slider-arrow--next">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-right">
+                        <use xlink:href="#gallery-slider-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="tables__slider-thumbs">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="tables__slider-thumbs-card">
+                                <img src="img/tables-thumbs/1.jpg" alt="" class="tables__slider-thumbs-card-image">
+                                <div class="tables__slider-thumbs-card-rombus">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tables__slider-thumbs-card">
+                                <img src="img/tables-thumbs/2.jpg" alt="" class="tables__slider-thumbs-card-image">
+                                <div class="tables__slider-thumbs-card-rombus">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tables__slider-thumbs-card">
+                                <img src="img/tables-thumbs/3.jpg" alt="" class="tables__slider-thumbs-card-image">
+                                <div class="tables__slider-thumbs-card-rombus">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tables__slider-thumbs-card">
+                                <img src="img/tables-thumbs/4.jpg" alt="" class="tables__slider-thumbs-card-image">
+                                <div class="tables__slider-thumbs-card-rombus">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="masterclasses">
+    <div class="container">
+        <div class="masterclasses__content">
+
+
+            <h2 class="masterclasses__heading">
+                ВАРИАНТЫ КУЛИНАРНОГО
+                МАСТЕР-КЛАССА
+            </h2>
+            <div class="masterclasses__text">
+                <p>
+                    В каждый пакет программы «Будний день» входит 4 варианта кулинарного мастер-класса, на котором, под
+                    руководством шефа, вы приготовите изысканный ужин
+                </p>
+            </div>
+            <div class="masterclasses__slider js-masterclass-slider">
+                <div class="masterclasses__slider-main">
+                    <button class="masterclasses__slider-arrow masterclasses__slider-arrow--prev">
+                        <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-left">
+                            <use xlink:href="#gallery-slider-arrow-left"></use>
+                        </svg>
+                    </button>
+                    <div class="masterclasses__slider-main-inner">
+
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="masterclasses__slider-card">
+                                        <div class="masterclasses__slider-card-content">
+                                            <h3 class="masterclasses__slider-card-title">
+                                                1 вариант
+                                            </h3>
+                                            <ul class="masterclasses__slider-card-list">
+                                                <li class="masterclasses__slider-card-list-item">
+                                                    Том ям с морепродуктами
+                                                </li>
+                                                <li class="masterclasses__slider-card-list-item">
+                                                    Свежемаринованный лосось с морковным маслом, гуакамоле, томатной
+                                                    водицей
+                                                    и
+                                                    азиатским соусом
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="masterclasses__slider-card-image-wrapper">
+                                            <img data-src="img/masterclasses-image.jpg" alt=""
+                                                class="masterclasses__slider-card-image lazyload">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="masterclasses__slider-card">
+                                        <div class="masterclasses__slider-card-content">
+                                            <h3 class="masterclasses__slider-card-title">
+                                                2 вариант
+                                            </h3>
+                                            <ul class="masterclasses__slider-card-list">
+                                                <li class="masterclasses__slider-card-list-item">
+                                                    Том ям с морепродуктами
+                                                </li>
+                                                <li class="masterclasses__slider-card-list-item">
+                                                    Свежемаринованный лосось с морковным маслом, гуакамоле, томатной
+                                                    водицей
+                                                    и
+                                                    азиатским соусом
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="masterclasses__slider-card-image-wrapper">
+                                            <img data-src="img/masterclasses-image.jpg" alt=""
+                                                class="masterclasses__slider-card-image lazyload">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="masterclasses__slider-card">
+                                        <div class="masterclasses__slider-card-content">
+                                            <h3 class="masterclasses__slider-card-title">
+                                                3 вариант
+                                            </h3>
+                                            <ul class="masterclasses__slider-card-list">
+                                                <li class="masterclasses__slider-card-list-item">
+                                                    Том ям с морепродуктами
+                                                </li>
+                                                <li class="masterclasses__slider-card-list-item">
+                                                    Свежемаринованный лосось с морковным маслом, гуакамоле, томатной
+                                                    водицей
+                                                    и
+                                                    азиатским соусом
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="masterclasses__slider-card-image-wrapper">
+                                            <img data-src="img/masterclasses-image.jpg" alt=""
+                                                class="masterclasses__slider-card-image lazyload">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="masterclasses__slider-card">
+                                        <div class="masterclasses__slider-card-content">
+                                            <h3 class="masterclasses__slider-card-title">
+                                                4 вариант
+                                            </h3>
+                                            <ul class="masterclasses__slider-card-list">
+                                                <li class="masterclasses__slider-card-list-item">
+                                                    Том ям с морепродуктами
+                                                </li>
+                                                <li class="masterclasses__slider-card-list-item">
+                                                    Свежемаринованный лосось с морковным маслом, гуакамоле, томатной
+                                                    водицей
+                                                    и
+                                                    азиатским соусом
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="masterclasses__slider-card-image-wrapper">
+                                            <img data-src="img/masterclasses-image.jpg" alt=""
+                                                class="masterclasses__slider-card-image lazyload">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="masterclasses__slider-arrow masterclasses__slider-arrow--next">
+                        <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-right">
+                            <use xlink:href="#gallery-slider-arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="masterclasses__slider-thumbs">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="masterclasses__slider-thumbs-card">
+                                    <img src="img/tables-thumbs/1.jpg" alt="" class="masterclasses__slider-thumbs-card-image">
+                                    <div class="masterclasses__slider-thumbs-card-rombus">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="masterclasses__slider-thumbs-card">
+                                    <img src="img/tables-thumbs/2.jpg" alt="" class="masterclasses__slider-thumbs-card-image">
+                                    <div class="masterclasses__slider-thumbs-card-rombus">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="masterclasses__slider-thumbs-card">
+                                    <img src="img/tables-thumbs/3.jpg" alt="" class="masterclasses__slider-thumbs-card-image">
+                                    <div class="masterclasses__slider-thumbs-card-rombus">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="masterclasses__slider-thumbs-card">
+                                    <img src="img/tables-thumbs/4.jpg" alt="" class="masterclasses__slider-thumbs-card-image">
+                                    <div class="masterclasses__slider-thumbs-card-rombus">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="variants">
     <div class="container">

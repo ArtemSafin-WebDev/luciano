@@ -93,7 +93,7 @@
 }
 
 .ask-question__inner-close {
-    pointer-events: initial;
+    // pointer-events: initial;
 }
 
 .ask-question__controls {
@@ -102,7 +102,7 @@
     left: 0;
     width: 100%;
     padding-top: 6rem;
-    pointer-events: none;
+    // pointer-events: none;
 
     @include breakpoint(mobile) {
         padding-top: 2.5rem;
@@ -128,7 +128,7 @@
     z-index: 1;
     flex-shrink: 0;
     margin-left: 4.5rem;
-    pointer-events: all;
+    // pointer-events: all;
 
     @include breakpoint(mobile) {
         width: 6rem;

@@ -27,8 +27,8 @@
     }
 
 
-    .no-touch &:hover,
-    .touch &:active {
+    .no-touch &[href]:hover,
+    .touch &[href]:active {
         color: #bb9b8c;
     }
 }

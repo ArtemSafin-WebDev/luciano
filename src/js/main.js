@@ -1,4 +1,3 @@
-import polyfills from './polyfills';
 import './lazyload';
 import detectTouch from './detectTouch';
 import setScrollbarWidth from './setScrollbarWidth';
@@ -23,6 +22,9 @@ import gallerySlider from './gallery';
 import showAll from './showAll';
 import fancybox from './fancybox';
 import restaurantsMenuNav from './restaurantsMenuNav';
+import tablesSlider from './tablesSlider';
+import flowersSlider from './flowersSlider';
+import masterclassSlider from './masterclassSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,7 +33,6 @@ window.refreshScrollTrigger = () => {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    polyfills();
     detectTouch();
     setScrollbarWidth();
     validation();
@@ -54,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
     showAll();
     fancybox();
     restaurantsMenuNav();
+    tablesSlider();
+    flowersSlider();
+    masterclassSlider();
    
     if (history.scrollRestoration) {
         history.scrollRestoration = 'manual';
