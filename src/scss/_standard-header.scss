@@ -43,6 +43,13 @@
     position: absolute;
     margin-left: -26rem;
     margin-top: -10rem;
+
+
+    @include breakpoint(mobile) {
+        height: 22.2rem;
+        width: auto;
+        margin: 0;
+    }
 }
 
 .standard-header__content {
@@ -50,6 +57,10 @@
     flex-direction: column;
     min-height: 82rem;
     padding-top: 4rem;
+
+    @include breakpoint(mobile) {
+        
+    }
 
     .standard-header--compact & {
         min-height: 70rem;
@@ -62,14 +73,7 @@
 }
 
 .standard-header__heading {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 8rem;
-    line-height: 120%;
-    text-align: center;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-family: var(--cormorant);
+    @include largeHeading();
     margin-bottom: 2rem;
     &:last-child {
         margin-bottom: 0;
@@ -87,6 +91,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.7rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .standard-header__breadcrumbs-link {
@@ -136,10 +144,7 @@
 .standard-header__bottom-nav {
     border-top: 1px solid rgba(#ffffff, 0.2);
     padding: 3.4rem 0;
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    justify-content: center;
+    
 
   
 }

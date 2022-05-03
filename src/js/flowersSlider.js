@@ -6,7 +6,7 @@ export default function flowersSlider() {
     const elements = Array.from(document.querySelectorAll('.js-flowers-slider'));
 
     elements.forEach(element => {
-        const container = element.querySelector('.swiper-container');
+        const container = element.querySelector('.swiper');
 
         new Swiper(container, {
             slidesPerView: 1,

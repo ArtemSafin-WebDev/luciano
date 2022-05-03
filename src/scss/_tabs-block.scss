@@ -1,6 +1,5 @@
 .tabs-block {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    @include sectionPadding;
 }
 
 .tabs-block__nav-wrapper {

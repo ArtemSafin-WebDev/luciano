@@ -14,8 +14,7 @@ import homeAnimation from './homeAnimation';
 import menu from './menu';
 import eventsSlider from './eventsSlider';
 import bottomPanel from './bottomPanel';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import homeSectionGallery from './homeSectionGallery';
 import tabs from './tabs';
 import gallerySlider from './gallery';
@@ -25,7 +24,12 @@ import restaurantsMenuNav from './restaurantsMenuNav';
 import tablesSlider from './tablesSlider';
 import flowersSlider from './flowersSlider';
 import masterclassSlider from './masterclassSlider';
+import standardNav from './standardNav';
+import masonry from './masonry';
 
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -58,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
     tablesSlider();
     flowersSlider();
     masterclassSlider();
+    standardNav();
+    masonry();
    
     if (history.scrollRestoration) {
         history.scrollRestoration = 'manual';

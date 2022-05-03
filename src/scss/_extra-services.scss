@@ -1,18 +1,12 @@
 .extra-services {
-    padding: 6rem 0;
+    @include sectionPadding;
     background: #ececec;
 }
 
 .extra-services__heading {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 4rem;
-    line-height: 120%;
-    text-align: center;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    @include sectionHeading;
     margin-bottom: 10rem;
-    font-family: var(--cormorant);
+    
 }
 
 .extra-services__content {

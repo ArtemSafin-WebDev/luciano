@@ -5,7 +5,7 @@
     <div class="home-section__bg" style="--overlay-opacity: 0;">
         <div class="home-section__bg-parallax-layer">
             <div class="home-section__bg-slider">
-                <div class="swiper-container">
+                <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="home-section__bg-slider-card" style="--overlay-opacity: 0;">
@@ -358,7 +358,101 @@
 
                 </h2>
             </div>
-            {{> fixed-bottom-panel }}
+            <div class="fixed-bottom-panel">
+                <div class="fixed-bottom-panel__desktop">
+
+
+                    <div class="fixed-bottom-panel__row">
+                        <div class="fixed-bottom-panel__col">
+                            <a href="#ask-question" class="fixed-bottom-panel__ask-question js-open-modal">
+                                <div class="fixed-bottom-panel__ask-question-icon">
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                        <use xlink:href="#rombus"></use>
+                                    </svg>
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-question">
+                                        <use xlink:href="#question"></use>
+                                    </svg>
+                                </div>
+                                <div class="fixed-bottom-panel__ask-question-text">
+                                    Задать вопрос
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fixed-bottom-panel__col">
+                            <form class="fixed-bottom-panel__filters" action="/" method="GET">
+                                <div class="fixed-bottom-panel__filters-inputs">
+                                    <div class="fixed-bottom-panel__filters-input-wrapper" id="checkin-container">
+                                        <label for="checkin" class="fixed-bottom-panel__filters-input-label">
+                                            Заезд
+                                        </label>
+                                        <input type="text" name="checkin"
+                                            class="fixed-bottom-panel__filters-input js-datepicker"
+                                            data-container="#checkin-container" readonly="" id="checkin"
+                                            value="05.11.2021">
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper" id="checkout-container">
+                                        <label for="checkout" class="fixed-bottom-panel__filters-input-label">
+                                            Выезд
+                                        </label>
+                                        <input type="text" name="checkout"
+                                            class="fixed-bottom-panel__filters-input js-datepicker"
+                                            data-container="#checkout-container" readonly="" id="checkout"
+                                            value="10.11.2021">
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper">
+                                        <label for="guests" class="fixed-bottom-panel__filters-input-label">
+                                            Гости
+                                        </label>
+                                        <div class="fixed-bottom-panel__select">
+                                            <select name="guests" id="guests" class="js-custom-select">
+                                                <option value="1">1 Взрослый</option>
+                                                <option value="2">2 Взрослых</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper">
+                                        <label for="area" class="fixed-bottom-panel__filters-input-label">
+                                            площадь
+                                        </label>
+                                        <div class="fixed-bottom-panel__select">
+                                            <select name="guests" id="area" class="js-custom-select">
+                                                <option value="1">любая</option>
+                                                <option value="2">40 кв.м.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="fixed-bottom-panel__filters-submit">
+                                    <span class="fixed-bottom-panel__filters-submit-icon">
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                            <use xlink:href="#rombus"></use>
+                                        </svg>
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-search">
+                                            <use xlink:href="#search"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="fixed-bottom-panel__filters-submit-text">
+                                        Найти номер
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-bottom-panel__mobile">
+                    <div class="fixed-bottom-panel__mobile-links">
+
+
+                        <a href="#ask-question" class="fixed-bottom-panel__mobile-link js-open-modal">
+                            Задать вопрос
+                        </a>
+                        <a href="#booking-modal" class="fixed-bottom-panel__mobile-link js-open-modal">
+                            Найти номер
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </div>
@@ -391,33 +485,91 @@
                 </div>
             </div>
             <div class="standard-header__bottom-nav">
-                <a href="#" class="standard-header__nav-link active">
-                    SPA Программы
-                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                        <use xlink:href="#divider"></use>
-                    </svg>
-                </a>
+                <div class="standard-nav js-standard-nav">
 
-                <a href="#" class="standard-header__nav-link">
-                    SPA процедуры
-                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                        <use xlink:href="#divider"></use>
-                    </svg>
-                </a>
 
-                <a href="#" class="standard-header__nav-link">
-                    Банные комплексы
-                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                        <use xlink:href="#divider"></use>
-                    </svg>
-                </a>
+                    <a href="#" class="standard-nav__btn standard-nav__btn--prev">
+                        <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-left">
+                            <use xlink:href="#gallery-slider-arrow-left"></use>
+                        </svg>
+                    </a>
+                    <div class="standard-nav__inner">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link active">
+                                        SPA Программы
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        SPA процедуры
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        Банные комплексы
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        Гостевые визиты
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        SPA Программы
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        SPA процедуры
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        Банные комплексы
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        Гостевые визиты
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="standard-nav__btn standard-nav__btn--next">
+                        <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-right">
+                            <use xlink:href="#gallery-slider-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
 
-                <a href="#" class="standard-header__nav-link">
-                    Гостевые визиты
-                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                        <use xlink:href="#divider"></use>
-                    </svg>
-                </a>
             </div>
 
         </div>
@@ -452,33 +604,59 @@
                 </div>
             </div>
             <div class="standard-header__bottom-nav">
-                <a href="#" class="standard-header__nav-link">
-                    SPA Программы
-                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                        <use xlink:href="#divider"></use>
-                    </svg>
-                </a>
+                <div class="standard-nav js-standard-nav">
 
-                <a href="#" class="standard-header__nav-link">
-                    SPA процедуры
-                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                        <use xlink:href="#divider"></use>
-                    </svg>
-                </a>
 
-                <a href="#" class="standard-header__nav-link">
-                    Банные комплексы
-                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                        <use xlink:href="#divider"></use>
-                    </svg>
-                </a>
+                    <a href="#" class="standard-nav__btn standard-nav__btn--prev">
+                        <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-left">
+                            <use xlink:href="#gallery-slider-arrow-left"></use>
+                        </svg>
+                    </a>
+                    <div class="standard-nav__inner">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link active">
+                                        SPA Программы
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        SPA процедуры
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        Банные комплексы
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link">
+                                        Гостевые визиты
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
 
-                <a href="#" class="standard-header__nav-link">
-                    Гостевые визиты
-                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                        <use xlink:href="#divider"></use>
-                    </svg>
-                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="standard-nav__btn standard-nav__btn--next">
+                        <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-right">
+                            <use xlink:href="#gallery-slider-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -820,7 +998,7 @@
                 </svg>
             </a>
             <div class="restaurant-menu__nav">
-                <div class="swiper-container">
+                <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="#" class="restaurant-menu__nav-link active">
@@ -1506,24 +1684,50 @@
             ОБОРУДОВАНИЕ
         </h2>
         <div class="items__nav">
-            <a href="#" class="items__nav-btn js-tabs-btn">
-                ЗВУКОВОЕ
-                <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                    <use xlink:href="#divider"></use>
-                </svg>
-            </a>
-            <a href="#" class="items__nav-btn js-tabs-btn">
-                СВЕТОВОЕ
-                <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                    <use xlink:href="#divider"></use>
-                </svg>
-            </a>
-            <a href="#" class="items__nav-btn js-tabs-btn">
-                ВИДЕО
-                <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                    <use xlink:href="#divider"></use>
-                </svg>
-            </a>
+            <div class="standard-nav standard-nav--dark js-standard-nav">
+
+
+                <a href="#" class="standard-nav__btn standard-nav__btn--prev">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-left">
+                        <use xlink:href="#gallery-slider-arrow-left"></use>
+                    </svg>
+                </a>
+                <div class="standard-nav__inner">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="standard-nav__link standard-nav__link--large js-tabs-btn active">
+                                    ЗВУКОВОЕ
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                        <use xlink:href="#divider"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="standard-nav__link standard-nav__link--large js-tabs-btn">
+                                    СВЕТОВОЕ
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                        <use xlink:href="#divider"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="standard-nav__link standard-nav__link--large js-tabs-btn">
+                                    ВИДЕО
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                        <use xlink:href="#divider"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="standard-nav__btn standard-nav__btn--next">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-right">
+                        <use xlink:href="#gallery-slider-arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
         </div>
         <div class="items__content">
             <div class="items__tabs">
@@ -1922,30 +2126,56 @@
             ПРОГРАММА ВКЛЮЧАЕТ СЛЕДУЮЩИЕ ПРОЦЕДУРЫ:
         </h2>
         <div class="items__nav">
-            <a href="#" class="items__nav-btn js-tabs-btn">
-                1 день
-                <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                    <use xlink:href="#divider"></use>
-                </svg>
-            </a>
-            <a href="#" class="items__nav-btn js-tabs-btn">
-                3 дня
-                <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                    <use xlink:href="#divider"></use>
-                </svg>
-            </a>
-            <a href="#" class="items__nav-btn js-tabs-btn">
-                7 дней
-                <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                    <use xlink:href="#divider"></use>
-                </svg>
-            </a>
-            <a href="#" class="items__nav-btn js-tabs-btn">
-                10 дней
-                <svg width="45" height="45" aria-hidden="true" class="icon-divider">
-                    <use xlink:href="#divider"></use>
-                </svg>
-            </a>
+            <div class="standard-nav standard-nav--dark js-standard-nav">
+                <a href="#" class="standard-nav__btn standard-nav__btn--prev">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-left">
+                        <use xlink:href="#gallery-slider-arrow-left"></use>
+                    </svg>
+                </a>
+                <div class="standard-nav__inner">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="standard-nav__link standard-nav__link--large js-tabs-btn active">
+                                    1 день
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                        <use xlink:href="#divider"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="standard-nav__link standard-nav__link--large js-tabs-btn">
+                                    3 дня
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                        <use xlink:href="#divider"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="standard-nav__link standard-nav__link--large js-tabs-btn">
+                                    7 дней
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                        <use xlink:href="#divider"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="standard-nav__link standard-nav__link--large js-tabs-btn">
+                                    10 дней
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                        <use xlink:href="#divider"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="standard-nav__btn standard-nav__btn--next">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-right">
+                        <use xlink:href="#gallery-slider-arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
         </div>
         <div class="items__content">
             <div class="items__tabs">
@@ -2813,7 +3043,7 @@
                 <div class="tables__slider-main-inner">
 
 
-                    <div class="swiper-container">
+                    <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="tables__slider-card">
@@ -2845,7 +3075,7 @@
                 </button>
             </div>
             <div class="tables__slider-thumbs">
-                <div class="swiper-container">
+                <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="tables__slider-thumbs-card">
@@ -2911,7 +3141,7 @@
                     <div class="masterclasses__slider-main-inner">
 
 
-                        <div class="swiper-container">
+                        <div class="swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="masterclasses__slider-card">
@@ -3019,11 +3249,12 @@
                     </button>
                 </div>
                 <div class="masterclasses__slider-thumbs">
-                    <div class="swiper-container">
+                    <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="masterclasses__slider-thumbs-card">
-                                    <img src="img/tables-thumbs/1.jpg" alt="" class="masterclasses__slider-thumbs-card-image">
+                                    <img src="img/tables-thumbs/1.jpg" alt=""
+                                        class="masterclasses__slider-thumbs-card-image">
                                     <div class="masterclasses__slider-thumbs-card-rombus">
 
                                     </div>
@@ -3031,7 +3262,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="masterclasses__slider-thumbs-card">
-                                    <img src="img/tables-thumbs/2.jpg" alt="" class="masterclasses__slider-thumbs-card-image">
+                                    <img src="img/tables-thumbs/2.jpg" alt=""
+                                        class="masterclasses__slider-thumbs-card-image">
                                     <div class="masterclasses__slider-thumbs-card-rombus">
 
                                     </div>
@@ -3039,7 +3271,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="masterclasses__slider-thumbs-card">
-                                    <img src="img/tables-thumbs/3.jpg" alt="" class="masterclasses__slider-thumbs-card-image">
+                                    <img src="img/tables-thumbs/3.jpg" alt=""
+                                        class="masterclasses__slider-thumbs-card-image">
                                     <div class="masterclasses__slider-thumbs-card-rombus">
 
                                     </div>
@@ -3047,7 +3280,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="masterclasses__slider-thumbs-card">
-                                    <img src="img/tables-thumbs/4.jpg" alt="" class="masterclasses__slider-thumbs-card-image">
+                                    <img src="img/tables-thumbs/4.jpg" alt=""
+                                        class="masterclasses__slider-thumbs-card-image">
                                     <div class="masterclasses__slider-thumbs-card-rombus">
 
                                     </div>
@@ -3256,8 +3490,857 @@
     </div>
 </section>
 
-<section class="bottom-panel-landing-position">
 
+<section class="result">
+    <div class="result__card">
+        <div class="result__card-bg">
+            <img data-src="img/result.jpg" alt="" class="result__card-bg-image lazyload">
+        </div>
+
+        <div class="container">
+            <div class="result__content">
+
+
+                <h2 class="result__heading">
+                    Результат
+                </h2>
+                <div class="result__text">
+                    <p>
+                        Благодаря целостному подходу Вы получаете улучшение работы всего организма на клеточном уровне,
+                        повышение уровня энергии, улучшение настроения, легкость во всем теле и снижение веса.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="included">
+    <div class="container">
+        <div class="included__content">
+
+            <h2 class="included__heading">
+                В каждом номере вам будут доступны
+            </h2>
+            <ul class="included__list">
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/1.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Рум сервис
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/2.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Бассейны
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/3.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Трансфер
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/4.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Завтрак
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/5.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Услуги спа-центра
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/6.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Термальная зона
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/7.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Консьерж услуги
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/8.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Услуги бизнес-центра конференц возможности
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/9.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Ресторан и лобби бар
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/10.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Интернет
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/10.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Интернет
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/10.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Интернет
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/10.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Интернет
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/10.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Интернет
+                        </h3>
+                    </div>
+                </li>
+                <li class="included__list-item">
+                    <div class="included__card">
+                        <div class="included__card-icon">
+                            <img data-src="img/included/10.svg" alt="" class="included__card-icon-image lazyload">
+                        </div>
+                        <h3 class="included__card-title">
+                            Интернет
+                        </h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="masonry">
+    <div class="container">
+        <div class="masonry__content js-tabs">
+            <h2 class="masonry__heading">
+                ВАРИАНТЫ ОБЕДОВ и ужинов ДЛЯ ПРОГРАММЫ «БУДНИЙ ДЕНЬ»
+            </h2>
+            <div class="masonry__nav">
+                <div class="standard-nav standard-nav--dark js-standard-nav">
+                    <a href="#" class="standard-nav__btn standard-nav__btn--prev">
+                        <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-left">
+                            <use xlink:href="#gallery-slider-arrow-left"></use>
+                        </svg>
+                    </a>
+                    <div class="standard-nav__inner">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link standard-nav__link--large js-tabs-btn active">
+                                        Обеды
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="standard-nav__link standard-nav__link--large js-tabs-btn">
+                                        Ужины
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-divider">
+                                            <use xlink:href="#divider"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="standard-nav__btn standard-nav__btn--next">
+                        <svg width="45" height="45" aria-hidden="true" class="icon-gallery-slider-arrow-right">
+                            <use xlink:href="#gallery-slider-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="masonry__tabs">
+                <div class="masonry__tabs-item js-tabs-item">
+                    <div class="masonry__row">
+                        <div class="masonry__text">
+                            <p>
+                                Наши шефы отобрали лучшие блюда, чтобы вы могли полностью насладиться временем в LUCIANO
+                                HOTEL & SPA
+                            </p>
+                        </div>
+                        <div class="masonry__grid js-masonry-grid">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/1.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 1
+                                                <span class="masonry__food-card-number">
+                                                    1
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Овощные палочки с семенами чиа и кунжутным соусом
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чечевичный суп с копченой уткой и огурчиками
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Котлеты из индейки и куриной грудки со шпинатом и грибным соусом
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый (Возможна замена на кофе/воду)
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Шоколадный торт
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/2.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 2
+                                                <span class="masonry__food-card-number">
+                                                    2
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Табуле из киноа с овощами, специями и манговым уксусом
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Суп-лапша с фермерской птицей
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Цыпленок запеченный с белыми грибами, чесночным соусом и трюфельным
+                                                    пюре
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Меренговый рулет с манго
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/3.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 3
+                                                <span class="masonry__food-card-number">
+                                                    3
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Овощи крудите с семенами чиа, миксом из свежих овощей, зелени и
+                                                    тертым кешью
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Тайский суп с фунчозой, креветками и листьями лайма
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Пенне с куриной грудкой и сливочным соусом
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чизкейк
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/4.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 4
+                                                <span class="masonry__food-card-number">
+                                                    4
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Тартар из говядины с желтком, горчичной заправкой и ржаными хрустами
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Пельмени с гусем и говядиной
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Рыбные котлеты с овощами на пару и соком лимона
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Конфеты ручной работы (2шт.)
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/5.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 5
+                                                <span class="masonry__food-card-number">
+                                                    5
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Греческий салат с сыром фета и соусом песто
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Минестроне с киноа, соусом песто, сыром пармезани гренками из
+                                                    чиабатты
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Спагетти Карбонара
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Морковный торт
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry__tabs-item js-tabs-item">
+                    <div class="masonry__row">
+                        <div class="masonry__text">
+                            <p>
+                                Наши шефы отобрали лучшие блюда, чтобы вы могли полностью насладиться временем в LUCIANO
+                                HOTEL & SPA
+                            </p>
+                        </div>
+                        <div class="masonry__grid js-masonry-grid">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/1.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 1
+                                                <span class="masonry__food-card-number">
+                                                    1
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Овощные палочки с семенами чиа и кунжутным соусом
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чечевичный суп с копченой уткой и огурчиками
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Котлеты из индейки и куриной грудки со шпинатом и грибным соусом
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый (Возможна замена на кофе/воду)
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Шоколадный торт
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/2.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 2
+                                                <span class="masonry__food-card-number">
+                                                    2
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Табуле из киноа с овощами, специями и манговым уксусом
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Суп-лапша с фермерской птицей
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Цыпленок запеченный с белыми грибами, чесночным соусом и трюфельным
+                                                    пюре
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Меренговый рулет с манго
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/3.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 3
+                                                <span class="masonry__food-card-number">
+                                                    3
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Овощи крудите с семенами чиа, миксом из свежих овощей, зелени и
+                                                    тертым кешью
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Тайский суп с фунчозой, креветками и листьями лайма
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Пенне с куриной грудкой и сливочным соусом
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чизкейк
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/4.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 4
+                                                <span class="masonry__food-card-number">
+                                                    4
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Тартар из говядины с желтком, горчичной заправкой и ржаными хрустами
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Пельмени с гусем и говядиной
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Рыбные котлеты с овощами на пару и соком лимона
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Конфеты ручной работы (2шт.)
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide js-masonry-grid-card">
+                                        <div class="masonry__food-card">
+                                            <div class="masonry__food-card-bg">
+                                                <img data-src="img/food-cards/5.jpg" alt=""
+                                                    class="masonry__food-card-bg-image lazyload">
+                                            </div>
+                                            <h3 class="masonry__food-card-title">
+                                                ОБЕД № 5
+                                                <span class="masonry__food-card-number">
+                                                    5
+                                                </span>
+                                            </h3>
+                                            <ul class="masonry__food-card-list">
+                                                <li class="masonry__food-card-list-item">
+                                                    Греческий салат с сыром фета и соусом песто
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Минестроне с киноа, соусом песто, сыром пармезани гренками из
+                                                    чиабатты
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Спагетти Карбонара
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Морковный торт
+                                                </li>
+                                                <li class="masonry__food-card-list-item">
+                                                    Чай черный/зеленый
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="masonry">
+    <div class="container">
+        <div class="masonry__content">
+            <h2 class="masonry__heading">
+                КОНСЬЕРЖ<br> РЕКОМЕНДУЕТ
+            </h2>
+
+
+            <div class="masonry__row">
+                <div class="masonry__text">
+                    <p>
+                        Команда консьерж-сервиса LUCIANO исполнит любую задачу и создаст для Вас персональный маршрутпо
+                        Казани и Республике Татарстан, чтобы Вы смогли исследовать город и получить незабываемые
+                        впечатления.
+                    </p>
+                </div>
+                <div class="masonry__grid js-masonry-grid">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide js-masonry-grid-card">
+                                <div class="masonry__service-card">
+                                    <div class="masonry__service-card-bg">
+                                        <img data-src="img/service-card/1.jpg" alt=""
+                                            class="masonry__service-card-bg-image lazyload">
+                                    </div>
+                                    <h3 class="masonry__service-card-title">
+                                        Национальная библиотека Республики Татарстан
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide js-masonry-grid-card">
+                                <div class="masonry__service-card">
+                                    <div class="masonry__service-card-bg">
+                                        <img data-src="img/service-card/2.jpg" alt=""
+                                            class="masonry__service-card-bg-image lazyload">
+                                    </div>
+                                    <h3 class="masonry__service-card-title">
+                                        Набережная озера Нижний Кабан
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide js-masonry-grid-card">
+                                <div class="masonry__service-card">
+                                    <div class="masonry__service-card-bg">
+                                        <img data-src="img/service-card/3.jpg" alt=""
+                                            class="masonry__service-card-bg-image lazyload">
+                                    </div>
+                                    <h3 class="masonry__service-card-title">
+                                        Экстрим-парк URAM
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide js-masonry-grid-card">
+                                <div class="masonry__service-card">
+                                    <div class="masonry__service-card-bg">
+                                        <img data-src="img/service-card/4.jpg" alt=""
+                                            class="masonry__service-card-bg-image lazyload">
+                                    </div>
+                                    <h3 class="masonry__service-card-title">
+                                        Экоферма «Страусы Билярска»
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide js-masonry-grid-card">
+                                <div class="masonry__service-card">
+                                    <div class="masonry__service-card-bg">
+                                        <img data-src="img/service-card/5.jpg" alt=""
+                                            class="masonry__service-card-bg-image lazyload">
+                                    </div>
+                                    <h3 class="masonry__service-card-title">
+                                        Экопарк «Дикая ферма»
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide js-masonry-grid-card">
+                                <div class="masonry__service-card">
+                                    <div class="masonry__service-card-bg">
+                                        <img data-src="img/service-card/6.jpg" alt=""
+                                            class="masonry__service-card-bg-image lazyload">
+                                    </div>
+                                    <h3 class="masonry__service-card-title">
+                                        Дендрарий Волжско-Камского природного заповедника
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    </div>
+</section>
+
+<section class="cars">
+    <div class="container">
+        <div class="cars__content">
+            <h2 class="cars__heading">
+                АВТОМОБИЛЬНОЕ<br>
+                СОПРОВОЖДЕНИЕ
+            </h2>
+            <ul class="cars__list">
+                <li class="cars__list-item">
+                    <div class="cars__card">
+                        <a href="#cars-modal" class="cars__card-image-container js-open-modal">
+                            <img data-src="img/cars/1.jpg" alt="" class="cars__card-image lazyload">
+                            <div class="cars__card-image-text">
+                                Смотреть
+                            </div>
+                        </a>
+                        <div class="cars__card-info">
+                            <div class="cars__card-info-item">
+                                2020 Г
+                            </div>
+                            <div class="cars__card-info-item">
+                                <svg width="45" height="45" aria-hidden="true" class="icon-person">
+                                    <use xlink:href="#person"></use>
+                                </svg>
+                                ДО 3 ГОСТЕЙ
+                            </div>
+                        </div>
+                        <h3 class="cars__card-title">
+                            HYUNDAI SONATA
+                        </h3>
+                        <a href="#" class="cars__card-show-price">
+                            Посмотреть прайс
+                            <svg width="45" height="45" aria-hidden="true" class="icon-arrow-down">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="circle-btn cars__order-link">
+                            <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                <use xlink:href="#semicircle"></use>
+                            </svg>
+                            Заказать
+                        </a>
+                    </div>
+                    {{> cars-modal }}
+                </li>
+                <li class="cars__list-item">
+                    <div class="cars__card">
+                        <a href="#cars-modal" class="cars__card-image-container js-open-modal">
+                            <img data-src="img/cars/2.jpg" alt="" class="cars__card-image lazyload">
+                            <div class="cars__card-image-text">
+                                Смотреть
+                            </div>
+                        </a>
+                        <div class="cars__card-info">
+                            <div class="cars__card-info-item">
+                                2020 Г
+                            </div>
+                            <div class="cars__card-info-item">
+                                <svg width="45" height="45" aria-hidden="true" class="icon-person">
+                                    <use xlink:href="#person"></use>
+                                </svg>
+                                ДО 3 ГОСТЕЙ
+                            </div>
+                        </div>
+                        <h3 class="cars__card-title">
+                            MERСEDES S CLASS
+                        </h3>
+                        <a href="#" class="cars__card-show-price">
+                            Посмотреть прайс
+                            <svg width="45" height="45" aria-hidden="true" class="icon-arrow-down">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="circle-btn cars__order-link">
+                            <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                <use xlink:href="#semicircle"></use>
+                            </svg>
+                            Заказать
+                        </a>
+                    </div>
+                </li>
+                <li class="cars__list-item">
+                    <div class="cars__card">
+                        <a href="#cars-modal" class="cars__card-image-container js-open-modal">
+                            <img data-src="img/cars/3.jpg" alt="" class="cars__card-image lazyload">
+                            <div class="cars__card-image-text">
+                                Смотреть
+                            </div>
+                        </a>
+                        <div class="cars__card-info">
+                            <div class="cars__card-info-item">
+                                2020 Г
+                            </div>
+                            <div class="cars__card-info-item">
+                                <svg width="45" height="45" aria-hidden="true" class="icon-person">
+                                    <use xlink:href="#person"></use>
+                                </svg>
+                                ДО 6 ГОСТЕЙ
+                            </div>
+                        </div>
+                        <h3 class="cars__card-title">
+                            MERСEDES V CLASS
+                        </h3>
+                        <a href="#" class="cars__card-show-price">
+                            Посмотреть прайс
+                            <svg width="45" height="45" aria-hidden="true" class="icon-arrow-down">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="circle-btn cars__order-link">
+                            <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                <use xlink:href="#semicircle"></use>
+                            </svg>
+                            Заказать
+                        </a>
+                    </div>
+                </li>
+                <li class="cars__list-item">
+                    <div class="cars__card">
+                        <a href="#cars-modal" class="cars__card-image-container js-open-modal">
+                            <img data-src="img/cars/3.jpg" alt="" class="cars__card-image lazyload">
+                            <div class="cars__card-image-text">
+                                Смотреть
+                            </div>
+                        </a>
+                        <div class="cars__card-info">
+                            <div class="cars__card-info-item">
+                                2020 Г
+                            </div>
+                            <div class="cars__card-info-item">
+                                <svg width="45" height="45" aria-hidden="true" class="icon-person">
+                                    <use xlink:href="#person"></use>
+                                </svg>
+                                ДО 4 ГОСТЕЙ
+                            </div>
+                        </div>
+                        <h3 class="cars__card-title">
+                            MERСEDES V CLASS VIP
+                        </h3>
+                        <a href="#" class="cars__card-show-price">
+                            Посмотреть прайс
+                            <svg width="45" height="45" aria-hidden="true" class="icon-arrow-down">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="circle-btn cars__order-link">
+                            <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                <use xlink:href="#semicircle"></use>
+                            </svg>
+                            Заказать
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="cars__fast-order-link">
+            <div class="cars__fast-order-link-icon">
+                <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                    <use xlink:href="#rombus"></use>
+                </svg>
+                <svg width="45" height="45" aria-hidden="true" class="icon-phone">
+                    <use xlink:href="#phone"></use>
+                </svg>
+            </div>
+            Быстрый заказ трансфера
+        </a>
+    </div>
 </section>
 
 {{/content}}

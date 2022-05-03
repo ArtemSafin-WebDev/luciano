@@ -18,14 +18,14 @@ export default function gallerySlider() {
 
         wrapper.classList.add('initialized');
 
-        wrapper.innerHTML = `<div class="swiper-container">
+        wrapper.innerHTML = `<div class="swiper">
             <div class="swiper-wrapper"> 
 
             </div>
         </div>`;
 
         const slidesWrapper = wrapper.querySelector('.swiper-wrapper');
-        const sliderContainer = wrapper.querySelector('.swiper-container');
+        const sliderContainer = wrapper.querySelector('.swiper');
 
         const cardsSplitByFour = sliceIntoChunks(cards, 4);
 

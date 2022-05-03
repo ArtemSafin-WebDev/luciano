@@ -6,8 +6,8 @@ export default function masterclassSlider() {
     const elements = Array.from(document.querySelectorAll('.js-masterclass-slider'));
 
     elements.forEach(element => {
-        const mainContainer = element.querySelector('.masterclasses__slider-main .swiper-container');
-        const thumbsContainer = element.querySelector('.masterclasses__slider-thumbs .swiper-container');
+        const mainContainer = element.querySelector('.masterclasses__slider-main .swiper');
+        const thumbsContainer = element.querySelector('.masterclasses__slider-thumbs .swiper');
         const mainSliderOptions = {
             watchOverflow: true,
             spaceBetween: 0,

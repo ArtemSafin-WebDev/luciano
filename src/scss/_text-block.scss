@@ -1,6 +1,5 @@
 .text-block {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    @include sectionPadding;
 }
 
 .text-block__content {

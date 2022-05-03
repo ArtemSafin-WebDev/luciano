@@ -1,19 +1,12 @@
 .scheme {
-    padding: 6rem 0;
+    @include sectionPadding;
     background: #ececec;
 }
 
 .scheme__heading {
-    text-align: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 4rem;
-    line-height: 120%;
-    text-align: center;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    @include sectionHeading;
     margin-bottom: 6rem;
-    font-family: var(--cormorant);
+   
 }
 
 

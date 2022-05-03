@@ -1,17 +1,10 @@
 .custom-set {
-    padding: 6rem 0;
+    @include sectionPadding;
     background: #ececec;
 }
 
 .custom-set__heading {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 4rem;
-    font-family: var(--cormorant);
-    line-height: 120%;
-    text-align: center;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+   @include sectionHeading;
     margin: 0 auto;
     margin-bottom: 7rem;
     max-width: 95rem;

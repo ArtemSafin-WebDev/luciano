@@ -6,7 +6,7 @@ export default function restaurantsMenuNav() {
     const elements = Array.from(document.querySelectorAll('.js-restaurant-menu-nav'));
 
     elements.forEach(element => {
-        const container = element.querySelector('.swiper-container');
+        const container = element.querySelector('.swiper');
 
         new Swiper(container, {
             slidesPerView: 'auto',

@@ -1,5 +1,5 @@
 .announcement {
-    padding: 6rem 0;
+    @include sectionPadding;
 }
 
 .announcement__card {

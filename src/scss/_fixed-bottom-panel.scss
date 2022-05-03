@@ -1,7 +1,6 @@
-.fixed-bottom-panel {
+.fixed-bottom-panel.js-bottom-panel {
     position: relative;
     z-index: 250;
-
 
     &::before {
         content: '';
@@ -35,7 +34,6 @@
         }
     }
 
-
     .fixed-panel-docked & {
         &::before {
             opacity: 0;
@@ -55,10 +53,19 @@
 }
 
 .fixed-bottom-panel__row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    // display: grid;
+    // grid-template-columns: repeat(2, minmax(0, 1fr));
     height: var(--fixed-bottom-panel-height, 0);
+    display: flex;
+    align-items: center;
     border-top: 1px solid rgba(white, 0.2);
+    font-family: var(--montserrat);
+  
+
+    .js-bottom-panel & {
+        position: relative;
+        z-index: 250;
+    }
 }
 
 .fixed-bottom-panel__col {
@@ -85,7 +92,7 @@
         color: #f4e5a0;
     }
 
-    .fixed-bottom-panel:not(.sticky) & {
+    .js-bottom-panel.fixed-bottom-panel:not(.sticky) & {
         color: white;
         &:link,
         &:visited {
@@ -122,7 +129,7 @@
         fill: #f4e5a0;
     }
 
-    .fixed-bottom-panel:not(.sticky) & {
+    .js-bottom-panel.fixed-bottom-panel:not(.sticky) & {
         .icon-rombus {
             fill: rgba(#ffffff, 0.4);
         }
@@ -134,27 +141,30 @@
 }
 
 .fixed-bottom-panel__filters {
-    width: 100%;
+    width: auto;
     align-self: stretch;
-    position: relative;
-    z-index: 250;
+
     display: flex;
+    margin-left: auto;
+    // margin-right: 5rem;
+
+    .js-bottom-panel & {
+        &::before {
+            content: '';
+            position: absolute;
+            // left: 0;
+            top: -1px;
+            right: calc((100vw - 100% - var(--sb-width)) / 2 * -1);
+            width: calc((100vw - var(--sb-width)) / 2);
+            bottom: -1px;
+            background: #bb9b8c;
+            transform-origin: center bottom;
+            transform: scaleY(0);
+            transition: transform 0.4s;
+        }
+    }
 
     
-
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: -1px;
-        right: calc((100vw - 100% - var(--sb-width)) / 2 * -1);
-        bottom: -1px;
-        background: #bb9b8c;
-        transform-origin: center bottom;
-        transform: scaleY(0);
-        transition: transform 0.4s;
-      
-    }
 
     .mobile-menu-open & {
         &::before {
@@ -168,6 +178,7 @@
     width: 50%;
     flex-grow: 1;
     display: flex;
+    margin-right: 5rem;
 }
 
 .fixed-bottom-panel__filters-input-wrapper {
@@ -272,12 +283,12 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: white;
-    padding-right: 3rem;
+    padding-right: 1rem;
     background-image: url('../img/dropdown-arrow.svg');
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 2rem 2rem;
-    width: 11em;
+    width: 10rem;
 }
 
 .fixed-bottom-panel__filters-submit {
@@ -314,7 +325,7 @@
         flex-shrink: 0;
     }
 
-    .fixed-bottom-panel:not(.sticky) & {
+    .js-bottom-panel.fixed-bottom-panel:not(.sticky) & {
         .icon-rombus {
             fill: rgba(#ffffff, 0.4);
         }
@@ -333,7 +344,7 @@
     color: #f4e5a0;
     transition: color 0.2s;
 
-    .fixed-bottom-panel:not(.sticky) & {
+    .js-bottom-panel.fixed-bottom-panel:not(.sticky) & {
         color: white;
     }
 }
@@ -341,6 +352,10 @@
 .bottom-panel-landing-position {
     height: var(--fixed-bottom-panel-height, 0);
     width: 100%;
+}
+
+.fixed-bottom-panel__col {
+    display: contents;
 }
 
 .fixed-bottom-panel__select {
@@ -519,7 +534,7 @@
     border-top: 1px solid rgba(#ffffff, 0.2);
     margin: 0 calc(-1 * var(--content-padding));
     height: var(--fixed-bottom-panel-height);
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     .mobile-menu-open & {
         background: #bb9b8c;
     }
@@ -547,7 +562,7 @@
         color: #f4e5a0;
     }
 
-    .fixed-bottom-panel:not(.sticky) & {
+    .js-bottom-panel.fixed-bottom-panel:not(.sticky) & {
         color: white;
         &:link,
         &:visited {
@@ -555,7 +570,7 @@
         }
     }
 
-    .mobile-menu-open & { 
+    .mobile-menu-open & {
         color: white;
         &:link,
         &:visited {

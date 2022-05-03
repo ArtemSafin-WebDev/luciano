@@ -1,0 +1,239 @@
+.cars {
+    @include sectionPadding;
+    padding-bottom: 0;
+    background: #ececec;
+}
+
+.cars__content {
+    width: 100%;
+    max-width: 118rem;
+    margin: 0 auto;
+}
+
+.cars__heading {
+    @include sectionHeading;
+    margin-bottom: 8rem;
+}
+
+.cars__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-row-gap: 8.7rem;
+    margin-bottom: 11rem;
+}
+
+.cars__list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.cars__card {
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.cars__card-image-container {
+    position: relative;
+    color: white;
+    margin-bottom: 2.5rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    .no-touch &:hover {
+        &::after {
+            opacity: 1;
+        }
+
+        .cars__card-image-text {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+    }
+}
+
+.cars__card-image-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
+    display: flex;
+
+    align-items: center;
+    padding: 5rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.4rem;
+    line-height: 3rem;
+    font-family: var(--cormorant);
+    text-align: center;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    &::before,
+    &::after {
+        content: '';
+        margin: 0 2rem;
+        height: 1px;
+        background-color: rgba(white, 0.4);
+        width: 1rem;
+        flex-grow: 1;
+    }
+}
+
+.cars__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cars__card-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cars__card-info-item {
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    svg {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.85rem;
+        fill: currentColor;
+    }
+}
+
+.cars__card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    font-family: var(--cormorant);
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.cars__card-show-price {
+    align-self: flex-end;
+
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dark-biege);
+    font-family: var(--montserrat);
+
+    svg {
+        fill: currentColor;
+        flex-shrink: 0;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.6rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--dark-biege);
+    }
+}
+
+.cars__order-link {
+    margin-top: 5.4rem;
+}
+
+.cars__fast-order-link {
+    min-height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(#0e1d2b, 0.1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: var(--montserrat);
+    line-height: 140%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+        background-color: var(--dark-biege);
+        border-color: var(--dark-biege);
+        svg {
+            fill: white;
+        }
+    }
+}
+
+.cars__fast-order-link-icon {
+    flex-shrink: 0;
+    width: 4.7rem;
+    height: 4.7rem;
+    margin-right: 1.2rem;
+    position: relative;
+
+    svg {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        fill: #0E1D2B;
+        transition: fill 0.2s;
+        &.icon-rombus {
+            fill: rgba(#0e1d2b, 0.4);
+        }
+
+        &.icon-phone {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 .variants {
-    padding: 6rem 0;
+    @include sectionPadding;
 }
 
 .variants__card {

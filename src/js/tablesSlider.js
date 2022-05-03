@@ -6,8 +6,8 @@ export default function tablesSlider() {
     const elements = Array.from(document.querySelectorAll('.js-tables-slider'));
 
     elements.forEach(element => {
-        const mainContainer = element.querySelector('.tables__slider-main .swiper-container');
-        const thumbsContainer = element.querySelector('.tables__slider-thumbs .swiper-container');
+        const mainContainer = element.querySelector('.tables__slider-main .swiper');
+        const thumbsContainer = element.querySelector('.tables__slider-thumbs .swiper');
         const mainSliderOptions = {
             watchOverflow: true,
             spaceBetween: 0,
