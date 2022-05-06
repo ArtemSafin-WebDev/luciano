@@ -3,7 +3,7 @@
     z-index: 350;
     left: 0;
     top: 0;
-    width: 100%;
+    right: 0;
     height: 100%;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -16,12 +16,16 @@
     padding-bottom: 2.5rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .4s, visibility 0s linear .4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    &:not(.active) {
+        right: calc(-1 * var(--sb-width, 0));
+    }
 
     &.active {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .4s, visibility .4s;
+        transition: opacity 0.4s, visibility 0.4s;
     }
 }
 
@@ -280,7 +284,7 @@
         bottom: 100%;
         left: 0;
         right: auto;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         &.is-active {
             opacity: 1;
             visibility: visible;

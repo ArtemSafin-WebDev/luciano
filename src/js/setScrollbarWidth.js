@@ -1,3 +1,5 @@
+import { debounce } from "lodash";
+
 export default function setScrollbarWidth() {
     const setWidth = () => {
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
@@ -7,6 +9,6 @@ export default function setScrollbarWidth() {
 
     setWidth();
 
-    // window.addEventListener('resize', setWidth);
+    window.addEventListener('resize', debounce(setWidth, 400));
     
 }

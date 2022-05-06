@@ -3,7 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function accordions() {
-    const SPEED = 0.7;
+    const SPEED = 0.4;
 
     const openAccordion = element => {
         gsap.to(element, {
@@ -48,5 +48,11 @@ export default function accordions() {
             }
             element.classList.toggle('active');
         });
+        if (element.classList.contains('active')) {
+            btn.click();
+        }
+       
     });
+
+    
 }

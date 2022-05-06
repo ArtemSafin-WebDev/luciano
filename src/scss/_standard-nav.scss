@@ -8,6 +8,10 @@
     flex-shrink: 0;
     transition: opacity 0.2s;
 
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
     &--prev {
         margin-right: 3rem;
     }
@@ -42,8 +46,15 @@
     .swiper {
         margin: 0;
         width: 100%;
-        padding: 0 2rem;
-        mask-image: linear-gradient(to right, transparent 0, white 1.5rem, white calc(100% - 1.5rem), transparent 100%);
+
+        @include breakpoint(mobile) {
+            overflow: visible;
+        }
+
+        @include breakpointMF(small-tablet) {
+            mask-image: linear-gradient(to right, transparent 0, white 1.5rem, white calc(100% - 1.5rem), transparent 100%);
+            padding: 0 2rem;
+        }
     }
     .swiper-slide {
         width: auto;
@@ -52,6 +63,10 @@
         // padding-right: 2.4rem;
         box-sizing: border-box;
         margin-right: 2.4rem;
+
+        @include breakpoint(mobile) {
+            margin-right: 1.2rem;
+        }
         &:last-child {
             .icon-divider {
                 display: none;
@@ -85,11 +100,26 @@
     align-items: center;
     flex-grow: 1;
 
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.2;
+        gap: 1.2rem;
+    }
+
     &--large {
         font-style: normal;
         font-weight: 600;
         font-size: 2.4rem;
         line-height: 3rem;
+
+        @include breakpoint(mobile) {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
     }
 
     .icon-divider {
@@ -97,6 +127,11 @@
         width: 4.8rem;
         height: 4.3rem;
         fill: rgba(white, 0.2);
+
+        @include breakpoint(mobile) {
+            width: 3.2rem;
+            height: 3rem;
+        }
     }
     &:link,
     &:visited {

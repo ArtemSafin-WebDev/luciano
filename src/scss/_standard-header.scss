@@ -2,6 +2,12 @@
     position: relative;
 
     color: white;
+
+    @include breakpoint(mobile) {
+        .fixed-bottom-panel__mobile-links {
+            border-bottom: 1px solid rgba(255,255,255,.2);
+        }
+    }
 }
 
 .standard-header__bg {
@@ -49,6 +55,7 @@
         height: 22.2rem;
         width: auto;
         margin: 0;
+        margin-top: 0rem;
     }
 }
 
@@ -59,11 +66,17 @@
     padding-top: 4rem;
 
     @include breakpoint(mobile) {
-        
+        min-height: var(--client-height, 100vh);
+        padding-top: 6rem;
+        position: relative;
     }
 
     .standard-header--compact & {
         min-height: 70rem;
+        @include breakpoint(mobile) {
+            min-height: var(--client-height, 100vh);
+           
+        }
     }
 }
 
@@ -74,10 +87,7 @@
 
 .standard-header__heading {
     @include largeHeading();
-    margin-bottom: 2rem;
-    &:last-child {
-        margin-bottom: 0;
-    }
+   
 }
 
 .standard-header__breadcrumbs {
@@ -144,6 +154,10 @@
 .standard-header__bottom-nav {
     border-top: 1px solid rgba(#ffffff, 0.2);
     padding: 3.4rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 0;
+    }
     
 
   
@@ -194,6 +208,11 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-family: var(--montserrat);
+    margin-top: 2rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-top: 2rem;
+    }
 }
 
 .standard-header__contacts {
@@ -241,6 +260,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .standard-header__apartment-info-features {
@@ -249,6 +272,11 @@
     flex-wrap: wrap;
     gap: 4rem;
     row-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        gap: 3rem;
+        row-gap: 1.5rem;
+    }
 }
 
 .standard-header__apartment-info-feature {
@@ -261,13 +289,18 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     flex-shrink: 0;
-    gap: 0.8rem;
+   
     font-family: var(--montserrat);
+
+  
     svg {
         flex-shrink: 0;
         width: 1.6rem;
         height: 1.6rem;
         fill: currentColor;
+        margin-right: 1rem;
+
+    
     }
 }
 
@@ -283,6 +316,17 @@
     text-transform: uppercase;
     gap: 1rem;
     font-family: var(--montserrat);
+
+    @include breakpoint(mobile) {
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 2rem 0;
+        border-top: 1px solid rgba(#FFFFFF, .2);
+        justify-content: center;
+    }
     svg {
         flex-shrink: 0;
 

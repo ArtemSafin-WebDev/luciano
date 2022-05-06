@@ -10,12 +10,19 @@ export default function masterclassSlider() {
         const thumbsContainer = element.querySelector('.masterclasses__slider-thumbs .swiper');
         const mainSliderOptions = {
             watchOverflow: true,
-            spaceBetween: 0,
             thumbs: {},
+            spaceBetween: 10,
+            slidesPerView: 'auto',
             speed: 700,
             navigation: {
                 nextEl: element.querySelector('.masterclasses__slider-arrow--next'),
                 prevEl: element.querySelector('.masterclasses__slider-arrow--prev')
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 20,
+                    slidesPerView: 1
+                }
             }
         };
 

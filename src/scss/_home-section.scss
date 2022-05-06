@@ -117,14 +117,25 @@
 
     @include breakpoint(mobile) {
         margin: 0;
-        // margin-left: auto;
-        margin-bottom: 3rem;
+        margin-top: 3rem;
+        order: 10;
     }
 }
 
 .home-section__slider-arrow {
     transition: opacity .2s;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        .home-section__link-icon {
+            width: 5.6rem;
+            .icon-arrow-right,
+            .icon-arrow-left {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+    }
 
     &.swiper-button-disabled {
         opacity: 0.5;
@@ -137,10 +148,14 @@
 }
 
 .home-section__content {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @include breakpoint(mobile) {
+        min-height: var(--client-height, 100vh);
+    }
 }
 
 .home-section__row {
@@ -168,7 +183,17 @@
         margin-bottom: 5rem;
 
         @include breakpoint(mobile) {
+            .no-bottom-menu & {
+                margin-bottom: 3rem;
+            }
+        }
+
+        @include breakpoint(mobile) {
             margin-bottom: 9rem;
+
+            .no-bottom-menu & {
+                margin-bottom: 3rem;
+            }
         }
     }
 }
@@ -176,6 +201,10 @@
 .home-section__col {
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 
@@ -256,8 +285,8 @@
         fill: black;
 
         @include breakpoint(mobile) {
-            width: 0.8rem;
-            height: 1.2rem;
+            width: 1.4rem;
+            height: 1.4rem;
         }
     }
 }

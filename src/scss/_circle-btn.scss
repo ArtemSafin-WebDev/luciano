@@ -15,6 +15,14 @@
     position: relative;
     z-index: 1;
 
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        padding-left: 3rem;
+    }
+
     svg {
         position: absolute;
         left: 0;
@@ -24,8 +32,12 @@
         height: 10rem;
         z-index: -1;
         pointer-events: none;
-    }
 
+        @include breakpoint(mobile) {
+            width: 7.2rem;
+            height: 7.2rem;
+        }
+    }
 
     .no-touch &[href]:hover,
     .touch &[href]:active {

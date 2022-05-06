@@ -2,17 +2,30 @@
     @include sectionPadding;
     padding-bottom: 0;
     background: #ececec;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 0;
+    }
 }
 
 .cars__content {
     width: 100%;
     max-width: 118rem;
     margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin: 0;
+    }
 }
 
 .cars__heading {
     @include sectionHeading;
     margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
 }
 
 .cars__list {
@@ -21,6 +34,12 @@
     grid-gap: 2rem;
     grid-row-gap: 8.7rem;
     margin-bottom: 11rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 6rem;
+    }
 }
 
 .cars__list-item {
@@ -32,12 +51,25 @@
     color: black;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, auto);
+        grid-template-areas: 'image image' 'info info' 'title title' 'order price';
+        align-items: center;
+        grid-gap: 2rem;
+    }
 }
 
 .cars__card-image-container {
     position: relative;
     color: white;
     margin-bottom: 2.5rem;
+    @include breakpoint(mobile) {
+        margin: 0 calc(-1 * var(--content-padding));
+        margin-bottom: 1rem;
+        grid-area: image;
+    }
     &:link,
     &:visited {
         color: white;
@@ -96,6 +128,12 @@
     opacity: 0;
     visibility: hidden;
     z-index: 10;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
     &::before,
     &::after {
         content: '';
@@ -122,6 +160,11 @@
     align-items: center;
     gap: 3rem;
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+        grid-area: info;
+    }
 }
 
 .cars__card-info-item {
@@ -133,6 +176,9 @@
     line-height: 1.6rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    @include breakpoint(mobile) {
+        font-family: var(--proxima);
+    }
     svg {
         flex-shrink: 0;
         width: 1.5rem;
@@ -151,6 +197,16 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 3.6rem;
+        line-height: 120%;
+        margin-bottom: 0;
+        grid-area: title;
+        margin-bottom: 4rem;
+    }
 }
 
 .cars__card-show-price {
@@ -167,6 +223,13 @@
     color: var(--dark-biege);
     font-family: var(--montserrat);
 
+    @include breakpoint(mobile) {
+        grid-area: price;
+        align-self: center;
+        width: min-content;
+        text-align: right;
+    }
+
     svg {
         fill: currentColor;
         flex-shrink: 0;
@@ -182,6 +245,11 @@
 
 .cars__order-link {
     margin-top: 5.4rem;
+
+    @include breakpoint(mobile) {
+        grid-area: order;
+        margin: 0;
+    }
 }
 
 .cars__fast-order-link {
@@ -198,6 +266,15 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+    @include breakpoint(mobile) {
+        min-height: 12.6rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 140%;
+        font-family: var(--proxima);
+    }
 
     .no-touch &:hover,
     .touch &:active {
@@ -225,7 +302,7 @@
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        fill: #0E1D2B;
+        fill: #0e1d2b;
         transition: fill 0.2s;
         &.icon-rombus {
             fill: rgba(#0e1d2b, 0.4);
@@ -234,6 +311,14 @@
         &.icon-phone {
             width: 1.6rem;
             height: 1.6rem;
+        }
+    }
+}
+
+.cars__fast-order-link-text {
+    @include breakpointMF(small-tablet) {
+        br {
+            display: none;
         }
     }
 }

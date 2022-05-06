@@ -37,7 +37,8 @@ export default function masonry() {
         elements.forEach(element => {
             new Swiper(element.querySelector('.swiper'), {
                 slidesPerView: 'auto',
-                speed: 500
+                speed: 500,
+                spaceBetween: 14
             });
         });
     }

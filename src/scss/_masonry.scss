@@ -7,6 +7,11 @@
     width: 100%;
     max-width: 120rem;
     margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        max-width: none;
+    }
 }
 
 .masonry__heading {
@@ -15,10 +20,20 @@
     margin: 0 auto;
     width: 100%;
     margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        max-width: none;
+        margin-bottom: 3rem;
+    }
 }
 
 .masonry__nav {
     margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .masonry__tabs {
@@ -33,6 +48,11 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 5rem;
+    }
 }
 
 .masonry__text {
@@ -42,6 +62,14 @@
     font-size: 3rem;
     line-height: 120%;
     margin-top: -0.8rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.6rem;
+        text-align: center;
+    }
 }
 
 .masonry__grid {
@@ -60,6 +88,12 @@
             align-items: flex-start;
         }
     }
+
+    @include breakpoint(mobile) {
+        .swiper-slide {
+            width: 28rem;
+        }
+    }
 }
 
 .masonry__grid-column {
@@ -68,6 +102,10 @@
     grid-gap: 2rem;
     &:nth-child(2) {
         margin-top: 12rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: contents;
     }
 }
 
@@ -80,6 +118,12 @@
     min-height: 60rem;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        padding: 3rem;
+        min-height: 50rem;
+        flex-grow: 1;
+    }
 
     &:link,
     &:visited {
@@ -128,6 +172,14 @@
     align-items: center;
     margin-bottom: 5rem;
     margin-top: 5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+    }
 }
 
 .masonry__food-card-number {
@@ -141,6 +193,16 @@
     margin-top: -8rem;
     margin-left: 2rem;
     user-select: none;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17rem;
+        line-height: 2rem;
+        margin-top: -8rem;
+        // margin-left: 1rem;
+        margin-right: -1rem;
+    }
 }
 
 .masonry__food-card-list {
@@ -148,6 +210,10 @@
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 1.3rem;
     margin-top: auto;
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+    }
 }
 
 .masonry__food-card-list-item {
@@ -158,6 +224,14 @@
     position: relative;
     padding-left: 1.5rem;
     font-family: var(--montserrat);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.8rem;
+        padding-left: 1.5rem;
+        line-height: 130%;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -167,6 +241,10 @@
         height: 0.4rem;
         background: #f4e5a0;
         transform: rotate(45deg);
+
+        @include breakpoint(mobile) {
+            top: 0.95rem;
+        }
     }
 }
 
@@ -179,6 +257,11 @@
     position: relative;
     z-index: 1;
     color: white;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 2.5rem;
+        min-height: 45rem;
+    }
     &:link,
     &:visited {
         color: white;
@@ -222,4 +305,13 @@
     text-transform: uppercase;
     font-feature-settings: 'tnum' on, 'lnum' on;
     font-family: var(--cormorant);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 120%;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
 }

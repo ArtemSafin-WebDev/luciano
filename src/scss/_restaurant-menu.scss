@@ -5,6 +5,10 @@
 .restaurant-menu__heading {
     @include sectionHeading;
     margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3.5rem;
+    }
 }
 
 .restaurant-menu__nav-wrapper {
@@ -13,6 +17,11 @@
     justify-content: space-between;
     gap: 3rem;
     margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3.5rem;
+        gap: 0;
+    }
 }
 
 .restaurant-menu__nav-btn {
@@ -20,6 +29,10 @@
     height: 6rem;
     flex-shrink: 0;
     transition: opacity 0.2s;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     svg {
         display: block;
         width: 100%;
@@ -37,17 +50,33 @@
     width: 50%;
     flex-grow: 1;
 
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+
     .swiper {
         margin: 0;
         width: 100%;
-        padding: 0 2rem;
-        mask-image: linear-gradient(to right, transparent 0, white 1.5rem, white calc(100% - 1.5rem), transparent 100%);
+
+        @include breakpointMF(small-tablet) {
+            padding: 0 2rem;
+            mask-image: linear-gradient(to right, transparent 0, white 1.5rem, white calc(100% - 1.5rem), transparent 100%);
+        }
+
+        @include breakpoint(mobile) {
+            overflow: visible;
+        }
     }
     .swiper-slide {
         width: auto;
         box-sizing: content-box;
         flex-shrink: 0;
-        padding-right: 2.4rem;
+        margin-right: 2.4rem;
+
+        @include breakpoint(mobile) {
+            margin-right: 1.2rem;
+        }
 
         &:last-child {
             .icon-divider {
@@ -56,7 +85,7 @@
         }
 
         &:last-child {
-            padding-right: 0;
+            margin-right: 0;
         }
     }
 }
@@ -80,11 +109,28 @@
     align-items: center;
     flex-grow: 1;
 
+    @include breakpoint(mobile) {
+        gap: 1.2rem;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.2;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+        color: rgba(#000000, 0.2);
+    }
+
     .icon-divider {
         flex-shrink: 0;
         width: 4.8rem;
         height: 4.3rem;
         fill: #bb9b8c;
+
+        @include breakpoint(mobile) {
+            width: 3.2rem;
+            height: 3rem;
+        }
     }
     &:link,
     &:visited {
@@ -103,6 +149,12 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
     grid-row-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1rem;
+        grid-row-gap: 2rem;
+    }
 }
 
 .restaurant-menu__card {
@@ -122,6 +174,10 @@
         content: '';
         display: block;
         padding-bottom: 56.25%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 100%;
+        }
     }
 }
 
@@ -142,6 +198,14 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 1.6rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-bottom: 0.8rem;
+    }
 }
 
 .restaurant-menu__card-row {
@@ -150,11 +214,23 @@
     justify-content: space-between;
     gap: 2rem;
 
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0.8rem;
+    }
+
     svg {
         flex-shrink: 0;
         width: 5.6rem;
         height: 5.6rem;
         margin-right: 1rem;
+        @include breakpoint(mobile) {
+            width: 4rem;
+            height: 4rem;
+            margin: 0;
+        }
     }
 }
 
@@ -169,6 +245,14 @@
     transition: color 0.2s;
     margin-top: 0.3rem;
     font-family: var(--montserrat);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 120%;
+        margin: 0;
+    }
 }
 
 .restaurant-menu__show-more {

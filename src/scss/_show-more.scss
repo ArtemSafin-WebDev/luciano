@@ -6,12 +6,17 @@
     line-height: 140%;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    border-top: 1px solid rgba(#0E1D2B, .1);
-    border-bottom: 1px solid rgba(#0E1D2B, .1);
+    border-top: 1px solid rgba(#0e1d2b, 0.1);
+    border-bottom: 1px solid rgba(#0e1d2b, 0.1);
     display: block;
     text-align: center;
     font-family: var(--montserrat);
-    transition: background-color .2s, color .2s, border-color .2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    @include breakpoint(mobile) {
+        font-weight: 400;
+        font-family: var(--proxima);
+    }
 
     .no-touch &:hover,
     .touch &:active {

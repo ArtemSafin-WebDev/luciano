@@ -2,12 +2,12 @@
     @include sectionPadding;
 
     &--grey {
-        background-color: #ECECEC;
+        background-color: #ececec;
     }
 }
 
 .excursions__heading {
-   @include sectionHeading();
+    @include sectionHeading();
 }
 
 .excursions__heading-text {
@@ -21,6 +21,14 @@
     line-height: 120%;
     text-align: center;
     font-feature-settings: 'pnum' on, 'lnum' on;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.6rem;
+        margin-top: 2rem;
+    }
 }
 
 .excursions__heading-remark {
@@ -42,6 +50,13 @@
     max-width: 139rem;
     margin: 0 auto;
     margin-top: 8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1rem;
+        grid-row-gap: 3rem;
+        margin-top: 4rem;
+    }
 }
 
 // .excursions__list-item {
@@ -57,7 +72,7 @@
     .no-touch &:hover,
     .touch &:active {
         .excursions__card-title {
-            color: #BB9B8C;
+            color: #bb9b8c;
         }
     }
 }
@@ -69,6 +84,10 @@
         content: '';
         display: block;
         padding-bottom: 56.25%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 100%;
+        }
     }
 }
 
@@ -91,6 +110,7 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin-bottom: 1.1rem;
+
     svg {
         flex-shrink: 0;
         width: 1.4rem;
@@ -109,7 +129,14 @@
     text-transform: uppercase;
     font-family: var(--cormorant);
     margin-bottom: 1.2rem;
-    transition: color .2s;
+    transition: color 0.2s;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
 }
 
 .excursions__card-price {
@@ -120,6 +147,13 @@
     letter-spacing: 0.05em;
     font-feature-settings: 'pnum' on, 'lnum' on;
     font-family: var(--cormorant);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 120%;
+    }
 }
 
 .excursions__card-remark {
@@ -128,6 +162,13 @@
     font-size: 2rem;
     line-height: 130%;
     color: rgba(black, 0.5);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
 }
 
 .excursions__show-more {

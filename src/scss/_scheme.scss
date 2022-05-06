@@ -6,6 +6,10 @@
 .scheme__heading {
     @include sectionHeading;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
    
 }
 

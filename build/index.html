@@ -25,14 +25,224 @@
         <header class="page-header">
             <div class="container">
                 <div class="page-header__row">
-                    <a href="index.html" class="page-header__logo">
-                       
+                    <div class="page-header__menu">
+                        <div class="container">
         
-                        <svg aria-hidden="true" class="icon-logo page-header__logo-image">
-                            <use xlink:href="#logo"></use>
-                        </svg>
+                            <a href="#" class="page-header__menu-logo">
+                                <img src="img/main-logo.svg" alt="" class="page-header__menu-logo-image">
+                            </a>
+                            <a href="#" class="page-header__menu-order-link js-open-modal">
+                                Забронировать номер
+                            </a>
+                            <nav class="page-header__menu-nav">
+                                <ul class="page-header__menu-nav-list">
+                                    <li class="page-header__menu-nav-list-item">
+                                        <a href="#" class="page-header__menu-nav-link">
+                                            Главная
+                                        </a>
+                                    </li>
+                                    <li class="page-header__menu-nav-list-item js-accordion" data-close-other="">
+                                        <a href="#" class="page-header__menu-nav-link js-accordion-btn">
+                                            Отель
+                                        </a>
+                                        <div class="page-header__submenu-wrapper js-accordion-content">
+        
+        
+                                            <ul class="page-header__submenu-list">
+                                                <li class="page-header__submenu-list-item">
+                                                    <a href="#" class="page-header__submenu-link">
+                                                        Категории номеров
+                                                    </a>
+                                                </li>
+                                                <li class="page-header__submenu-list-item">
+                                                    <a href="#" class="page-header__submenu-link">
+                                                        Программы с проживанием
+                                                    </a>
+                                                </li>
+                                                <li class="page-header__submenu-list-item">
+                                                    <a href="#" class="page-header__submenu-link">
+                                                        Консьерж-сервис
+                                                    </a>
+                                                </li>
+                                                <li class="page-header__submenu-list-item">
+                                                    <a href="#" class="page-header__submenu-link">
+                                                        Рум-сервис
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="page-header__menu-nav-list-item">
+                                        <a href="#" class="page-header__menu-nav-link">
+                                            Спа комплекс
+                                        </a>
+                                    </li>
+                                    <li class="page-header__menu-nav-list-item">
+                                        <a href="#" class="page-header__menu-nav-link">
+                                            Фитнес клуб
+                                        </a>
+                                    </li>
+                                    <li class="page-header__menu-nav-list-item">
+                                        <a href="#" class="page-header__menu-nav-link">
+                                            Салон красоты
+                                        </a>
+                                    </li>
+                                    <li class="page-header__menu-nav-list-item">
+                                        <a href="#" class="page-header__menu-nav-link">
+                                            Оздоровительные программы
+                                        </a>
+                                    </li>
+                                    <li class="page-header__menu-nav-list-item">
+                                        <a href="#" class="page-header__menu-nav-link">
+                                            Медицинские услуги
+                                        </a>
+                                    </li>
+                                    <li class="page-header__menu-nav-list-item">
+                                        <a href="#" class="page-header__menu-nav-link">
+                                            Доставка
+                                        </a>
+                                    </li>
+                                    <li class="page-header__menu-nav-list-item">
+                                        <a href="#" class="page-header__menu-nav-link">
+                                            Мероприятия
+                                        </a>
+                                    </li>
+                                    <li class="page-header__menu-nav-list-item">
+                                        <a href="#" class="page-header__menu-nav-link">
+                                            Детский клуб
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="page-header__menu-bottom-row">
+        
+        
+                                <div class="page-header__menu-links">
+                                    <a href="#" class="page-header__menu-link">
+                                        Галерея
+                                    </a>
+                                    <a href="#" class="page-header__menu-link">
+                                        Философия LUCIANO
+                                    </a>
+                                    <a href="#" class="page-header__menu-link">
+                                        Контакты
+                                    </a>
+                                </div>
+                                <div class="page-header__menu-social">
+                                    <a href="#" class="page-header__menu-social-link">
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-vkontakte">
+                                            <use xlink:href="#vkontakte"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+        
+                            <div class="fixed-bottom-panel fixed-bottom-panel--white">
+                                <div class="fixed-bottom-panel__desktop">
+        
+        
+                                    <div class="fixed-bottom-panel__row">
+                                        <div class="fixed-bottom-panel__col">
+                                            <a href="#ask-question" class="fixed-bottom-panel__ask-question js-open-modal">
+                                                <div class="fixed-bottom-panel__ask-question-icon">
+                                                    <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                                        <use xlink:href="#rombus"></use>
+                                                    </svg>
+                                                    <svg width="45" height="45" aria-hidden="true" class="icon-question">
+                                                        <use xlink:href="#question"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="fixed-bottom-panel__ask-question-text">
+                                                    Задать вопрос
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="fixed-bottom-panel__col">
+                                            <form class="fixed-bottom-panel__filters" action="/" method="GET">
+                                                <div class="fixed-bottom-panel__filters-inputs">
+                                                    <div class="fixed-bottom-panel__filters-input-wrapper"
+                                                        id="checkin-container-2">
+                                                        <label for="checkin" class="fixed-bottom-panel__filters-input-label">
+                                                            Заезд
+                                                        </label>
+                                                        <input type="text" name="checkin"
+                                                            class="fixed-bottom-panel__filters-input js-datepicker"
+                                                            data-container="#checkin-container-2" readonly="" id="checkin-2"
+                                                            value="05.11.2021">
+                                                    </div>
+                                                    <div class="fixed-bottom-panel__filters-input-wrapper"
+                                                        id="checkout-container-2">
+                                                        <label for="checkout" class="fixed-bottom-panel__filters-input-label">
+                                                            Выезд
+                                                        </label>
+                                                        <input type="text" name="checkout"
+                                                            class="fixed-bottom-panel__filters-input js-datepicker"
+                                                            data-container="#checkout-container-2" readonly="" id="checkout-2"
+                                                            value="10.11.2021">
+                                                    </div>
+                                                    <div class="fixed-bottom-panel__filters-input-wrapper">
+                                                        <label for="guests-2" class="fixed-bottom-panel__filters-input-label">
+                                                            Гости
+                                                        </label>
+                                                        <div class="fixed-bottom-panel__select">
+                                                            <select name="guests" id="guests-2" class="js-custom-select">
+                                                                <option value="1">1 Взрослый</option>
+                                                                <option value="2">2 Взрослых</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fixed-bottom-panel__filters-input-wrapper">
+                                                        <label for="area-2" class="fixed-bottom-panel__filters-input-label">
+                                                            площадь
+                                                        </label>
+                                                        <div class="fixed-bottom-panel__select">
+                                                            <select name="area" id="area-2" class="js-custom-select">
+                                                                <option value="1">любая</option>
+                                                                <option value="2">40 кв.м.</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="fixed-bottom-panel__filters-submit">
+                                                    <span class="fixed-bottom-panel__filters-submit-icon">
+                                                        <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                                            <use xlink:href="#rombus"></use>
+                                                        </svg>
+                                                        <svg width="45" height="45" aria-hidden="true" class="icon-search">
+                                                            <use xlink:href="#search"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="fixed-bottom-panel__filters-submit-text">
+                                                        Найти номер
+                                                    </span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fixed-bottom-panel__mobile">
+                                    <div class="fixed-bottom-panel__mobile-links">
+        
+        
+                                        <a href="#ask-question" class="fixed-bottom-panel__mobile-link js-open-modal">
+                                            Задать вопрос
+                                        </a>
+                                        <a href="#booking-modal" class="fixed-bottom-panel__mobile-link js-open-modal">
+                                            Найти номер
+                                        </a>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html" class="page-header__logo">
+                        <img src="img/main-logo.svg" alt="" class="page-header__logo-image">
                     </a>
                     <div class="page-header__controls">
+                        <a href="#" class="page-header__order-link js-open-modal">
+                            Забронировать номер
+                        </a>
                         <div class="page-header__languages">
                             <a href="#" class="page-header__languages-link active">
                                 Ру
@@ -52,78 +262,8 @@
                     </div>
                 </div>
             </div>
-        </header>        <div class="menu">
-            <div class="menu__inner">
-                <nav class="menu__nav">
-                    <a href="#" class="menu__nav-link">
-                        На главную
-                    </a>
-                    <a href="#" class="menu__nav-link">
-                        Отель
-                    </a>
-                    <a href="#" class="menu__nav-link">
-                        Кухня
-                    </a>
-                    <a href="#" class="menu__nav-link">
-                        SPA
-                    </a>
-                    <a href="#" class="menu__nav-link">
-                        Оздоровительные программы
-                    </a>
-                    <a href="#" class="menu__nav-link">
-                        Салон красоты
-                    </a>
-                    <a href="#" class="menu__nav-link">
-                        Фитнес клуб
-                    </a>
-                    <a href="#" class="menu__nav-link">
-                        Медицина и косметология
-                    </a>
-                    <a href="#" class="menu__nav-link">
-                        Детский клуб
-                    </a>
-                    <a href="#" class="menu__nav-link">
-                        Мероприятия
-                    </a>
-                </nav>
-                <div class="menu__row">
-                    <div class="menu__secondary-nav">
-                        <a href="#" class="menu__secondary-nav-link">
-                            Галерея
-                        </a>
-                        <a href="#" class="menu__secondary-nav-link">
-                            Философия LUCIANO
-                        </a>
-                        <a href="#" class="menu__secondary-nav-link">
-                            Контакты
-                        </a>
-                    </div>
-                    <ul class="menu__social-list">
-                        <li class="menu__social-list-item">
-                            <a href="#" class="menu__social-link">
-                                <svg width="45" height="45" aria-hidden="true" class="icon-instagram">
-                                    <use xlink:href="#instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu__social-list-item">
-                            <a href="#" class="menu__social-link">
-                                <svg width="45" height="45" aria-hidden="true" class="icon-facebook">
-                                    <use xlink:href="#facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu__social-list-item">
-                            <a href="#" class="menu__social-link">
-                                <svg width="45" height="45" aria-hidden="true" class="icon-vkontakte">
-                                    <use xlink:href="#vkontakte"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>        <main class="page-main">
+        </header>       
+        <main class="page-main">
 
 
 <section class="home-section home-section--align-right">
@@ -308,7 +448,7 @@
                                             площадь
                                         </label>
                                         <div class="fixed-bottom-panel__select">
-                                            <select name="guests" id="area" class="js-custom-select">
+                                            <select name="area" id="area" class="js-custom-select">
                                                 <option value="1">любая</option>
                                                 <option value="2">40 кв.м.</option>
                                             </select>

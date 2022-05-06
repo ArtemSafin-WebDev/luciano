@@ -3,6 +3,8 @@ import { sliceIntoChunks } from './utils';
 
 Swiper.use([Navigation, EffectFade]);
 
+import { IS_MOBILE } from './utils';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -18,18 +20,26 @@ export default function gallerySlider() {
 
         wrapper.classList.add('initialized');
 
-        wrapper.innerHTML = `<div class="swiper">
-            <div class="swiper-wrapper"> 
+        let sliderContainer = element.querySelector('.swiper');
 
-            </div>
-        </div>`;
+        wrapper.innerHTML = `<div class="swiper">
+                <div class="swiper-wrapper"> 
+
+                </div>
+            </div>`;
 
         const slidesWrapper = wrapper.querySelector('.swiper-wrapper');
-        const sliderContainer = wrapper.querySelector('.swiper');
+        sliderContainer = wrapper.querySelector('.swiper');
 
-        const cardsSplitByFour = sliceIntoChunks(cards, 4);
+        let preparedCards = [];
 
-        const slides = cardsSplitByFour.map(group => {
+        if (!IS_MOBILE) {
+            preparedCards = sliceIntoChunks(cards, 4);
+        } else {
+            preparedCards = cards.map(card => [card]);
+        }
+
+        const slides = preparedCards.map(group => {
             const slide = document.createElement('div');
             slide.classList.add('swiper-slide');
             group.forEach(groupItem => {
@@ -41,19 +51,22 @@ export default function gallerySlider() {
 
         slidesWrapper.append(...slides);
 
+        ScrollTrigger.refresh();
+
         new Swiper(sliderContainer, {
             slidesPerView: 1,
             watchOverflow: true,
-            spaceBetween: 20,
+            spaceBetween: 10,
             speed: 700,
             navigation: {
                 nextEl: element.querySelector('.gallery__slider-arrow--next'),
                 prevEl: element.querySelector('.gallery__slider-arrow--prev')
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 20
+                }
             }
         });
-
-        ScrollTrigger.refresh();
-
-
     });
 }

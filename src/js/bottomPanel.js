@@ -5,13 +5,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function bottomPanel() {
     const bottomPanel = document.querySelector('.js-bottom-panel');
+    const landingPosition = document.querySelector('.bottom-panel-landing-position')
 
-    if (!bottomPanel) return;
+    if (!bottomPanel || !landingPosition) {
+        document.body.classList.add('no-bottom-menu');
+        return;
+    }
 
     ScrollTrigger.create({
         trigger: bottomPanel,
         start: 'bottom bottom',
-        endTrigger: '.bottom-panel-landing-position',
+        endTrigger: landingPosition,
         end: 'bottom bottom',
         markers: false,
         pin: true,

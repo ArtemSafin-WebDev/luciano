@@ -28,8 +28,14 @@ import standardNav from './standardNav';
 import masonry from './masonry';
 
 
+
+import menuLinks from './menuLinks';
+import clientHeight from './clientHeight';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import fixedHeader from './fixedHeader';
+import includedSlider from './includedSlider';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -39,6 +45,7 @@ window.refreshScrollTrigger = () => {
 document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
     setScrollbarWidth();
+    clientHeight();
     validation();
     customSelects();
     masks();
@@ -64,6 +71,10 @@ document.addEventListener('DOMContentLoaded', function() {
     masterclassSlider();
     standardNav();
     masonry();
+    menuLinks();
+    fixedHeader();
+    includedSlider();
+   
    
     if (history.scrollRestoration) {
         history.scrollRestoration = 'manual';

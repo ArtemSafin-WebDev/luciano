@@ -10,12 +10,19 @@ export default function tablesSlider() {
         const thumbsContainer = element.querySelector('.tables__slider-thumbs .swiper');
         const mainSliderOptions = {
             watchOverflow: true,
-            spaceBetween: 0,
+            spaceBetween: 10,
+            slidesPerView: 'auto',
             thumbs: {},
             speed: 700,
             navigation: {
                 nextEl: element.querySelector('.tables__slider-arrow--next'),
                 prevEl: element.querySelector('.tables__slider-arrow--prev')
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 20,
+                    slidesPerView: 1
+                }
             }
         };
 

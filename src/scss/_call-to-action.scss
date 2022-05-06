@@ -11,8 +11,6 @@
             color: white;
         }
     }
-
-    
 }
 
 .call-to-action__bg {
@@ -26,26 +24,27 @@
     display: flex;
     align-items: center;
 
-  
-
     &::before,
     &::after {
         content: '';
         width: 1rem;
         flex-grow: 1;
         height: 1px;
-        background-color: rgba(#0e1d2b, 0.2); 
+        background-color: rgba(#0e1d2b, 0.2);
         position: relative;
         z-index: 5;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 
     .call-to-action--biege & {
-        background: #BB9B8C;
-        
+        background: #bb9b8c;
 
         &::before,
         &::after {
-            background-color: rgba(white, .2);
+            background-color: rgba(white, 0.2);
         }
     }
 
@@ -74,6 +73,11 @@
     position: relative;
     bottom: 3rem;
     z-index: 8;
+
+    @include breakpoint(mobile) {
+        max-width: 42rem;
+        bottom: 2rem;
+    }
 }
 
 .call-to-action__content {
@@ -83,6 +87,11 @@
     padding: 6rem 0;
     align-items: center;
     justify-content: center;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 2rem;
+        min-height: 28rem;
+    }
 }
 
 .call-to-action__link {
@@ -93,4 +102,12 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-family: var(--cormorant);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 120%;
+        text-align: center;
+    }
 }

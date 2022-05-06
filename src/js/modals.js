@@ -10,10 +10,6 @@ export default function modals() {
             return;
         }
 
-        if (typeof window.closeMenu === 'function') {
-            window.closeMenu();
-        }
-
         if (event) {
             event.preventDefault();
         }
@@ -34,6 +30,11 @@ export default function modals() {
         if (window.activeModal) {
             closeModal(window.activeModal);
 
+            setTimeout(() => {
+                openHandler();
+            }, 400);
+        } else if (typeof window.closeMenu === 'function' && window.menuOpen) {
+            window.closeMenu();
             setTimeout(() => {
                 openHandler();
             }, 400);

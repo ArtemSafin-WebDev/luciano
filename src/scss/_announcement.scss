@@ -1,19 +1,36 @@
 .announcement {
     @include sectionPadding;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
 }
 
 .announcement__card {
     display: flex;
     flex-direction: column;
     padding: 1.4rem;
-    border: 1px solid #bb9b8c;
-    max-width: 114rem;
-    margin: 0 auto;
+
     color: white;
     position: relative;
 
+    @include breakpointMF(small-tablet) {
+        border: 1px solid #bb9b8c;
+        max-width: 114rem;
+        margin: 0 auto;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 3rem var(--content-padding);
+        padding-bottom: 5rem;
+        position: relative;
+        margin: 0 calc(-1 * var(--content-padding));
+    }
+
     &--with-decoration {
-        margin-top: 7rem;
+        @include breakpointMF(small-tablet) {
+            margin-top: 7rem;
+        }
     }
     &:link,
     &:visited {
@@ -40,11 +57,19 @@
     z-index: 10;
     margin-bottom: -2rem;
     margin-left: -9rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .announcement__card-inner {
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        position: static;
+    }
 }
 
 .announcement__card-bg {
@@ -86,6 +111,12 @@
     justify-content: center;
     padding: 7rem 8rem;
     min-height: 40rem;
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+        padding: 0;
+        justify-content: flex-start;
+    }
 }
 
 .announcement__card-heading {
@@ -99,6 +130,16 @@
     font-feature-settings: 'tnum' on, 'lnum' on;
     margin-bottom: 8rem;
     font-family: var(--cormorant);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 120%;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
 }
 
 .announcement__card-bottom-row {
@@ -106,6 +147,9 @@
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .announcement__card-text {
@@ -115,4 +159,13 @@
     font-size: 1.8rem;
     line-height: 130%;
     max-width: 54rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 120%;
+        max-width: none;
+        margin-bottom: 5.2rem;
+    }
 }

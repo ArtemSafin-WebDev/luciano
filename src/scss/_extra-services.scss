@@ -6,16 +6,29 @@
 .extra-services__heading {
     @include sectionHeading;
     margin-bottom: 10rem;
-    
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
 }
 
 .extra-services__content {
     width: 100%;
     margin: 0 auto;
     max-width: 94.6rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        max-width: none;
+    }
 }
 .extra-services__block {
     margin-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5.5rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -30,8 +43,16 @@
     line-height: 140%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-family: var(--cormorant);
+    font-family: var(--montserrat);
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 140%;
+        margin-bottom: 2.5rem;
+    }
 }
 
 .extra-services__block-heading-decor {
@@ -44,15 +65,28 @@
     left: -21.5rem;
     z-index: -1;
     font-family: var(--caravan);
-    bottom: -.5rem;
+    bottom: -0.5rem;
     color: rgba(#bb9b8c, 0.2);
     text-transform: none;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 9.6rem;
+        line-height: 8rem;
+        left: 5rem;
+        bottom: 2rem;
+    }
 }
 
 .extra-services__list {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+    }
 }
 
 .extra-services__card {
@@ -60,6 +94,10 @@
     align-items: center;
     gap: 3rem;
     justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        align-items: flex-start;
+    }
 }
 
 .extra-services__card-key {
@@ -70,6 +108,12 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
     font-family: var(--montserrat);
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 130%;
+    }
 }
 
 .extra-services__card-value {
@@ -82,4 +126,13 @@
     text-align: right;
     letter-spacing: 0.05em;
     font-feature-settings: 'pnum' on, 'lnum' on;
+    flex-shrink: 0;
+    white-space: nowrap;
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-top: -0.2rem;
+    }
 }

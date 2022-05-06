@@ -4,21 +4,33 @@
 }
 
 .custom-set__heading {
-   @include sectionHeading;
+    @include sectionHeading;
     margin: 0 auto;
     margin-bottom: 7rem;
     max-width: 95rem;
     width: 100%;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 6rem;
+        max-width: none;
+    }
 }
 
 .custom-set__content {
-    width: 100%;
-    max-width: 94.6rem;
-    margin: 0 auto;
+    @include breakpointMF(small-tablet) {
+        width: 100%;
+        max-width: 94.6rem;
+        margin: 0 auto;
+    }
 }
 
 .custom-set__block {
     margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -33,11 +45,21 @@
     text-transform: uppercase;
     font-family: var(--montserrat);
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 140%;
+        margin-bottom: 2rem;
+    }
 }
 
 .custom-set__list {
-    column-count: 2;
-    column-gap: 6rem;
+    @include breakpointMF(small-tablet) {
+        column-count: 2;
+        column-gap: 6rem;
+    }
 }
 
 .custom-set__list-item {
@@ -50,6 +72,15 @@
     font-weight: 400;
     font-size: 3rem;
     line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.6rem;
+        padding-left: 2rem;
+        margin-bottom: 1.3rem;
+    }
     &::before {
         content: '';
         background-image: url('../img/marker.svg');
@@ -61,5 +92,11 @@
         position: absolute;
         left: 0;
         top: 1.2rem;
+
+        @include breakpoint(mobile) {
+            width: 0.8rem;
+            height: 0.8rem;
+            top: .9rem;
+        }
     }
 }

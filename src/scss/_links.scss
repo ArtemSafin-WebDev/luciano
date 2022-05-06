@@ -4,8 +4,14 @@
 .links__row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    border-top: 1px solid #bb9b8c;
-    border-bottom: 1px solid #bb9b8c;
+    border-top: 1px solid var(--dark-biege);
+    border-bottom: 1px solid var(--dark-biege);
+
+    @include breakpoint(mobile) {
+        
+        grid-template-columns: minmax(0, 1fr);
+        border: 1px solid var(--dark-biege);
+    }
 }
 
 .links + .links {
@@ -22,13 +28,24 @@
     justify-content: center;
     transition: color 0.2s, background-color 0.2s;
 
-    &:nth-child(odd) {
-        border-right: 1px solid #bb9b8c;
+    @include breakpoint(mobile) {
+        min-height: 19rem;
+        padding: 2rem 5rem;
+        border-bottom: 1px solid var(--dark-biege);
+        &:last-child {
+            border: none;
+        }
+    }
+
+    @include breakpointMF(small-tablet) {
+        &:nth-child(odd) {
+            border-right: 1px solid var(--dark-biege);
+        }
     }
 
     .no-touch &:hover,
     .touch &:active {
-        background-color: #bb9b8c;
+        background-color: var(--dark-biege);
         color: white;
 
         .links__btn-content {
@@ -37,7 +54,7 @@
 
         .links__btn-icon {
             &::before {
-                border-color: rgba(white, .4);
+                border-color: rgba(white, 0.4);
             }
 
             svg {
@@ -57,6 +74,14 @@
     text-align: center;
     margin-bottom: 2.5rem;
     font-family: var(--cormorant);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 120%;
+        margin-bottom: 2rem;
+    }
 }
 
 .links__btn-content {
@@ -69,8 +94,15 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #0e1d2b;
-    transition: color .2s;
+    transition: color 0.2s;
     font-family: var(--montserrat);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 140%;
+    }
 }
 
 .links__btn-icon {
@@ -84,6 +116,11 @@
     justify-content: center;
     margin-right: 2rem;
 
+    @include breakpoint(mobile) {
+      
+        margin-right: 2rem;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -94,12 +131,12 @@
         transform: rotate(45deg);
         border: 1px solid rgba(#0e1d2b, 0.4);
         z-index: -1;
-        transition: border-color .2s;
+        transition: border-color 0.2s;
     }
     svg {
         fill: #0e1d2b;
         width: 1.6rem;
         height: 1.6rem;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 }
