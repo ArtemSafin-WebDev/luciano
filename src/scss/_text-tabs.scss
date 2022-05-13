@@ -1,0 +1,175 @@
+.text-tabs {
+    @include sectionPadding;
+}
+
+.text-tabs__content {
+    max-width: 118rem;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 5rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        max-width: none;
+        display: block;
+    }
+}
+
+.text-tabs__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.5rem;
+
+    @include breakpoint(mobile) {
+        align-items: stretch;
+        gap: 3rem;
+    }
+}
+
+.text-tabs__btn {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-family: var(--cormorant);
+    position: relative;
+
+    svg {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 3rem;
+        gap: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        svg {
+            flex-shrink: 0;
+            width: 1.6rem;
+            height: 1.6rem;
+            fill: currentColor;
+            transition: transform 0.2s;
+            display: block;
+            margin-left: auto;
+        }
+
+        .js-accordion.active & {
+            color: var(--dark-biege);
+
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    @include breakpointMF(small-tablet) {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 10rem;
+            height: 1px;
+            background-color: var(--dark-biege);
+            transition: transform 0.2s;
+            transform-origin: left center;
+            transform: scaleX(0);
+            margin-top: 0.3rem;
+        }
+
+        &.active {
+            color: var(--dark-biege);
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+.text-tabs__items {
+    @include breakpointMF(small-tablet) {
+        @include tabsContainer;
+    }
+}
+
+.text-tabs__item {
+    @include breakpointMF(small-tablet) {
+        @include tabsItem;
+    }
+
+    @include breakpoint(mobile) {
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+.text-tabs__text-content {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-family: var(--montserrat);
+
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+        font-family: var(--proxima);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & > li {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+
+            @include breakpoint(mobile) {
+                padding-left: 2.5rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.6rem;
+                width: 1.2rem;
+                height: 1.2rem;
+                background-image: url('../img/marker.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                @include breakpoint(mobile) {
+                    top: .4rem;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

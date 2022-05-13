@@ -38,6 +38,7 @@ import fixedHeader from './fixedHeader';
 import includedSlider from './includedSlider';
 import mastersSlider from './mastersSlider';
 import trainingsSlider from './trainingsSlider';
+import textTabs from './textTabs';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     masks();
     fileUpload();
     anchorLinks();
+    textTabs();
     accordions();
     mediaPlayer();
     menu();
