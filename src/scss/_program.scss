@@ -1,0 +1,188 @@
+.program {
+    @include sectionPadding;
+
+    &--grey {
+        background: #ececec;
+    }
+}
+
+.program__content {
+    width: 100%;
+    max-width: 130rem;
+    margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.program__heading {
+    @include sectionHeading;
+    margin-bottom: 18rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
+}
+
+.program__list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 12rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 6rem;
+    }
+}
+
+.program__card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2.5rem;
+    }
+}
+
+.program__card-image-container {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 65%;
+    }
+
+    @include breakpointMF(small-tablet) {
+        .program__list-item:nth-child(even) & {
+            order: 2;
+            width: 43rem;
+            justify-self: flex-start;
+
+            &::before {
+                padding-bottom: 140%;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        .program__list-item:nth-child(even) & {
+          
+
+            &::before {
+                padding-bottom: 140%;
+            }
+        }
+    }
+}
+
+.program__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.program__card-content {
+    padding-left: 10rem;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+
+    @include breakpointMF(small-tablet) {
+        .program__list-item:nth-child(even) & {
+            padding-left: 0;
+            justify-self: flex-end;
+            padding-right: 5rem;
+        }
+    }
+}
+
+.program__card-content-inner {
+    width: 45rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.program__card-decor {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22rem;
+    line-height: 8rem;
+    position: absolute;
+    font-family: var(--caravan);
+    color: rgba(#bb9b8c, 0.2);
+    z-index: -1;
+    position: absolute;
+    bottom: 100%;
+    left: -10rem;
+    margin-bottom: 10rem;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    .program__list-item:nth-child(even) & {
+        left: -25rem;
+    }
+}
+
+.program__card-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 140%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    font-family: var(--montserrat);
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 140%;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.program__card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    font-family: var(--cormorant);
+
+    p {
+        margin-bottom: 2rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1.5rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+}
