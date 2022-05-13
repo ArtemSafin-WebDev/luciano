@@ -39,8 +39,14 @@
         }
     }
 
-    .no-touch &[href]:hover,
-    .touch &[href]:active {
+
+}
+
+
+a.circle-btn,
+button.circle-btn {
+    .no-touch &:hover,
+    .touch &:active {
         color: #bb9b8c;
     }
 }

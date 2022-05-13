@@ -1,0 +1,202 @@
+.order-excursion {
+    @include sectionPadding;
+}
+
+.order-excursion__card {
+    @include breakpointMF(small-tablet) {
+        width: 100%;
+        max-width: 118rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+        border: 1px solid #bb9b8c;
+    }
+
+    .parsley-errors-list.filled {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-top: 0.7rem;
+        color: var(--dark-biege);
+    }
+}
+
+.order-excursion__card-inner {
+    @include breakpointMF(small-tablet) {
+        border: 1px solid #bb9b8c;
+        padding: 9rem;
+        padding-top: 7.5rem;
+        padding-bottom: 11rem;
+    }
+}
+
+.order-excursion__card-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 7.3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-family: var(--cormorant);
+    margin-bottom: 8rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+        margin-bottom: 1rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        width: 19rem;
+        height: 1px;
+        margin-right: 2.7rem;
+        background-color: rgba(#0e1d2b, 0.4);
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
+
+.order-excursion__card-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 9rem;
+    grid-row-gap: 8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.order-excursion__card-field-label {
+    position: relative;
+    display: block;
+}
+
+.order-excursion__card-input {
+    border-bottom: 1px solid rgba(14, 29, 43, 0.2);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    height: 5rem;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+    transition: color 0.2s;
+    @include placeholder {
+        opacity: 0;
+    }
+}
+
+.order-excursion__card-field-label-text {
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 140%;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-family: var(--cormorant);
+    transition: transform 0.2s;
+    pointer-events: none;
+}
+
+.order-excursion__card-input:focus ~ .order-excursion__card-field-label-text,
+.order-excursion__card-input:not(:placeholder-shown) ~ .order-excursion__card-field-label-text {
+    transform: translateY(-2.3rem);
+}
+
+.order-excursion__card-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    @include breakpoint(mobile) {
+        margin: 2rem 0;
+    }
+}
+
+.order-excursion__card-checkbox-input {
+    display: none;
+}
+
+.order-excursion__card-checkbox-mark {
+    width: 2.2rem;
+    height: 2.2rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--dark-biege);
+    margin-right: 1.4rem;
+    svg {
+        width: 1.5rem;
+        height: 1.1rem;
+        fill: var(--dark-biege);
+        transition: opacity 0.2s;
+        opacity: 0;
+    }
+}
+
+.order-excursion__card-checkbox-input:checked ~ .order-excursion__card-checkbox-mark {
+    svg {
+        opacity: 1;
+    }
+}
+
+.order-excursion__card-checkbox-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 130%;
+    font-family: var(--montserrat);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        font-family: var(--proxima);
+        line-height: 120%;
+    }
+
+    a {
+        color: var(--dark-biege);
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: all 0.2s;
+
+        .no-touch &:hover,
+        .touch &:active {
+            text-decoration-color: var(--dark-biege);
+        }
+    }
+}
+
+.order-excursion__card-field--centered {
+    @include breakpointMF(small-tablet) {
+        align-self: center;
+    }
+}
+
+.order-excursion__card-submit {
+    @include breakpoint(mobile) {
+        margin: 2rem 0;
+    }
+}

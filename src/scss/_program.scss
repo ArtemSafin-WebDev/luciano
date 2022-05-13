@@ -20,7 +20,10 @@
 
 .program__heading {
     @include sectionHeading;
+    margin: 0 auto;
     margin-bottom: 18rem;
+    max-width: 94rem;
+    width: 100%;
 
     @include breakpoint(mobile) {
         margin-bottom: 6rem;
