@@ -37,6 +37,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import fixedHeader from './fixedHeader';
 import includedSlider from './includedSlider';
 import mastersSlider from './mastersSlider';
+import trainingsSlider from './trainingsSlider';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fixedHeader();
     includedSlider();
     mastersSlider();
+    trainingsSlider();
    
    
     if (history.scrollRestoration) {

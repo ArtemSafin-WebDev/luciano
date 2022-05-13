@@ -1,0 +1,188 @@
+.trainings {
+    @include sectionPadding;
+    overflow: hidden;
+}
+
+.trainings__content {
+    padding: 0 10rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.trainings__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22rem;
+    line-height: 8rem;
+    color: rgba(#bb9b8c, 0.2);
+    margin-bottom: 20rem;
+    text-align: center;
+    font-family: var(--caravan);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 9.6rem;
+        line-height: 5.5rem;
+        color: rgba(#bb9b8c, 0.6);
+        margin-bottom: 7rem;
+    }
+    // white-space: pre;
+}
+
+.trainings__slider {
+    margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+    .swiper {
+        overflow: visible;
+    }
+
+    @include breakpointMF(small-tablet) {
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            width: max-content;
+
+            &::after {
+                content: '';
+                width: 12rem;
+                height: 1px;
+                flex-shrink: 0;
+                margin: 0 7rem;
+                background-color: rgba(#000000, 0.2);
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &::after {
+                content: '';
+                height: 5.5rem;
+                width: 1px;
+                background-color: rgba(#000000, 0.2);
+                flex-shrink: 0;
+                margin: 2rem 0;
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.trainings__slider-card {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.trainings__slider-card-image-container {
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+
+    @include breakpoint(mobile) {
+        width: 12rem;
+        height: 12rem;
+        margin-bottom: 1.3rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(91.46deg, rgba(255, 255, 255, 0) 50.07%, rgba(255, 255, 255, 0.7) 98.84%);
+    }
+}
+
+.trainings__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trainings__slider-card-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    font-family: var(--cormorant);
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 110%;
+        margin-bottom: 1rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.trainings__slider-card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+}
+
+.trainings__slider-card-content {
+    margin-left: -4rem;
+    position: relative;
+    z-index: 5;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
+}
