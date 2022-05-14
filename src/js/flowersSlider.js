@@ -2,7 +2,7 @@ import { Swiper, Thumbs, Navigation, Pagination } from 'swiper';
 
 Swiper.use([Thumbs, Navigation, Pagination]);
 
-export default function flowersSlider() {
+function initializeFlowersSlider() {
     const elements = Array.from(document.querySelectorAll('.js-flowers-slider'));
 
     elements.forEach(element => {
@@ -18,4 +18,10 @@ export default function flowersSlider() {
             }
         });
     });
+}
+
+window.initializeFlowersSlider = initializeFlowersSlider;
+
+export default function flowersSlider() {
+    initializeFlowersSlider();
 }
