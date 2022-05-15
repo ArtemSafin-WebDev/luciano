@@ -1,6 +1,7 @@
 .masters {
     @include sectionPadding;
     overflow: hidden;
+    background-color: #fff;
     &--grey {
         background: #f9f9f9;
     }

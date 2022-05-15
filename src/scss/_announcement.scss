@@ -1,6 +1,6 @@
 .announcement {
     @include sectionPadding;
-
+    background-color: #fff;
     @include breakpoint(mobile) {
         padding: 0;
     }
