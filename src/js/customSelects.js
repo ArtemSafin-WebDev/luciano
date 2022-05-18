@@ -8,7 +8,7 @@ export default function customSelects() {
             searchEnabled: false,
             itemSelectText: '',
             shouldSort: false,
-            position: 'top'
+            position: select.hasAttribute('data-position') ? select.getAttribute('data-position') : 'top'
         });
     });
 }

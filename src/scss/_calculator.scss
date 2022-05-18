@@ -1,0 +1,269 @@
+.calculator {
+    @include sectionPadding;
+    background: #bb9b8c;
+    color: white;
+}
+
+.calculator__content {
+    width: 100%;
+    max-width: 78rem;
+    margin: 0 auto;
+}
+
+.calculator__heading {
+    @include sectionHeading;
+    margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+}
+
+.calculator__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator__form-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 6rem;
+    grid-row-gap: 3rem;
+    margin-bottom: 6.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.calculator__form-field {
+    text-align: left;
+
+    .choices {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-family: var(--montserrat);
+        line-height: 140%;
+        margin-bottom: 0;
+        position: relative;
+        border-radius: 0;
+        background: transparent;
+
+        &.is-open {
+            border-bottom-left-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+    }
+
+    .choices.is-open {
+        z-index: 30;
+    }
+
+    .choices[data-type*='select-one'].is-open::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .choices[data-type*='select-one'] .choices__inner {
+        padding-bottom: 0rem;
+    }
+
+    .choices__inner {
+        background: transparent;
+        font-size: 1.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-family: var(--montserrat);
+        padding: 0;
+
+        border: none;
+        min-height: 4rem;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border-radius: 0;
+        border-radius: 0 !important;
+        transition: border-color 0.2s;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .choices__list--single {
+        padding: 0;
+        padding-right: 3rem;
+    }
+
+    .choices[data-type*='select-one']:after {
+        border: none;
+        margin: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../img/dropdown-arrow.svg');
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 2rem 2rem;
+        width: 2rem;
+        height: 2rem;
+
+        transition: transform 0.3s;
+    }
+
+    .choices__placeholder {
+        opacity: 1;
+
+        color: white;
+    }
+
+    .choices__list--dropdown {
+        word-break: initial;
+        font-size: 1.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-family: var(--montserrat);
+        text-transform: uppercase;
+        background: #ffffff;
+        border: none;
+
+        border-radius: 0rem !important;
+
+        box-shadow: none;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
+        display: block !important;
+        opacity: 0;
+        visibility: hidden;
+        padding: 0;
+        top: 100%;
+        bottom: auto;
+        left: 0;
+        right: auto;
+        margin-top: 0.5rem;
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+
+    .choices__list--dropdown .choices__item {
+        font-size: 1.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-family: var(--montserrat);
+        text-transform: uppercase;
+        transition: background-color 0.2s, color 0.2s;
+        padding: 1.1rem 1.6rem;
+        display: flex;
+        align-items: center;
+        // border-top: 1px solid #e9e9e9;
+        color: black;
+        white-space: nowrap;
+        &:first-child {
+            border: none;
+        }
+    }
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        background: black;
+        color: white;
+    }
+
+    .choices__list--dropdown .choices__list {
+        max-height: 30rem;
+
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            background-color: white;
+            width: 0.6rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 0.3rem;
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        @include breakpoint(mobile) {
+            max-height: 22rem;
+        }
+    }
+}
+
+.calculator__form-field-label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgba(white, 0.7);
+    font-family: var(--cormorant);
+    line-height: 140%;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: -0.5rem;
+    pointer-events: none;
+}
+
+.calculator__form-submit {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+    margin-bottom: 4rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: background-color .2s, color .2s;
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: white;
+        color: var(--dark-biege);
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 140%;
+        padding: 3rem 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.calculator__form-total {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 1;
+    font-family: var(--cormorant);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+}

@@ -72,6 +72,15 @@
         cursor: default;
     }
 
+    &.swiper-button-lock {
+        opacity: 0;
+        visibility: hidden;
+        display: block;
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
     &--prev {
         margin-right: 8.8rem;
     }
