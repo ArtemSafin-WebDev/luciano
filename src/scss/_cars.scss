@@ -222,6 +222,7 @@
     text-transform: uppercase;
     color: var(--dark-biege);
     font-family: var(--montserrat);
+    margin-left: auto;
 
     @include breakpoint(mobile) {
         grid-area: price;
