@@ -39,6 +39,7 @@ import includedSlider from './includedSlider';
 import mastersSlider from './mastersSlider';
 import trainingsSlider from './trainingsSlider';
 import textTabs from './textTabs';
+import proceduresSlider from './proceduresSlider';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -80,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     includedSlider();
     mastersSlider();
     trainingsSlider();
+    proceduresSlider();
    
    
     if (history.scrollRestoration) {
