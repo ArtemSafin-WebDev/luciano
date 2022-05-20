@@ -1,0 +1,151 @@
+<div class="standard-modal standard-modal--excursion js-modal" id="abonement-modal">
+    <div class="standard-modal__inner">
+        <button class="standard-modal__close js-close-modal">
+            <svg width="45" height="45" aria-hidden="true" class="icon-modal-close">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <div class="standard-modal__abonement">
+            <div class="standard-modal__abonement-top-row">
+                <div class="standard-modal__abonement-image-container">
+                    <img data-src="img/cards/3.svg" alt="" class="standard-modal__abonement-image lazyload">
+                </div>
+                <div class="standard-modal__abonement-content">
+                    <h3 class="standard-modal__abonement-heading">
+                        FITNESS GOLD
+                    </h3>
+                    <div class="standard-modal__abonement-heading-text">
+                        время посещения: каждый день с 7:00 до 23:00
+                    </div>
+                    <ul class="standard-modal__abonement-tariffs-list">
+                        <li class="standard-modal__abonement-tariffs-list-item">
+                            <div class="standard-modal__abonement-tariffs-card">
+                                <div class="standard-modal__abonement-tariffs-card-price">
+                                    340 000 ₽
+                                </div>
+                                <div class="standard-modal__abonement-tariffs-card-duration">
+                                    1 год
+                                </div>
+                                <div class="standard-modal__abonement-tariffs-card-desc">
+                                    Заморозка 60 дней<br>
+                                    4 консультации спортивного диагноста<br>
+                                    1 персональная тренировка 60 мин на суше<br>
+                                    1 персональная тренировка 60 мин в воде<br>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="standard-modal__abonement-tariffs-list-item">
+                            <div class="standard-modal__abonement-tariffs-card">
+                                <div class="standard-modal__abonement-tariffs-card-price">
+                                    240 000 ₽
+                                </div>
+                                <div class="standard-modal__abonement-tariffs-card-duration">
+                                    6 месяцев
+                                </div>
+                                <div class="standard-modal__abonement-tariffs-card-desc">
+                                    Заморозка 30 дней<br>
+                                    2 консультации спортивного диагноста<br>
+                                    1 персональная тренировка 60 мин на суше<br>
+                                    1 персональная тренировка 60 мин в воде
+                                </div>
+                            </div>
+                        </li>
+                        <li class="standard-modal__abonement-tariffs-list-item">
+                            <div class="standard-modal__abonement-tariffs-card">
+                                <div class="standard-modal__abonement-tariffs-card-price">
+                                    140 000 ₽
+                                </div>
+                                <div class="standard-modal__abonement-tariffs-card-duration">
+                                    3 месяцев
+                                </div>
+                                <div class="standard-modal__abonement-tariffs-card-desc">
+                                    1 консультации спортивного диагноста<br>
+                                    1 персональная тренировка 60 мин на суше<br>
+                                    1 персональная тренировка 60 мин в воде
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="standard-modal__abonement-text-content">
+                        <p>
+                            Клубная карта на 12 месяцев с дополнительными привилегиями, способными удовлетворить самые
+                            высокие требования VIP-клиентов.
+                        </p>
+                        <ul>
+                            <li>
+                                Многофункциональный зал и кардиозона
+                            </li>
+                            <li>
+                                Групповые тренировки на суше
+                            </li>
+                            <li>
+                                Аквазона и термальная спа-зона
+                            </li>
+                            <li>
+                                Раздевалки 1,2,3 этаж и раздевалка при спортивном бассейне
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-excursion__card">
+                <div class="order-excursion__card-inner">
+
+
+                    <h2 class="order-excursion__card-heading">
+                        Оформить карту
+                    </h2>
+                    <form action="/" method="POST" class="order-excursion__card-form" data-need-validation="">
+                        <div class="order-excursion__card-fields">
+                            <div class="order-excursion__card-field">
+                                <label class="order-excursion__card-field-label">
+
+                                    <input type="text" name="name" class="order-excursion__card-input" placeholder="Имя"
+                                        required="">
+
+                                    <span class="order-excursion__card-field-label-text">
+                                        Имя
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="order-excursion__card-field">
+                                <label class="order-excursion__card-field-label">
+
+                                    <input type="text" name="name" class="order-excursion__card-input js-phone-input"
+                                        placeholder="телефон" required="">
+
+                                    <span class="order-excursion__card-field-label-text">
+                                        телефон
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="order-excursion__card-field order-excursion__card-field--centered">
+                                <label class="order-excursion__card-checkbox">
+                                    <input name="policy" class="order-excursion__card-checkbox-input" type="checkbox"
+                                        value="1" required="" checked="">
+                                    <span class="order-excursion__card-checkbox-mark">
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-checkmark">
+                                            <use xlink:href="#checkmark"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="order-excursion__card-checkbox-text">
+                                        Я согласен на <a href="#">обработку данных</a>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="order-excursion__card-field order-excursion__card-field--centered">
+                                <button type="submit" class="circle-btn order-excursion__card-submit">
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                        <use xlink:href="#semicircle"></use>
+                                    </svg>
+                                    Отправить
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

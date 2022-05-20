@@ -1,0 +1,111 @@
+.cards {
+    @include sectionPadding;
+}
+
+.cards__content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 130rem;
+}
+
+.cards__list {
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin: -4rem;
+        justify-content: center;
+    }
+}
+
+.cards__list-item {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpointMF(small-tablet) {
+        padding: 4rem;
+        width: 33.33%;
+    }
+}
+
+.cards__card {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 2rem;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        .cards__card-title {
+            color: #bb9b8c;
+            span {
+                border-color: #bb9b8c;
+            }
+        }
+    }
+}
+
+.cards__card-image-container {
+    position: relative;
+    margin-bottom: 1.8rem;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 68%;
+    }
+}
+
+.cards__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards__card-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 90%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--cormorant);
+    transition: color 0.2s;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    span {
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s;
+    }
+}
+
+.cards__card-price {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+}
+
+
+.cards__slider {
+    .swiper {
+        overflow: visible;
+    }
+}
