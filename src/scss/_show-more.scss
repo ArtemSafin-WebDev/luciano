@@ -16,6 +16,9 @@
     @include breakpoint(mobile) {
         font-weight: 400;
         font-family: var(--proxima);
+        padding: 2rem 0;
+        font-size: 1.4rem;
+        
     }
 
     .no-touch &:hover,

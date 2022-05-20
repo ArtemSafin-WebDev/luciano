@@ -5,6 +5,10 @@
     &--grey {
         background: #f9f9f9;
     }
+
+    &--no-bottom-padding {
+        padding-bottom: 0;
+    }
 }
 
 .masters__heading {
@@ -38,6 +42,7 @@
         opacity: 0.5;
     }
 
+    .masters__slider:not(.js-masters-slider) &,
     &.swiper-button-lock {
         opacity: 0;
         visibility: hidden;
@@ -87,6 +92,24 @@
             }
         }
     }
+
+    .masters__slider:not(.js-masters-slider) & {
+        .swiper-slide {
+            width: 100%;
+            margin: 0;
+        }
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-row-gap: 7rem;
+
+            @include breakpoint(mobile) {
+                grid-gap: 2rem;
+                
+                // grid-template-columns: minmax(0, 1fr);
+            }
+        }
+    }
 }
 
 .masters__slider-card {
@@ -108,6 +131,10 @@
         width: 100%;
         flex-shrink: 1;
         margin-bottom: 3rem;
+
+        .masters__slider:not(.js-masters-slider) & {
+            margin-bottom: 1.5rem;
+        }
     }
     &::before {
         content: '';
@@ -163,6 +190,11 @@
         font-size: 2.4rem;
         line-height: 120%;
 
+        .masters__slider:not(.js-masters-slider) &  {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
         br {
             display: none;
         }
@@ -188,6 +220,10 @@
         letter-spacing: 0.18em;
         text-transform: uppercase;
         margin-bottom: 2rem;
+
+        .masters__slider:not(.js-masters-slider) & {
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -213,6 +249,11 @@
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 130%;
+
+        .masters__slider:not(.js-masters-slider) & {
+            font-size: 1.2rem;
+
+        }
     }
 }
 
@@ -230,6 +271,12 @@
     transition: all 0.2s;
     display: block;
     margin-top: 2.4rem;
+
+    @include breakpoint(mobile) {
+        .masters__slider:not(.js-masters-slider) & {
+            margin-top: 1.5rem;
+        }
+    }
     &:link,
     &:visited {
         color: var(--dark-biege);
@@ -240,5 +287,12 @@
        
 
         text-decoration-color: transparent;
+    }
+}
+
+.masters__slider-show-more {
+    margin-top: 12rem;
+    @include breakpoint(mobile) {
+        margin-top: 4rem;
     }
 }
