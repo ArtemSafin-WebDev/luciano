@@ -257,7 +257,9 @@
     position: relative;
     z-index: 1;
     color: white;
-
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     @include breakpoint(mobile) {
         padding: 3rem 2.5rem;
         min-height: 45rem;
@@ -265,6 +267,18 @@
     &:link,
     &:visited {
         color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        .masonry__service-card-bg::after {
+            opacity: 0;
+        }
+
+        .masonry__service-card-bg-image {
+            transform: scale(1.03);
+            transition: transform .5s;
+        }
     }
 }
 
@@ -275,7 +289,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-
+    
     &::after {
         content: '';
         position: absolute;
@@ -284,6 +298,7 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(0deg, rgba(14, 29, 43, 0.5), rgba(14, 29, 43, 0.5));
+        transition: opacity .2s;
     }
 }
 
@@ -294,6 +309,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .3s;
 }
 
 .masonry__service-card-title {

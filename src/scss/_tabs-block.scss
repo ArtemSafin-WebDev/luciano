@@ -68,6 +68,7 @@
     position: relative;
     padding-bottom: 5rem;
     font-family: var(--montserrat);
+    justify-content: center;
 
     @include breakpoint(mobile) {
         font-style: normal;
