@@ -84,11 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     trainingsSlider();
     proceduresSlider();
     cardsSlider();
-   
-   
-    if (history.scrollRestoration) {
-        history.scrollRestoration = 'manual';
-    }
+
 });
 
 window.addEventListener('load', function() {
