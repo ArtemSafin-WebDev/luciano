@@ -55,7 +55,7 @@
     @include breakpoint(mobile) {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, auto);
-        grid-template-areas: 'image image' 'info info' 'title title' 'order price';
+        grid-template-areas: 'image image' 'info info' 'title title' 'prices prices' 'order price';
         align-items: center;
         grid-gap: 2rem;
     }
@@ -205,7 +205,7 @@
         line-height: 120%;
         margin-bottom: 0;
         grid-area: title;
-        margin-bottom: 4rem;
+        margin-bottom: 0rem;
     }
 }
 
@@ -224,6 +224,14 @@
     font-family: var(--montserrat);
     margin-left: auto;
 
+    span {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
+  
+
     @include breakpoint(mobile) {
         grid-area: price;
         align-self: center;
@@ -237,6 +245,21 @@
         width: 2rem;
         height: 2rem;
         margin-left: 0.6rem;
+        transition: transform .2s;
+    }
+
+    .js-accordion.active & {
+        span {
+            &:nth-child(1) {
+                display: none;
+            }
+            &:nth-child(2) {
+                display: inline;
+            }
+        }
+        svg {
+            transform: rotate(180deg);
+        }
     }
     &:link,
     &:visited {
@@ -321,5 +344,64 @@
         br {
             display: none;
         }
+    }
+}
+
+.cars__card-prices {
+    height: 0;
+    overflow: hidden;
+    @include breakpoint(mobile) {
+        grid-area: prices;
+    }
+}
+
+.cars__card-prices-inner {
+    padding-top: 3rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+    }
+}
+
+.cars__card-prices-table {
+    border-collapse: collapse;
+    width: 100%;
+
+    tr {
+    }
+
+    th,
+    td {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        font-family: var(--montserrat);
+        vertical-align: top;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding-bottom: 1.8rem;
+
+        tr:last-child & {
+            padding-bottom: 0;
+        }
+    }
+
+    th {
+        padding-right: 5rem;
+
+
+    }
+
+    td {
+        text-align: right;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-family: var(--proxima);
+        white-space: nowrap;
     }
 }
