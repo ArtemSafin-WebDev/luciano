@@ -576,3 +576,36 @@
         }
     }
 }
+
+.fixed-bottom-panel__tour {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+    gap: 1rem;
+    color: #f4e5a0;
+    &:link,
+    &:visited {
+        color: #f4e5a0;
+    }
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+    svg {
+        flex-shrink: 0;
+        width: 5.6rem;
+        height: 5.6rem;
+
+        @include breakpoint(mobile) {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
