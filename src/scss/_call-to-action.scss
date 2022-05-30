@@ -34,8 +34,21 @@
         position: relative;
         z-index: 5;
 
+      
+
         @include breakpoint(mobile) {
             display: none;
+        }
+    }
+
+
+    .call-to-action--alpha & {
+        &::before {
+            margin-right: 15rem;
+        }
+
+        &::after {
+            margin-left: 15rem;
         }
     }
 
@@ -74,9 +87,26 @@
     bottom: 3rem;
     z-index: 8;
 
+   .call-to-action--alpha & {
+       width: 38rem;
+       max-width: none;
+       bottom: 1.5rem;
+       left: 4rem;
+
+       
+   }
+
     @include breakpoint(mobile) {
         max-width: 42rem;
         bottom: 2rem;
+
+        .call-to-action--alpha & {
+            max-width: none;
+            width: 18rem;
+            bottom: 1rem;
+            margin: 0 auto;
+            left: 2.5rem;
+        }
     }
 }
 
