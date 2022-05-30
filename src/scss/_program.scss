@@ -53,6 +53,24 @@
 
 .program__card-image-container {
     position: relative;
+
+    .swiper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .swiper-wrapper {
+        flex-grow: 1;
+    }
+
+    .swiper-slide {
+        position: relative;
+    }
     &::before {
         content: '';
         display: block;
@@ -241,6 +259,50 @@
             height: 4rem;
         }
     }
+}
+
+.program__slider-buttons {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.6rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 1.2rem;
+    }
+}
+
+.program__slider-button {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 2.5rem;
+    font-family: var(--montserrat);
+    letter-spacing: 0;
+
+    &:hover,
+    &.active {
+        .program__slider-button-marker {
+            background-color: #BB9B8C;
+        }
+    }
+    
+   
+}
+
+.program__slider-button-marker {
+    width: .8rem;
+    height: .8rem;
+    position: absolute;
+    left: 0;
+    top: .4rem;
+    border: 1px solid #BB9B8C;
+    transform: rotate(-45deg);
+    transition: background-color .2s;
+
 }
 
 .program__inner-list {

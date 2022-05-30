@@ -41,6 +41,7 @@ import trainingsSlider from './trainingsSlider';
 import textTabs from './textTabs';
 import proceduresSlider from './proceduresSlider';
 import cardsSlider from './cardsSlider';
+import programCardImageSlider from './programCardImageSlider';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     trainingsSlider();
     proceduresSlider();
     cardsSlider();
+    programCardImageSlider();
 
 });
 
