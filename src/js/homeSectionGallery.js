@@ -1,14 +1,17 @@
-import { Swiper, Navigation, EffectFade } from 'swiper';
+import { Swiper, Navigation, EffectFade, Controller } from 'swiper';
 
-Swiper.use([Navigation, EffectFade]);
+Swiper.use([Navigation, EffectFade, Controller]);
+
+import { IS_MOBILE } from './utils';
 
 export default function homeSectionGallery() {
     const elements = Array.from(document.querySelectorAll('.js-home-section-gallery'));
 
     elements.forEach(element => {
-        const container = element.querySelector('.swiper');
+        const photoSliderContainer = element.querySelector('.home-section__bg-slider .swiper');
+        const textSliderContainer = element.querySelector('.home-section__text-slider .swiper');
 
-        new Swiper(container, {
+        const photoSlider = new Swiper(photoSliderContainer, {
             slidesPerView: 1,
             speed: 700,
             watchOverflow: true,
@@ -21,6 +24,17 @@ export default function homeSectionGallery() {
                 nextEl: element.querySelector('.home-section__slider-arrow--next'),
                 prevEl: element.querySelector('.home-section__slider-arrow--prev')
             }
-        })
-    })
+        });
+
+        const textSlider = new Swiper(textSliderContainer, {
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            autoHeight: true
+        });
+
+        textSlider.controller.control = photoSlider;
+        photoSlider.controller.control = textSlider;
+    });
 }
