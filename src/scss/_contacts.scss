@@ -1,0 +1,265 @@
+.contacts {
+    padding-top: 8rem;
+    padding-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        padding: 4rem 0;
+    }
+}
+
+.contacts__content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 118rem;
+}
+
+.contacts__blocks {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 8rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 5rem;
+    }
+}
+
+.contacts__block-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    font-family: var(--cormorant);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 120%;
+        margin-bottom: 2rem;
+    }
+}
+
+.contacts__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-row-gap: 5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+    }
+}
+
+.contacts__card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.contacts__card-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: var(--montserrat);
+}
+
+.contacts__card-phone {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--dark-biege);
+    }
+}
+
+.contacts__card-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.contacts__card-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.18em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #bb9b8c;
+    transition: all 0.2s;
+    text-decoration-color: #bb9b8c;
+    &:link,
+    &:visited {
+        color: #bb9b8c;
+    }
+    svg,
+    img {
+        flex-shrink: 0;
+        width: 1.6rem;
+        height: 1.6rem;
+        object-fit: contain;
+        fill: #bb9b8c;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        text-decoration-color: transparent;
+    }
+}
+
+.contacts__card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    color: rgba(black, 0.5);
+}
+
+.contacts__map-wrapper {
+    position: relative;
+    margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.contacts__map-inner-wrapper {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 100%;
+        }
+    }
+}
+
+.contacts__map {
+    background-color: lightgrey;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contacts__select {
+    position: absolute;
+    left: 1.8rem;
+    top: 3rem;
+    z-index: 50;
+
+    @include breakpoint(mobile) {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+    }
+}
+
+.contacts__select-current {
+    display: flex;
+    align-items: center;
+    min-width: 36rem;
+    padding: 0.8rem 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+    gap: 1.2rem;
+    background-color: #fff;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    svg {
+        fill: currentColor;
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        transition: transform 0.2s;
+    }
+
+    .dropdown-shown & {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.contacts__select-current-text {
+    white-space: nowrap;
+}
+
+.contacts__select-dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s linear 0.5s;
+
+    .dropdown-shown & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+}
+
+.contacts__select-dropdown-inner {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.contacts__select-btn {
+    padding: 0.8rem 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+    transition: background-color 0.2s, opacity 0.2s;
+    text-align: left;
+
+    &.active {
+        // background-color: lightgrey;
+        // color: white;
+        opacity: 0.3;
+        cursor: default;
+        pointer-events: none;
+    }
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--dark-biege);
+        color: white;
+    }
+}

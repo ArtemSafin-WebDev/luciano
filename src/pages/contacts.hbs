@@ -1,0 +1,507 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="standard-header">
+    <div class="standard-header__bg">
+        <img src="img/decor.svg" alt="" class="standard-header__bg-decor">
+    </div>
+    <div class="container">
+        <div class="standard-header__content">
+
+
+            <div class="standard-header__breadcrumbs">
+                <a href="#" class="standard-header__breadcrumbs-link">
+                    Главная
+                </a>
+
+                <a href="#" class="standard-header__breadcrumbs-link">
+                    Контакты
+                </a>
+
+
+            </div>
+            <div class="standard-header__heading-wrapper">
+                <h2 class="standard-header__heading">
+                    Контакты
+
+                </h2>
+            </div>
+            <div class="fixed-bottom-panel">
+                <div class="fixed-bottom-panel__desktop">
+
+
+                    <div class="fixed-bottom-panel__row">
+                        <div class="fixed-bottom-panel__col">
+                            <a href="#ask-question" class="fixed-bottom-panel__ask-question js-open-modal">
+                                <div class="fixed-bottom-panel__ask-question-icon">
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                        <use xlink:href="#rombus"></use>
+                                    </svg>
+                                    <svg width="45" height="45" aria-hidden="true" class="icon-question">
+                                        <use xlink:href="#question"></use>
+                                    </svg>
+                                </div>
+                                <div class="fixed-bottom-panel__ask-question-text">
+                                    Задать вопрос
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fixed-bottom-panel__col">
+                            <form class="fixed-bottom-panel__filters" action="/" method="GET">
+                                <div class="fixed-bottom-panel__filters-inputs">
+                                    <div class="fixed-bottom-panel__filters-input-wrapper" id="checkin-container">
+                                        <label for="checkin" class="fixed-bottom-panel__filters-input-label">
+                                            Заезд
+                                        </label>
+                                        <input type="text" name="checkin"
+                                            class="fixed-bottom-panel__filters-input js-datepicker"
+                                            data-container="#checkin-container" readonly="" id="checkin"
+                                            value="05.11.2021">
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper" id="checkout-container">
+                                        <label for="checkout" class="fixed-bottom-panel__filters-input-label">
+                                            Выезд
+                                        </label>
+                                        <input type="text" name="checkout"
+                                            class="fixed-bottom-panel__filters-input js-datepicker"
+                                            data-container="#checkout-container" readonly="" id="checkout"
+                                            value="10.11.2021">
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper">
+                                        <label for="guests" class="fixed-bottom-panel__filters-input-label">
+                                            Гости
+                                        </label>
+                                        <div class="fixed-bottom-panel__select">
+                                            <select name="area" id="guests" class="js-custom-select">
+                                                <option value="1">1 Взрослый</option>
+                                                <option value="2">2 Взрослых</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fixed-bottom-panel__filters-input-wrapper">
+                                        <label for="area" class="fixed-bottom-panel__filters-input-label">
+                                            площадь
+                                        </label>
+                                        <div class="fixed-bottom-panel__select">
+                                            <select name="guests" id="area" class="js-custom-select">
+                                                <option value="1">любая</option>
+                                                <option value="2">40 кв.м.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="fixed-bottom-panel__filters-submit">
+                                    <span class="fixed-bottom-panel__filters-submit-icon">
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                                            <use xlink:href="#rombus"></use>
+                                        </svg>
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-search">
+                                            <use xlink:href="#search"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="fixed-bottom-panel__filters-submit-text">
+                                        Найти номер
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-bottom-panel__mobile">
+                    <div class="fixed-bottom-panel__mobile-links">
+
+
+                        <a href="#ask-question" class="fixed-bottom-panel__mobile-link js-open-modal">
+                            Задать вопрос
+                        </a>
+                        <a href="#booking-modal" class="fixed-bottom-panel__mobile-link js-open-modal">
+                            Найти номер
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="contacts">
+    <div class="container">
+        <div class="contacts__content">
+            <script>
+                var pointsMapData = [
+                    {
+                        id: 1,
+                        coords: [55.796454, 49.108656],
+                        type: 'sight',
+                        pin: {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/pins/kremlin.svg',
+                            iconImageSize: [164, 29],
+                            iconImageOffset: [-6.5, -7]
+                        }
+                    },
+                    {
+                        id: 2,
+                        coords: [55.798414, 49.105227],
+                        type: 'sight',
+                        pin: {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/pins/sheriff.svg',
+                            iconImageSize: [163, 29],
+                            iconImageOffset: [-6.5, -7]
+                        }
+                    },
+                    {
+                        id: 3,
+                        coords: [55.792400, 49.111501],
+                        type: 'sight',
+                        pin: {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/pins/bauman.svg',
+                            iconImageSize: [297, 29],
+                            iconImageOffset: [-6.5, -7]
+                        }
+                    },
+                    {
+                        id: 4,
+                        coords: [55.781456, 49.123371],
+                        type: 'sight',
+                        pin: {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/pins/kaban.svg',
+                            iconImageSize: [190, 29],
+                            iconImageOffset: [-6.5, -7]
+                        }
+                    },
+                    {
+                        id: 5,
+                        coords: [55.802568, 49.106288],
+                        type: 'sight',
+                        pin: {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/pins/nab.svg',
+                            iconImageSize: [198, 29],
+                            iconImageOffset: [-6.5, -7]
+                        }
+                    },
+                    {
+                        id: 6,
+                        coords: [55.788336, 49.113484],
+                        type: 'luciano',
+                        pin: {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/pins/hotel.svg',
+                            iconImageSize: [135, 17],
+                            iconImageOffset: [-6.5, -7]
+                        }
+                    },
+                    {
+                        id: 7,
+                        coords: [55.787082, 49.117626],
+                        type: 'luciano',
+                        pin: {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/pins/hotel.svg',
+                            iconImageSize: [135, 17],
+                            iconImageOffset: [-6.5, -7]
+                        }
+                    },
+
+                ];
+
+                var mapCenter = [55.788326, 49.113521];
+                var zoomLevel = 14;
+            </script>
+            <div class="contacts__map-wrapper">
+                <div class="contacts__select js-contacts-map-select">
+                    <div class="contacts__select-current">
+                        <span class="contacts__select-current-text">
+                            г. Казань, ул. Право-Булачная, 49
+                        </span>
+
+                        <svg width="45" height="45" aria-hidden="true" class="icon-select-arrow">
+                            <use xlink:href="#select-arrow"></use>
+                        </svg>
+                    </div>
+                    <div class="contacts__select-dropdown">
+                        <div class="contacts__select-dropdown-inner">
+                            <button class="contacts__select-btn" data-id="6">
+                                г. Казань, ул. Право-Булачная, 49
+                            </button>
+                            <button class="contacts__select-btn" data-id="7">
+                                г. Казань, ул. Островского, 26
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="contacts__map-inner-wrapper">
+
+               
+                <div class="contacts__map js-contacts-map">
+
+                </div>
+                 </div>
+
+            </div>
+            <div class="contacts__blocks">
+                <div class="contacts__block">
+                    <h3 class="contacts__block-heading">
+                        Контакты
+                    </h3>
+                    <ul class="contacts__list">
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Call-центр:
+                                </h4>
+                                <a href="tel:+78432000900" class="contacts__card-phone">+7 (843) 2000-900</a>
+                                <div class="contacts__card-links">
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/whatsapp.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        Написать в WhatsApp
+                                    </a>
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/mail.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        Написать в WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Отдел продаж, офис в г. Казань:
+                                </h4>
+                                <a href="tel:+78432000987" class="contacts__card-phone">+7 (843) 2000-987</a>
+                                <div class="contacts__card-links">
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/whatsapp.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        Написать в WhatsApp
+                                    </a>
+                                    <a href="mailto:sales@luciano.ru" class="contacts__card-link">
+                                        <img src="img/contacts-socials/mail.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        sales@luciano.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Отдел продаж, офис в г. Москва:
+                                </h4>
+                                <a href="tel:+74955392498" class="contacts__card-phone">+7 (495) 539-24-98</a>
+                                <div class="contacts__card-links">
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/whatsapp.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        Написать в WhatsApp
+                                    </a>
+                                    <a href="mailto:sales@luciano.ru" class="contacts__card-link">
+                                        <img src="img/contacts-socials/mail.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        sales@luciano.ru
+                                    </a>
+                                </div>
+                                <div class="contacts__card-text">
+                                    Москва-Сити, ул. Пресненская набережная, д.12, башня «Федерация Запад»
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Консьерж-сервис:
+                                </h4>
+                                <a href="tel:+78432000958" class="contacts__card-phone">+7 (843) 2000-958</a>
+                                <div class="contacts__card-links">
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/whatsapp.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        Написать в WhatsApp
+                                    </a>
+                                    <a href="mailto:concierge@luciano.ru" class="contacts__card-link">
+                                        <img src="img/contacts-socials/mail.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        concierge@luciano.ru
+                                    </a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Бутик парфюмерии и косметики:
+                                </h4>
+                                <a href="tel:+78432000968" class="contacts__card-phone">+7 (843) 2000-968</a>
+                                <div class="contacts__card-links">
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/whatsapp.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        Написать в WhatsApp
+                                    </a>
+                                    <a href="mailto:concierge@luciano.ru" class="contacts__card-link">
+                                        <img src="img/contacts-socials/mail.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        Интернет-магазин
+                                    </a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Отдел маркетинга:
+                                </h4>
+                                <a href="tel:+78432000917" class="contacts__card-phone">+ 7 (843) 2000-917</a>
+                                <div class="contacts__card-links">
+
+                                    <a href="mailto:marketing@luciano.ru" class="contacts__card-link">
+                                        <img src="img/contacts-socials/mail.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        marketing@luciano.ru
+                                    </a>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contacts__block">
+                    <h3 class="contacts__block-heading">
+                        Мы в социальных<br> сетях
+                    </h3>
+                    <ul class="contacts__list">
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    спа-комплекс LUCIANO:
+                                </h4>
+                                <div class="contacts__card-text">
+                                    Основные аккаунты комплекса. Узнавайте о акциях и главных событиях:
+                                </div>
+                                <div class="contacts__card-links">
+
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/telegram.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        t.me/luciano_spa_hotel
+                                    </a>
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/vk.svg" alt="" class="contacts__card-link-icon">
+                                        vk.com/lucianokazan
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Фитнес-клуб:
+                                </h4>
+                                <div class="contacts__card-text">
+                                    Расписание, информация о тренерах и новых направлениях клуба:
+                                </div>
+                                <div class="contacts__card-links">
+
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/telegram.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        t.me/lucianofitnessclub
+                                    </a>
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/vk.svg" alt="" class="contacts__card-link-icon">
+                                        vk.com/lucianofitness
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Рестораны спа-комплекса LUCIANO:
+                                </h4>
+                                <div class="contacts__card-text">
+                                    Новинки меню, анонсы предстоящих событий и яркие фото с них:
+                                </div>
+                                <div class="contacts__card-links">
+
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/telegram.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        t.me/lucianorest
+                                    </a>
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/vk.svg" alt="" class="contacts__card-link-icon">
+                                        vk.com/luciano.rest
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Медицинский оздоровительный центр:
+                                </h4>
+                                <div class="contacts__card-text">
+                                    Все актуальные новости, акции и информация об услугах и специалистах медицинского
+                                    центра:
+                                </div>
+                                <div class="contacts__card-links">
+
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/telegram.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        t.me/lucianoclinic
+                                    </a>
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/vk.svg" alt="" class="contacts__card-link-icon">
+                                        vk.com/lucianoclinic
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contacts__list-item">
+                            <div class="contacts__card">
+                                <h4 class="contacts__card-heading">
+                                    Детский клуб ADRIANA:
+                                </h4>
+                                <div class="contacts__card-text">
+                                    Подробнее о жизни детского клуба, новые абонементы и секции, расписание, актуальные
+                                    мастер-классы:
+                                </div>
+                                <div class="contacts__card-links">
+
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/telegram.svg" alt=""
+                                            class="contacts__card-link-icon">
+                                        t.me/kidsclubadriana
+                                    </a>
+                                    <a href="#" class="contacts__card-link">
+                                        <img src="img/contacts-socials/vk.svg" alt="" class="contacts__card-link-icon">
+                                        vk.com/kidsclubadriana
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

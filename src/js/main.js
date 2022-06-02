@@ -42,6 +42,7 @@ import textTabs from './textTabs';
 import proceduresSlider from './proceduresSlider';
 import cardsSlider from './cardsSlider';
 import programCardImageSlider from './programCardImageSlider';
+import contactsMap from './contactsMap';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     proceduresSlider();
     cardsSlider();
     programCardImageSlider();
+    contactsMap();
 
 });
 
