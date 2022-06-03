@@ -69,6 +69,12 @@
     position: relative;
     width: 98rem;
 
+    width: 88rem;
+
+    // @media screen and(max-width: 1366px) {
+    //     width: 70rem;
+    // }
+
     @include breakpoint(mobile) {
         width: auto;
         margin: 0 calc(-1 * var(--content-padding));
@@ -245,7 +251,7 @@
     }
 }
 
-.rooms__card-included-item-image {
+.rooms__card-included-image {
     width: 4rem;
     height: 4rem;
     display: block;

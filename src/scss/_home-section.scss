@@ -152,10 +152,15 @@
 }
 
 .home-section__content {
-    min-height: 100vh;
+   
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    min-height: 100vh;
+
+    @include breakpoint(laptop) {
+        min-height: min(100vh, 108rem);
+    }
 
     @include breakpoint(mobile) {
         min-height: var(--client-height, 100vh);

@@ -18,7 +18,7 @@ export default function homeAnimation() {
         const fixedTl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
-                start: 'bottom bottom',
+                start: 'top top',
                 end: () => `+=${window.innerHeight * 1.5}`,
                 scrub: true,
                 pin: bgWrapper,
