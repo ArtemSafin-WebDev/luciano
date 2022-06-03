@@ -19,11 +19,23 @@
         pointer-events: none;
         transition: opacity 0.2s;
         opacity: 0;
+
+        height: 26rem;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.87) -7.98%, rgba(0, 0, 0, 0.31) 30.8%, rgba(255, 255, 255, 0) 60.33%, transparent 60.33%);
+
+        @include breakpoint(mobile) {
+            height: 12rem;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) -7.98%, rgba(0, 0, 0, 0) 100%);
+        }
     }
 
     &.fixed {
         &::before {
             opacity: 1;
+
+            @include breakpoint(mobile) {
+                opacity: 1;
+            }
         }
     }
 
