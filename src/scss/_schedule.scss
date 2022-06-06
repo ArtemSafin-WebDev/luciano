@@ -1,0 +1,354 @@
+.schedule {
+    @include sectionPadding;
+}
+
+.schedule__block-days {
+    @include breakpoint(mobile) {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.schedule__block-days-arrow {
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        flex-shrink: 0;
+        transition: opacity 0.2s;
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+            fill: var(--dark-biege);
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+}
+
+.schedule__block-days-inner {
+    padding-left: 20rem;
+    padding-right: 5rem;
+    border-top: 1px solid rgba(#bb9b8c, 0.5);
+    border-bottom: 1px solid rgba(#bb9b8c, 0.5);
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        width: 50%;
+        flex-grow: 1;
+        border-color: var(--dark-biege);
+    }
+
+    .swiper {
+        width: 100%;
+        margin: 0;
+    }
+
+    .swiper-wrapper {
+        @include breakpointMF(small-tablet) {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+        }
+    }
+}
+
+.schedule__block-day {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #000000;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.2s, background-color 0.2s;
+    font-family: var(--montserrat);
+
+    @include breakpoint(mobile) {
+        height: 5rem;
+    }
+    &.current {
+        color: white;
+        background: #bb9b8c;
+    }
+}
+
+.schedule__block-trainings {
+    padding: 5rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        padding-top: 3rem;
+    }
+}
+
+.schedule__block-trainings-row {
+    display: grid;
+    grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+    grid-gap: 5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.schedule__block-trainings-time-of-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: white;
+    background: #0e1d2b;
+    border: 1px solid #ffffff;
+    height: 5rem;
+    font-family: var(--montserrat);
+}
+
+.schedule__block-trainings-time {
+    background: #f9f9f9;
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: black;
+    font-family: var(--montserrat);
+}
+
+.schedule__block-trainings-items {
+    @include breakpointMF(small-tablet) {
+        // border: 1px solid #dedede;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    &:first-child {
+    }
+
+    .swiper {
+        @include breakpointMF(small-tablet) {
+            overflow: visible;
+        }
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #dedede;
+
+        &:last-child {
+            border-right: 1px solid transparent;
+        }
+
+        // &.current {
+        //     .schedule__block-trainings-item::after {
+        //         content: '';
+        //         border: 1px solid var(--dark-biege);
+        //         position: absolute;
+        //         left: -1px;
+        //         right: -1px;
+        //         top: -1px;
+        //         bottom: -1px;
+        //     }
+        // }
+
+        @include breakpoint(mobile) {
+            border: none;
+        }
+    }
+
+    .swiper-wrapper {
+        @include breakpointMF(small-tablet) {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+        }
+    }
+}
+
+.schedule__block-trainings-selector {
+    position: relative;
+
+  
+}
+
+.schedule__block-trainings-selector-row {
+    display: grid;
+    grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+    grid-gap: 5rem;
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+
+ 
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+        grid-gap: 2rem;
+
+        display: none;
+    }
+}
+
+.schedule__block-trainings-selector-row-inner {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    // grid-gap: 1px;
+    // padding-left: 1px;
+    // padding-right: 1px;
+    // padding-left: 1px;
+    // padding-right: .5px;
+    // padding-right: .5px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+     
+        border: 1px solid #dedede;
+        inset: 0;
+        pointer-events: none;
+        left: -1px;
+    }
+}
+
+.schedule__block-trainings-selector-marker {
+    grid-column: calc(var(--day, 1) + 1) / span 1;
+    border-right: 1px solid transparent;
+    position: relative;
+    z-index: 20;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        bottom: 0;
+        top: 0;
+        border: 1px solid var(--dark-biege);
+        transform: translateZ(0);
+    }
+}
+
+.schedule__block-trainings-item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    position: relative;
+    @include breakpoint(mobile) {
+        border: 1px solid #dedede;
+
+        .current & {
+            border-color: var(--dark-biege);
+            // border-bottom-color: #dedede;
+        }
+    }
+
+    .schedule__block-trainings-row:not(.schedule__block-trainings-row--divider)
+        + .schedule__block-trainings-row:not(.schedule__block-trainings-row--divider)
+        & {
+        border-top: none;
+    }
+}
+
+.schedule__block-trainings-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+
+    flex-basis: 12rem;
+    flex-grow: 1;
+
+    border-bottom: 1px solid #dedede;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.2s;
+
+    &::after {
+        
+
+        @include breakpointMF(small-tablet) {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border: 1px solid #bb9b8c;
+            transition: opacity 0.2s;
+            z-index: 1;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background: #f9f9f9;
+
+        .schedule__block-trainings-card-title {
+            color: #bb9b8c;
+        }
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.schedule__block-trainings-card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: var(--montserrat);
+    margin-bottom: 1rem;
+    transition: color 0.2s;
+}
+
+.schedule__block-trainings-card-master {
+    margin-top: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(black, 0.5);
+}

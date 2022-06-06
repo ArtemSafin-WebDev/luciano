@@ -43,6 +43,7 @@ import proceduresSlider from './proceduresSlider';
 import cardsSlider from './cardsSlider';
 import programCardImageSlider from './programCardImageSlider';
 import contactsMap from './contactsMap';
+import schedule from './schedule';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cardsSlider();
     programCardImageSlider();
     contactsMap();
+    schedule();
 
 });
 
