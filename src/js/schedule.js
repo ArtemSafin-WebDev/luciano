@@ -39,7 +39,7 @@ export default function schedule() {
 
     const dayIndex = dayOfWeekIndexes.find(item => item.dayOfWeekDigit === dayOfWeekDigit).index;
 
-    const elements = Array.from(document.querySelectorAll('.schedule'));
+    const elements = Array.from(document.querySelectorAll('.schedule__block'));
 
     elements.forEach(element => {
         const days = Array.from(element.querySelectorAll('.schedule__block-day'));

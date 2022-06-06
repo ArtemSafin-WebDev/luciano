@@ -197,8 +197,6 @@
 
 .schedule__block-trainings-selector {
     position: relative;
-
-  
 }
 
 .schedule__block-trainings-selector-row {
@@ -211,8 +209,6 @@
     bottom: 0;
     right: 0;
     pointer-events: none;
-
- 
 
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
@@ -237,7 +233,7 @@
     &::after {
         content: '';
         position: absolute;
-     
+
         border: 1px solid #dedede;
         inset: 0;
         pointer-events: none;
@@ -299,8 +295,6 @@
     transition: background-color 0.2s;
 
     &::after {
-        
-
         @include breakpointMF(small-tablet) {
             content: '';
             position: absolute;
@@ -351,4 +345,19 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: rgba(black, 0.5);
+}
+
+.schedule__nav {
+    margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.schedule__tabs {
+    @include tabsContainer;
+}
+.schedule__tabs-item {
+    @include tabsItem;
 }
