@@ -1,0 +1,184 @@
+.fitness-program {
+    @include sectionPadding;
+}
+.fitness-program__heading {
+    @include sectionHeading;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.fitness-program__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12rem 0;
+    max-width: 164rem;
+    margin: 0 auto;
+    color: white;
+
+    @include breakpoint(mobile) {
+        padding: 4rem 0;
+    }
+}
+
+.fitness-program__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #0e1d2b;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    &::after,
+    &::before {
+        content: '';
+        background-color: rgba(#ffffff, 0.2);
+        width: 2rem;
+        flex-grow: 1;
+        margin: 0 2rem;
+        height: 1px;
+    }
+}
+
+.fitness-program__images {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.fitness-program__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    .hovered & {
+        transition: opacity 0.1s ease .3s, visibility 0s linear 0.4s;
+    }
+
+    img,
+    video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    }
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.3s, visibility 0.3s;
+        z-index: 10;
+    }
+}
+
+.fitness-program__bg-decor {
+    width: 100%;
+    height: auto;
+    max-width: 102.5rem;
+
+    @include breakpoint(mobile) {
+        max-width: 22rem;
+    }
+}
+
+.fitness-program__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fitness-program__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+        content: '';
+        width: 1.2rem;
+        height: 1.2rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../img/yellow-marker.svg');
+        flex-shrink: 0;
+        display: block;
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    &:last-child {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+
+
+.fitness-program__link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: white;
+    font-family: var(--cormorant);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.2rem 0;
+    transition: color .2s, transform .3s;
+
+    @include breakpoint(mobile) {
+        padding: 2rem 0;
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    &.inactive {
+        color: rgba(white, .3);
+    }
+
+    &.active {
+        transform: scale(1.2);
+    }
+
+   
+
+    
+}

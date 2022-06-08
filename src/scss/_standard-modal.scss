@@ -725,7 +725,6 @@
         font-weight: 400;
         font-size: 2.4rem;
         line-height: 2.6rem;
-        
     }
 }
 
@@ -798,6 +797,89 @@
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 120%;
-       
+    }
+}
+
+.standard-modal__training {
+    background-color: #fff;
+}
+
+.standard-modal__training-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.standard-modal__training-content {
+    padding: 14rem;
+    padding-top: 6rem;
+    @include breakpoint(mobile) {
+        padding: 2rem var(--content-padding);
+    }
+}
+
+.standard-modal__training-heading {
+    @include sectionHeading;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.standard-modal__training-list {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(16.4rem, auto);
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: initial;
+    }
+}
+
+.standard-modal__training-list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.standard-modal__training-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2.4rem;
+    border: 1px solid #dbd5d5;
+    margin-top: -1px;
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+.standard-modal__training-card-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    font-family: var(--proxima);
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.standard-modal__training-card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    color: rgba(black, 0.5);
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
     }
 }
