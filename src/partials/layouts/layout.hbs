@@ -15,9 +15,17 @@
     <title>
         {{ title }}
     </title>
+    <script>
+        const setHeight = () => {
+            const clientHeight = document.documentElement.clientHeight;
+            document.documentElement.style.setProperty('--client-height', clientHeight + "px");
+        }
+        setHeight();
+    </script>
 </head>
 
 <body class="no-touch" ontouchstart="">
+
     <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
         {{> sprite }}
     </div>

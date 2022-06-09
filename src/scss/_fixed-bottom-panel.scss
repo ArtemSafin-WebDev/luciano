@@ -1,6 +1,10 @@
 .fixed-bottom-panel.js-bottom-panel {
     position: relative;
     z-index: 30;
+    &.sticky {
+        top: auto !important;
+        bottom: 0 !important;
+    }
 
     &::before {
         content: '';

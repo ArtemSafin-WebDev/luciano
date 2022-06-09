@@ -89,7 +89,7 @@
 .page-header__menu-logo {
     margin: 0 auto;
     margin-bottom: 10rem;
-
+    position: relative;
     @include breakpoint(mobile) {
         display: none;
     }
@@ -108,11 +108,11 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         margin-bottom: 2rem;
-        color: #F4E5A0;
+        color: #f4e5a0;
         font-family: var(--proxima);
         &:link,
         &:visited {
-            color: #F4E5A0;
+            color: #f4e5a0;
         }
     }
 }
@@ -365,6 +365,7 @@
 }
 
 .page-header__logo {
+    position: relative;
     @include breakpointMF(small-tablet) {
         grid-area: logo;
     }
@@ -379,6 +380,25 @@
     width: 8.9rem;
     display: block;
     height: auto;
+
+    &:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        display: none;
+        transition: opacity 0.2s;
+        opacity: 0;
+
+        .page-header:not(.fixed) & {
+            opacity: 1;
+        }
+
+        .page-header--dark & {
+            display: block;
+        }
+    }
 
     @include breakpoint(mobile) {
         width: 7.2rem;
@@ -408,6 +428,10 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #f4e5a0;
+
+    body:not(.mobile-menu-open) .page-header--dark:not(.fixed) & {
+        color: #bb9b8c;
+    }
 
     @include breakpoint(mobile) {
         display: none;
@@ -452,10 +476,24 @@
         color: rgba(white, 0.4);
     }
 
-    .no-touch &:hover,
-    .touch &:active,
+    &:hover,
+    &:active,
     &.active {
         color: white;
+    }
+
+    body:not(.mobile-menu-open) .page-header--dark:not(.fixed) & {
+        color: rgba(black, 0.4);
+        &:link,
+        &:visited {
+            color: rgba(black, 0.4);
+        }
+
+        &:hover,
+        &:active,
+        &.active {
+            color: black;
+        }
     }
 }
 
@@ -483,6 +521,9 @@
         height: 100%;
         z-index: -1;
         fill: rgba(white, 0.4);
+        transition: fill .2s;
+
+     
     }
 
     & > span {
@@ -499,6 +540,17 @@
         &:last-child {
             margin-bottom: 0;
         }
+    }
+
+    body:not(.mobile-menu-open) .page-header--dark:not(.fixed) & {
+        svg {
+            fill: rgba(#BB9B8C, .4);
+        }
+
+        & > span {
+            background-color: #000;
+        }
+       
     }
 
     .mobile-menu-open & {

@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function bottomPanel() {
+  
     const bottomPanel = document.querySelector('.js-bottom-panel');
     const landingPosition = document.querySelector('.bottom-panel-landing-position')
 
@@ -21,6 +22,7 @@ export default function bottomPanel() {
         pin: true,
         pinSpacing: false,
         toggleClass: 'sticky',
+     
         anticipatePin: 1,
         onLeave: () => {
             document.body.classList.add('fixed-panel-docked');

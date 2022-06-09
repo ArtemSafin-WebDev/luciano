@@ -4,7 +4,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function clientHeight() {
+
+    let width = 0;
     const setHeight = () => {
+        const currentWidth = document.documentElement.clientWidth;
+        if (width === currentWidth) return;
+        width = currentWidth;
         const clientHeight = document.documentElement.clientHeight;
 
         console.log(clientHeight)
@@ -16,6 +21,6 @@ export default function clientHeight() {
 
     setHeight();
 
-    window.addEventListener('resize', debounce(setHeight, 400));
+    // window.addEventListener('resize', debounce(setHeight, 400));
     
 }
