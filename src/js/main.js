@@ -46,6 +46,7 @@ import contactsMap from './contactsMap';
 import schedule from './schedule';
 import fitnessProgram from './fitnessProgram';
 import stickyTerraceBtn from './stickyTerraceBtn';
+import cookies from './cookies';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     datepicker();
     homeSectionGallery();
     homeAnimation();
-
+    cookies();
     eventsSlider();
     bottomPanel();
     tabs();
