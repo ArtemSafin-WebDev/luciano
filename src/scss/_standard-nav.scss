@@ -1,12 +1,24 @@
 .standard-nav {
     display: flex;
     align-items: center;
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
 }
 .standard-nav__btn {
     width: 6rem;
     height: 6rem;
     flex-shrink: 0;
     transition: opacity 0.2s;
+
+    &--small {
+        width: 2rem;
+        height: 2rem;
+    }
 
     @include breakpoint(mobile) {
         display: none;
@@ -25,6 +37,12 @@
         height: 100%;
         fill: #f4e5a0;
         transition: fill 0.2s;
+    }
+
+    .standard-nav--white & {
+        svg {
+            fill: white;
+        }
     }
 
     .standard-nav--dark & {
@@ -159,6 +177,25 @@
         .touch &:active,
         &.active {
             color: black;
+        }
+    }
+
+
+    .standard-nav--white & { 
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+
+        .icon-divider {
+            fill: rgba(white, .2);
+        }
+
+        .no-touch &:hover,
+        .touch &:active,
+        &.active {
+            color: white;
         }
     }
 }

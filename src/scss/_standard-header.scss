@@ -5,7 +5,7 @@
 
     @include breakpoint(mobile) {
         .fixed-bottom-panel__mobile-links {
-            border-bottom: 1px solid rgba(255,255,255,.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
     }
 }
@@ -50,7 +50,6 @@
     margin-left: -26rem;
     margin-top: -10rem;
 
-
     @include breakpoint(mobile) {
         height: 22.2rem;
         width: auto;
@@ -75,7 +74,13 @@
         min-height: 70rem;
         @include breakpoint(mobile) {
             min-height: var(--client-height, 100vh);
-           
+        }
+    }
+
+    .standard-header--large & {
+        min-height: 96rem;
+        @include breakpoint(mobile) {
+            min-height: var(--client-height, 100vh);
         }
     }
 }
@@ -87,7 +92,6 @@
 
 .standard-header__heading {
     @include largeHeading();
-   
 }
 
 .standard-header__breadcrumbs {
@@ -121,7 +125,7 @@
             width: 2px;
             height: 2px;
             border-radius: 50%;
-            background-color: rgba(white, .5);
+            background-color: rgba(white, 0.5);
         }
     }
 
@@ -154,13 +158,14 @@
 .standard-header__bottom-nav {
     border-top: 1px solid rgba(#ffffff, 0.2);
     padding: 3.4rem 0;
+    display: flex;
+    align-items: center;
 
     @include breakpoint(mobile) {
         padding: 2.5rem 0;
+        flex-direction: column;
+        align-items: stretch;
     }
-    
-
-  
 }
 
 .standard-header__nav-link {
@@ -289,18 +294,15 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     flex-shrink: 0;
-   
+
     font-family: var(--montserrat);
 
-  
     svg {
         flex-shrink: 0;
         width: 1.6rem;
         height: 1.6rem;
         fill: currentColor;
         margin-right: 1rem;
-
-    
     }
 }
 
@@ -324,7 +326,7 @@
         bottom: 0;
         width: 100%;
         padding: 2rem 0;
-        border-top: 1px solid rgba(#FFFFFF, .2);
+        border-top: 1px solid rgba(#ffffff, 0.2);
         justify-content: center;
     }
     svg {
@@ -336,5 +338,34 @@
         &:last-child {
             margin-right: 0;
         }
+    }
+}
+
+.standard-header__order-btn {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    gap: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-family: var(--cormorant);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+        margin-top: 3rem;
+        
+       
+    }
+    svg {
+        flex-shrink: 0;
+        width: 5.6rem;
+        height: 5.6rem;
     }
 }
