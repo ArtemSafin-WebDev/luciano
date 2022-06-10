@@ -45,6 +45,7 @@ import programCardImageSlider from './programCardImageSlider';
 import contactsMap from './contactsMap';
 import schedule from './schedule';
 import fitnessProgram from './fitnessProgram';
+import stickyTerraceBtn from './stickyTerraceBtn';
 gsap.registerPlugin(ScrollTrigger);
 
 window.refreshScrollTrigger = () => {
@@ -92,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
     contactsMap();
     schedule();
     fitnessProgram();
+    stickyTerraceBtn();
 
 });
 
