@@ -257,3 +257,37 @@
         </div>
     </div>
 </div>
+
+<div class="request-status js-modal" id="request-success">
+    <div class="request-status__inner">
+        <button class="request-status__close js-close-modal">
+            <svg width="45" height="45" aria-hidden="true" class="icon-modal-close">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <div class="request-status__text">
+            Ваша заявка успешно отправлена, спасибо за обращение!
+        </div>
+        <button class="request-status__ok js-close-modal">
+            Хорошо
+        </button>
+    </div>
+</div>
+<div class="request-status js-modal" id="request-failure">
+    <div class="request-status__inner">
+        <button class="request-status__close js-close-modal">
+            <svg width="45" height="45" aria-hidden="true" class="icon-modal-close">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <svg width="45" height="45" aria-hidden="true" class="icon-warning request-status__icon">
+            <use xlink:href="#warning"></use>
+        </svg>
+        <div class="request-status__text">
+            Ваша заявка не отправлена, попробуйте повторить
+        </div>
+        <button class="request-status__ok js-close-modal">
+            Хорошо
+        </button>
+    </div>
+</div>
