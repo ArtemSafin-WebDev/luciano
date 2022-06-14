@@ -1021,6 +1021,135 @@
                     </div>
                 </form>
             </div>
+        </div>
+        
+        
+        
+        <div class="reserve-table js-modal" id="reserve-table">
+            <div class="reserve-table__inner">
+                <button class="reserve-table__close js-close-modal">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-modal-close">
+                        <use xlink:href="#modal-close"></use>
+                    </svg>
+                </button>
+        
+                <button class="modal__close js-close-modal">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-rombus">
+                        <use xlink:href="#rombus"></use>
+                    </svg>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="reserve-table__card">
+                    <div class="reserve-table__card-inner">
+                        <h3 class="reserve-table__card-heading">
+                            ЗАБРОНИРОВАТЬ СТОЛИК
+                        </h3>
+                        <form action="/" method="POST" class="reserve-table__form" data-need-validation="">
+                            <div class="reserve-table__form-fields">
+                                <div class="reserve-table__form-field reserve-table__form-field--fullwidth"
+                                    id="reserve-table-rest">
+                                    <div class="reserve-table__form-select">
+                                        <span class="reserve-table__form-field-label-text">
+                                            Выберите ресторан
+                                        </span>
+                                        <select name="rest" class="js-custom-select" required=""
+                                            data-parsley-errors-container="#reserve-table-rest"
+                                            data-parsley-class-handler="#reserve-table-rest" data-position="bottom">
+                                            <option value="" placeholder="">
+                                                ВЫБЕРИТЕ РЕСТОРАН
+                                            </option>
+                                            <option value="1">
+                                                Ресторан 1
+                                            </option>
+                                            <option value="2">
+                                                Ресторан 2
+                                            </option>
+                                        </select>
+                                    </div>
+        
+                                </div>
+                                <div class="reserve-table__form-field">
+                                    <label class="reserve-table__form-field-label">
+                                        <input type="text" class="reserve-table__form-field-input" name="name" placeholder="Имя"
+                                            required="">
+                                        <span class="reserve-table__form-field-label-text">
+                                            Имя
+                                        </span>
+                                    </label>
+        
+                                </div>
+                                <div class="reserve-table__form-field">
+                                    <label class="reserve-table__form-field-label">
+                                        <input type="tel" class="reserve-table__form-field-input js-phone-input"
+                                            placeholder="телефон" required="" data-parsley-phone="">
+                                        <span class="reserve-table__form-field-label-text">
+                                            телефон
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="reserve-table__form-field" id="reserve-date-container">
+                                    <div class="reserve-table__form-datepicker-container" id="reserve-date">
+                                        <label class="reserve-table__form-field-label">
+                                            <input type="text" class="reserve-table__form-field-input js-datepicker" name="name"
+                                                placeholder="УКАЖИТЕ ДАТУ" data-container="#reserve-date" required=""
+                                                readonly="" data-parsley-errors-container="#reserve-date-container">
+                                            <span class="reserve-table__form-field-label-text">
+                                                Укажите дату
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+        
+                                <div class="reserve-table__form-field" id="reserve-table-guests">
+                                    <div class="reserve-table__form-select">
+                                        <span class="reserve-table__form-field-label-text">
+                                            Количество гостей
+                                        </span>
+                                        <select name="guests" class="js-custom-select" required=""
+                                            data-parsley-errors-container="#reserve-table-guests"
+                                            data-parsley-class-handler="#reserve-table-guests">
+                                            <option value="" placeholder="">
+                                                Количество гостей
+                                            </option>
+                                            <option value="1">
+                                                1 Гость
+                                            </option>
+                                            <option value="2">
+                                                2 Гостя
+                                            </option>
+                                        </select>
+                                    </div>
+        
+                                </div>
+                                <div class="reserve-table__form-field reserve-table__form-field--centered">
+                                    <label class="reserve-table__checkbox">
+                                        <input name="policy" class="reserve-table__checkbox-input" type="checkbox" value="1"
+                                            required="" checked="">
+                                        <span class="reserve-table__checkbox-mark">
+                                            <svg width="45" height="45" aria-hidden="true" class="icon-checkmark">
+                                                <use xlink:href="#checkmark"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="reserve-table__checkbox-text">
+                                            Я согласен на <a href="#">обработку данных</a>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="reserve-table__form-field reserve-table__form-field--centered">
+                                    <button type="submit" class="circle-btn reserve-table__card-submit">
+                                        <svg width="45" height="45" aria-hidden="true" class="icon-semicircle">
+                                            <use xlink:href="#semicircle"></use>
+                                        </svg>
+                                        Забронировать
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>        <div class="cookies">
             <div class="cookies__text">
                 Мы используем <a href="#">cookie</a> на нашем сайте

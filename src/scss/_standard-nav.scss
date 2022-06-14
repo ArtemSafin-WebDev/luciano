@@ -4,6 +4,11 @@
     width: 50%;
     flex-grow: 1;
 
+    &:only-child {
+        width: 100%;
+        flex-grow: 0;
+    }
+
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;

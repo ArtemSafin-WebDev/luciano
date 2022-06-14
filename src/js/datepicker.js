@@ -18,6 +18,8 @@ function initializeDatepicker() {
             })
             .on('hide', function(e) {
                 element.classList.remove('datepicker-shown');
+            }).on('changeDate', function(e) {
+                $(element).trigger('blur');
             });
     });
 }
