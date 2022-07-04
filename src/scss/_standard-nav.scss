@@ -20,6 +20,12 @@
     flex-shrink: 0;
     transition: opacity 0.2s;
 
+    @include breakpointMF(small-tablet) {
+        .standard-nav.js-standard-nav-only-mobile & {
+            display: none;
+        }
+    }
+
     &--small {
         width: 2rem;
         height: 2rem;
@@ -99,6 +105,22 @@
         &:last-child {
             // padding-right: 0;
             margin-right: 0;
+        }
+    }
+
+    @include breakpointMF(small-tablet) {
+        .standard-nav.js-standard-nav-only-mobile & {
+            .swiper-slide {
+                margin: 0 !important;
+            }
+
+            .swiper-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2.4rem;
+
+                justify-content: center;
+            }
         }
     }
 }
@@ -185,8 +207,7 @@
         }
     }
 
-
-    .standard-nav--white & { 
+    .standard-nav--white & {
         color: white;
         &:link,
         &:visited {
@@ -194,7 +215,7 @@
         }
 
         .icon-divider {
-            fill: rgba(white, .2);
+            fill: rgba(white, 0.2);
         }
 
         .no-touch &:hover,
