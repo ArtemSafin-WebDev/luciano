@@ -175,7 +175,19 @@
 }
 
 .terrace__order-link-wrapper {
-    @include breakpointMF(small-tablet) {
-        margin-bottom: 3rem;
+    position: fixed;
+    bottom: 8.8rem;
+    left: 0;
+    width: 100%;
+    z-index: 60;
+
+    @include breakpoint(mobile) {
+        bottom: var(--content-padding);
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 }

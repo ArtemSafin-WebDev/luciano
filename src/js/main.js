@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     contactsMap();
     schedule();
     fitnessProgram();
-    stickyTerraceBtn();
+    // stickyTerraceBtn();
 
 });
 
