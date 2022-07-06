@@ -269,6 +269,12 @@
         color: white;
     }
 
+    &:hover {
+        .masonry__service-card-content {
+            transform: translateY(0);
+        }
+    }
+
     .no-touch &:hover,
     .touch &:active {
         .masonry__service-card-bg::after {
@@ -279,6 +285,29 @@
             transform: scale(1.03);
             transition: transform .5s;
         }
+
+      
+    }
+
+ 
+}
+
+.masonry__service-card-content {
+    position: absolute;
+    padding: 4rem;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    transition: transform .3s;
+    font-family: var(--montserrat);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    transform: translateY(100%);
+
+    @include breakpoint(mobile) {
+        transform: translateY(0%);
+        padding: 3rem 2.5rem;
+        font-size: 1.6rem;
     }
 }
 
